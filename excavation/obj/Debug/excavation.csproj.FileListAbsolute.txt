@@ -1,0 +1,616 @@
+C:\Users\user\Desktop\Sino\API\demo\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\user\Desktop\Sino\API\demo\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\user\Desktop\Sino\API\demo\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sino\API\demo\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\user\Desktop\Sino\API\demo\excavation\excavation\obj\Debug\excavation.pdb
+D:\Sino\Code\excavation\excavation\bin\Debug\excavation.dll
+D:\Sino\Code\excavation\excavation\bin\Debug\excavation.pdb
+D:\Sino\Code\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+D:\Sino\Code\excavation\excavation\obj\Debug\excavation.dll
+D:\Sino\Code\excavation\excavation\obj\Debug\excavation.pdb
+D:\Sino\Code\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+D:\Sino\Code\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\user\Desktop\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\bin\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\bin\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\伯凱的課題\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+E:\desc\profile\Sino\API\demo\excavation\excavation\bin\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\excavation\excavation\bin\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.Form1.resources
+E:\desc\profile\Sino\API\demo\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\bin\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\bin\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.Form1.resources
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程專案\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\bin\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\bin\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.Form1.resources
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation\excavation\obj\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\bin\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\bin\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.Form1.resources
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.Properties.Resources.resources
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程專案\深開挖自動建置程式\excavation V4\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V4\excavation V4\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0810_2\excavation V5\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0810_3\excavation V5\excavation V5\excavation\obj\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\bin\Debug\excavation.dll
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\bin\Debug\excavation.pdb
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+D:\臺大暑期CAE實習\中興工程深開挖介面研發\excavation V5_0810_4\excavation V5\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation V5_0814\excavation V5\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\bin\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\bin\Debug\excavation.pdb
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.dll
+E:\desc\profile\Sino\API\demo\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\hanwei\Desktop\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\Roy\Desktop\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation_20180928\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181003\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\戴\Downloads\excavation_20181008\excavation_20181008\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation_20181015\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\hanwei\Desktop\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181024\excavation_20181024\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181029\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.DetectForm.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181029\excavation_20181101\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181102\excavation_20181102\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181103\excavation_20181103\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181109\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181110\excavation_20181110\excavation V5\excavation\obj\Debug\excavation.Form2.resources
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181119\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181126\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181129\excavation_20181129\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\Roy\Desktop\excavation_20181203_V2\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181205\excavation_20181205\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181206\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\bin\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\bin\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.form2.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation V5\excavation\obj\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181208\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181220\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20181220\excavation_20181220\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20181230\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\U-hackers\Desktop\BoKai\excavation_20190103\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20190108_v1.0.4\excavation_20190108\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\HTeam\Downloads\excavation_20190108\excavation\excavation\obj\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\bin\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\bin\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.Form1.resources
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.form2.resources
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190108\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\Interop.OcOfficeLib.dll
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\帶\Downloads\excavation_20190116_v1.0.0\excavation_20190116\excavation\excavation\obj\Debug\excavation.pdb
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.dll
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.pdb
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\bin\Debug\excavation.dll
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\bin\Debug\excavation.pdb
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.Form1.resources
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.form2.resources
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+E:\2018研發案\API_臺大BIM\!excavation\excavation_20190117_v1.0.7\excavation_20190116\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Form1.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.form2.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.7\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csprojResolveAssemblyReference.cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Form1.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.form2.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.Cache
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation_20190117_v1.0.8\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190117\excavation\excavation\obj\Debug\excavation.pdb
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\bin\Debug\excavation.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\bin\Debug\excavation.pdb
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.dll
+C:\Users\Kevin\Downloads\excavation_20190121_v1.0.9\excavation_20190121_v1.0.9\excavation_20190117_v1.0.7\excavation_20190122\excavation\excavation\obj\Debug\excavation.pdb
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.dll
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\obj\Debug\excavation.pdb
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\bin\Debug\excavation.dll
+C:\中興企劃案\excavation_20190122_v1.1.0\excavation_20190122\excavation\excavation\bin\Debug\excavation.pdb
+C:\中興企劃案\2019版\excavation\excavation\bin\Debug\excavation.dll
+C:\中興企劃案\2019版\excavation\excavation\bin\Debug\excavation.pdb
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\Interop.MsoEuro.dll
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.Form1.resources
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.form2.resources
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.dll
+C:\中興企劃案\2019版\excavation\excavation\obj\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.Form1.resources
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.form2.resources
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation\excavation\obj\Debug\excavation.pdb
+\\Mac\Home\Desktop\excavation\excavation\bin\Debug\excavation.dll
+\\Mac\Home\Desktop\excavation\excavation\bin\Debug\excavation.pdb
+C:\ProgramData\Autodesk\Revit\Addins\2020\excavation.dll
+C:\ProgramData\Autodesk\Revit\Addins\2020\excavation.pdb
