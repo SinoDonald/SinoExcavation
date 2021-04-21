@@ -52,6 +52,9 @@ namespace excavation
         ExternalEvent externalEvent_CreateSheetPile;
         sheet_pile_NoCAD handler_sheet_pile_NoCAD = new sheet_pile_NoCAD();
 
+        ExternalEvent externalEvent_CreateSoldierPile;
+        CreateSoldierPile handler_CreateSoldierPile = new CreateSoldierPile();
+
         ExternalEvent externalEvent_CreateColumn;
         CreateColumn handler_createColumn = new CreateColumn();
 
@@ -108,6 +111,7 @@ namespace excavation
             externalEvent_CreateWall = ExternalEvent.Create(handler_createWall);
             externalEvent_CreateWallCADmode = ExternalEvent.Create(handler_createWallCADmode);
             externalEvent_CreateSheetPile = ExternalEvent.Create(handler_sheet_pile_NoCAD);
+            externalEvent_CreateSoldierPile = ExternalEvent.Create(handler_CreateSoldierPile);
             externalEvent_CreateColumn = ExternalEvent.Create(handler_createColumn);
             externalEvent_MoveColumn = ExternalEvent.Create(handler_moveColumn);
             externalEvent_CreateFrame = ExternalEvent.Create(handler_createFrame);
@@ -237,7 +241,19 @@ namespace excavation
                     externalEvent_CreateSheetPile.Raise();
                     textBox7.Text = "0";
                 }
-               
+                else if (comboBox10.Text == "型鋼樁" || comboBox10.Text == "鋼軌樁")
+                {
+                    //建立鋼板樁
+                    handler_CreateSoldierPile.files_path = new List<string>();
+                    handler_CreateSoldierPile.files_path = file_names;
+                    handler_CreateSoldierPile.xy_shift = new List<double>();
+                    handler_CreateSoldierPile.xy_shift.Add(double.Parse(shift_x.Text));
+                    handler_CreateSoldierPile.xy_shift.Add(double.Parse(shift_y.Text));
+                    handler_CreateSoldierPile.type = comboBox10.Text;
+                    externalEvent_CreateSoldierPile.Raise();
+                    textBox7.Text = "0";
+                }
+
 
             }
         }
@@ -508,9 +524,8 @@ namespace excavation
             {
                 ExReader exReader = new ExReader();
                 exReader.SetData(file, 1);
-                TaskDialog.Show("a", "a");
                 exReader.PassColumnData();
-                //exReader.PassCircle();
+                // exReader.PassCircle();
                 exReader.CloseEx();
                 comboBox1.Items.Add(new { Text = exReader.section, Value = exReader.centralCol[0] });
                 comboBox2.Items.Add(new { Text = exReader.section, Value = exReader.centralCol[0] });

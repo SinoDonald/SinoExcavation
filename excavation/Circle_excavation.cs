@@ -51,7 +51,6 @@ namespace excavation
                 foreach (var data in dex.excaLevel)
                     height.Add(data.Item2 * -1);
 
-
                 //建立開挖階數            
                 Level[] levlist = new Level[height.Count()];
                 for (int i = 0; i != height.Count(); i++)
@@ -74,32 +73,41 @@ namespace excavation
                 //訂定開挖範圍
                 IList<CurveLoop> profileloops = new List<CurveLoop>();
 
-
                 //須回到原點
                 XYZ[] points = new XYZ[dex.excaRange.Count()];
 
                 for (int i = 0; i != dex.excaRange.Count(); i++)
                     points[i] = new XYZ(dex.excaRange[i].Item1 - shift_x, dex.excaRange[i].Item2 - shift_y, 0) * 1000 / 304.8;
-
+                TaskDialog.Show("1", "5.1");
+                dex.Diameter = 20;
                 //建立環形輪廓
                 IList<Curve> wall_profileloops = new List<Curve>();
                 for (int i = 0; i < 2; i++)
                 {
+                    TaskDialog.Show("index", new XYZ(0 - shift_x, 0 - shift_y, 0).ToString() +"/"+ (dex.Diameter * 1000 / 304.8 / 2).ToString() +"/"+ (Math.PI * i).ToString() +"/"+ (Math.PI * (i + 1)).ToString()+"/"+ XYZ.BasisX+"/"+XYZ.BasisY);
                     wall_profileloops.Add(Arc.Create(new XYZ(0 - shift_x, 0 - shift_y, 0), dex.Diameter * 1000 / 304.8 / 2, Math.PI * i, Math.PI * (i + 1), XYZ.BasisX, XYZ.BasisY));
                 }
+                TaskDialog.Show("1", "5.2");
+
                 CurveLoop profileloop = CurveLoop.Create(new List<Curve>(wall_profileloops));
                 profileloops.Add(profileloop);
                 Level levdeep = null;
+                TaskDialog.Show("1", "6");
 
                 //建立開挖深度
                 ICollection<Level> level_familyinstance = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().ToList();
+                TaskDialog.Show("1", "6.1");
+
                 foreach (Level lev in level_familyinstance)
                 {
+                    TaskDialog.Show("1", lev.Name +"/"+ levlist[levlist.Count() - 1].Name);
+
                     if (lev.Name == levlist[levlist.Count() - 1].Name)
                     {
                         levdeep = lev;
                     }
                 }
+                TaskDialog.Show("1", "7");
 
                 //建立連續壁
                 IList<Curve> inner_wall_curves = new List<Curve>();
@@ -107,7 +115,8 @@ namespace excavation
                 WallType wallType = null;
                 List<Wall> inner_wall = new List<Wall>();
                 ICollection<WallType> walltype_familyinstance = new FilteredElementCollector(doc).OfClass(typeof(WallType)).Cast<WallType>().ToList();
-                
+                TaskDialog.Show("1", "8");
+
                 //檢查擋土壁
                 if (walltype_familyinstance.Where(x => x.Name.Split('-')[0] == "連續壁" && x.Name.Split('-')[1] == (dex.wall_width * 1000).ToString() + "mm").ToList().Count != 0)
                     wallType = walltype_familyinstance.Where(x => x.Name.Split('-')[0] == "連續壁" && x.Name.Split('-')[1] == (dex.wall_width * 1000).ToString() + "mm").ToList().First();

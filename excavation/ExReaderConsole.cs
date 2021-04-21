@@ -37,6 +37,9 @@ namespace ExReaderConsole
         public List<Tuple<string, double, double>> sideWall = new List<Tuple<string, double, double>>();
         public List<Tuple<string, double, double, string>> back = new List<Tuple<string, double, double, string>>();
         public List<Tuple<string, double, double, double, double>> circle_floor = new List<Tuple<string, double, double, double, double>>();
+        public List<Tuple<double, double, string>> timber_lagging = new List<Tuple<double, double, string>>();
+        public List<Tuple<double, double, double, double>> soldier_pile = new List<Tuple<double, double, double, double>>();
+        public List<Tuple<double, double, double, double, double, double, double>> rail_soldier_pile = new List<Tuple<double, double, double, double, double, double, double>>();
         public List<double> centralCol = new List<double>();
         public double wall_width;
         public double wall_high;
@@ -64,8 +67,6 @@ namespace ExReaderConsole
             xlRange = xlWorksheet.UsedRange;
             rowCount = xlRange.Rows.Count;
             colCount = xlRange.Columns.Count;
-
-            TaskDialog.Show("Done", rowCount.ToString());
         }
 
         void SetPage(int page)
@@ -84,6 +85,7 @@ namespace ExReaderConsole
 
             pos = this.FindAddress("分析斷面");
             section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
+            
             pos = this.FindAddress("擋土壁長度");
             wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
             pos = this.FindAddress("環形擋土直徑");
@@ -136,16 +138,16 @@ namespace ExReaderConsole
         }
         public void PassWallData()
         {
-            var pos = this.FindAddress("擋土壁厚度");
+            var pos = this.FindAddress("連續壁厚度");
             wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
             pos = this.FindAddress("分析斷面");
             section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
             pos = this.FindAddress("擋土壁長度");
             wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            int i = 1;
-            try
-            {
 
+            int i = 0;
+            if (excaRange.Count == 0)
+            {
                 pos = this.FindAddress("開挖範圍");
                 i = 1;
                 do
@@ -155,7 +157,7 @@ namespace ExReaderConsole
                     i++;
                 } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
             }
-            catch { }
+
             pos = this.FindAddress("開挖階數");
             i = 1;
             do
@@ -169,8 +171,10 @@ namespace ExReaderConsole
 
         public void PassColumnData()
         {
+            
             var pos = this.FindAddress("中間柱");
             int i = 1;
+            
             do
             {
                 var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
@@ -179,12 +183,11 @@ namespace ExReaderConsole
                 column.Add(data);
                 i++;
             } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
-            
 
             pos = this.FindAddress("分析斷面");
             section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
 
-            try
+            if (excaRange.Count == 0)
             {
                 pos = this.FindAddress("開挖範圍");
                 i = 1;
@@ -194,9 +197,32 @@ namespace ExReaderConsole
                     excaRange.Add(data);
                     i++;
                 } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                centralCol.Add(4);
             }
-            catch { };
-            centralCol.Add(4);
+        }
+        public void PassSoldierPile()
+        {
+            var pos = this.FindAddress(column[0].Item5);
+            var data = Tuple.Create(xlRange.Cells[pos.Item1, pos.Item2 + 8].Value2, xlRange.Cells[pos.Item1, pos.Item2 + 9].Value2, 
+                xlRange.Cells[pos.Item1, pos.Item2 + 10].Value2, xlRange.Cells[pos.Item1, pos.Item2 + 11].Value2);
+            soldier_pile.Add(data);
+        }
+        public void PassRailSoldierPile()
+        {
+            var pos = this.FindAddress("JRS˙JIS37Kg A");
+            var data = Tuple.Create(xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1, pos.Item2 + 2].Value2,
+                xlRange.Cells[pos.Item1, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1, pos.Item2 + 4].Value2,
+                xlRange.Cells[pos.Item1, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1, pos.Item2 + 6].Value2,
+                xlRange.Cells[pos.Item1, pos.Item2 + 7].Value2);
+            rail_soldier_pile.Add(data);
+        }
+        public void PassTimberLagging()
+        {
+            var pos = this.FindAddress("長(m)");
+            var data = Tuple.Create(xlRange.Cells[pos.Item1 + 1, pos.Item2 + 1].Value2, 
+                xlRange.Cells[pos.Item1 + 1, pos.Item2 + 2].Value2, 
+                xlRange.Cells[pos.Item1 + 1, pos.Item2 + 3].Value2);
+            timber_lagging.Add(data);
         }
         public void PassFrameData()
         {

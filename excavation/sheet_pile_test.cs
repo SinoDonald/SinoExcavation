@@ -43,10 +43,8 @@ namespace excavation
                     sheet.CloseEx();
                 }
                 catch (Exception e) { sheet.CloseEx(); TaskDialog.Show("Error", e.Message + e.StackTrace); }
-
                 Transaction tran = new Transaction(doc);
                 SubTransaction subtran = new SubTransaction(doc);
-
                 tran.Start("放鋼板樁");
 
                 //開挖各階之深度輸入
@@ -73,7 +71,6 @@ namespace excavation
                 Level wall_level = Level.Create(doc, sheet.wall_high * 1000 * -1 / 304.8);
                 try { wall_level.Name = String.Format("斷面{0}-擋土壁深度", sheet.section); } catch { }
 
-
                 //須回到原點
                 XYZ[] points = new XYZ[sheet.excaRange.Count()];
 
@@ -83,19 +80,22 @@ namespace excavation
                     points[i] = new XYZ(sheet.excaRange[i].Item1 - xshift, sheet.excaRange[i].Item2 - yshift, 0) * 1000 / 304.8;
 
                 Level level = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().First();
+
                 FamilySymbol sheet_pile = new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>().Where(x => x.Name == "鋼板樁_v2").ToList().First();
                 sheet_pile.Activate();
+
                 sheet_pile.LookupParameter("高度").SetValueString((sheet.wall_high * 1000).ToString());
 
                 FamilyInstance instance1 = doc.Create.NewFamilyInstance(XYZ.Zero, sheet_pile, wall_level, StructuralType.Brace);
                 double B = double.Parse(instance1.LookupParameter("B").AsValueString());
-                double h = double.Parse(instance1.LookupParameter("h").AsValueString());
-                double t = double.Parse(instance1.LookupParameter("t").AsValueString());
+                double h = double.Parse(instance1.LookupParameter("h").AsValueString());//h
+                double t = double.Parse(instance1.LookupParameter("t").AsValueString());//t
                 double distance = (B + 2 * t * Math.Tan(15 * Math.PI / 180)) / 304.8;
+
                 doc.Delete(instance1.Id);
 
                 IList<Curve> wall_profileloops = new List<Curve>();
-                
+
                 for (int i = 0; i < points.Count() - 1; i++)
                 {
                     subtran.Start();

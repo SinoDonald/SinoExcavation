@@ -80,6 +80,8 @@
             this.step3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -160,8 +162,6 @@
             this.title = new System.Windows.Forms.Label();
             this.mini = new System.Windows.Forms.Button();
             this.dragControl1 = new excavation.DragControl();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.homeleftpanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.settingpanel1.SuspendLayout();
@@ -812,6 +812,32 @@
             this.tabPage1.Size = new System.Drawing.Size(377, 285);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 12F);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.label23.Location = new System.Drawing.Point(29, 74);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(129, 20);
+            this.label23.TabIndex = 37;
+            this.label23.Text = "連續壁建置模式 :";
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "連續壁",
+            "鋼板樁",
+            "型鋼樁",
+            "鋼軌樁"});
+            this.comboBox10.Location = new System.Drawing.Point(172, 74);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(121, 20);
+            this.comboBox10.TabIndex = 36;
             // 
             // label18
             // 
@@ -1871,30 +1897,6 @@
             // 
             this.dragControl1.SelectControl = this.header;
             // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "連續壁",
-            "鋼板樁"});
-            this.comboBox10.Location = new System.Drawing.Point(172, 74);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 20);
-            this.comboBox10.TabIndex = 36;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label23.Font = new System.Drawing.Font("微軟正黑體", 12F);
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.label23.Location = new System.Drawing.Point(29, 74);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(129, 20);
-            this.label23.TabIndex = 37;
-            this.label23.Text = "連續壁建置模式 :";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1903,7 +1905,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1174, 788);
+            this.ClientSize = new System.Drawing.Size(895, 678);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.header);
