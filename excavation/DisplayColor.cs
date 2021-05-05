@@ -20,7 +20,6 @@ namespace excavation
             Document doc = commandData.Application.ActiveUIDocument.Document;
             UIDocument uiDoc = commandData.Application.ActiveUIDocument;
 
-            
             Transaction tran = new Transaction(doc);
             SubTransaction subtran = new SubTransaction(doc);
             tran.Start("start");
@@ -37,21 +36,42 @@ namespace excavation
             // If display style does not already exist in the document, create it
             if (displayStyle.Count() == 0)
             {
-                //TaskDialog.Show("1", );
                 AnalysisDisplayColoredSurfaceSettings coloredSurfaceSettings = new AnalysisDisplayColoredSurfaceSettings();
                 coloredSurfaceSettings.ShowGridLines = true;
 
                 AnalysisDisplayColorSettings colorSettings = new AnalysisDisplayColorSettings();
+                colorSettings.ColorSettingsType = AnalysisDisplayStyleColorSettingsType.SolidColorRanges;
+
+                Color deepRed = new Color(166, 0, 0);
+                Color red = new Color(255, 44, 01);
+                Color green = new Color(0, 253, 0);
+                Color lightGreen = new Color(128, 255, 12);
                 Color orange = new Color(255, 205, 0);
                 Color purple = new Color(200, 0, 200);
-                colorSettings.MaxColor = orange;
+                Color white = new Color(255, 255, 255);
+
+
+                colorSettings.MaxColor = red;
+                colorSettings.SetIntermediateColors(new List<AnalysisDisplayColorEntry>
+                                                    {
+                                                        new AnalysisDisplayColorEntry(red, -3000),
+                                                        new AnalysisDisplayColorEntry(orange, -2500),
+                                                        new AnalysisDisplayColorEntry(lightGreen, 2500),
+                                                        new AnalysisDisplayColorEntry(orange, 3000),
+
+                                                    });
+                
                 colorSettings.MinColor = purple;
 
-                AnalysisDisplayLegendSettings legendSettings = new AnalysisDisplayLegendSettings();
-                legendSettings.NumberOfSteps = 10;
-                legendSettings.Rounding = 0.05;
-                legendSettings.ShowDataDescription = false;
-                legendSettings.ShowLegend = true;
+                AnalysisDisplayLegendSettings legendSettings = new AnalysisDisplayLegendSettings
+                {
+                    NumberOfSteps = 10,
+                    Rounding = 0.05,
+                    ShowDataDescription = false,
+                    ShowLegend = true
+                    
+                };                
+
 
                 analysisDisplayStyle = AnalysisDisplayStyle.CreateAnalysisDisplayStyle(doc, "Display Style 1", coloredSurfaceSettings, colorSettings, legendSettings);
             }
@@ -63,8 +83,10 @@ namespace excavation
             // now assign the display style to the view
             doc.ActiveView.AnalysisDisplayStyleId = analysisDisplayStyle.Id;
             subtran.Commit();
+
             subtran.Start();
             SpatialFieldManager sfm = SpatialFieldManager.GetSpatialFieldManager(doc.ActiveView);
+            sfm.Clear();
             if (null == sfm)
             {
                 sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
@@ -79,27 +101,38 @@ namespace excavation
             BoundingBoxUV bb = face.GetBoundingBox();
             UV min = bb.Min;
             UV max = bb.Max;
-            uvPts.Add(new UV(min.U, min.V));
             uvPts.Add(new UV(max.U, max.V));
+            uvPts.Add(new UV(min.U, max.V));
+
+            uvPts.Add(new UV(max.U, max.V/2));
+            uvPts.Add(new UV(min.U, max.V/2));
+
+            uvPts.Add(new UV(max.U, min.V));
+            uvPts.Add(new UV(min.U, min.V));
+
 
             FieldDomainPointsByUV pnts = new FieldDomainPointsByUV(uvPts);
 
-            List<double> doubleList = new List<double>();
             IList<ValueAtPoint> valList = new List<ValueAtPoint>();
-            doubleList.Add(0);
-            valList.Add(new ValueAtPoint(doubleList));
-            doubleList.Clear();
-            doubleList.Add(10);
-            valList.Add(new ValueAtPoint(doubleList));
-            TaskDialog.Show("1", valList.ToString());
+            valList.Add(new ValueAtPoint(new List<double> { -133 }));
+            valList.Add(new ValueAtPoint(new List<double> { 29 }));
+
+            valList.Add(new ValueAtPoint(new List<double> { 4000 }));
+            valList.Add(new ValueAtPoint(new List<double> { -430 }));
+
+            valList.Add(new ValueAtPoint(new List<double> { -158 }));
+            valList.Add(new ValueAtPoint(new List<double> { -2900 }));
             FieldValues vals = new FieldValues(valList);
 
-            AnalysisResultSchema resultSchema = new AnalysisResultSchema("Schema Name", "Description");
+            AnalysisResultSchema resultSchema = new AnalysisResultSchema("鋼筋應力", "Description");
+            resultSchema.SetUnits(new List<string> { "kg/cm^2" }, new List<double> { 1 });
+
+            sfm.SetMeasurementNames(new List<string> { "資料 1" });
+
             int schemaIndex = sfm.RegisterResult(resultSchema);
             sfm.UpdateSpatialFieldPrimitive(idx, pnts, vals, schemaIndex);
             subtran.Commit();
             tran.Commit();
-
 
             return Result.Succeeded;
         }

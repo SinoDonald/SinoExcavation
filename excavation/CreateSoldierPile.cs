@@ -7,6 +7,7 @@ using Autodesk.Revit.DB.Architecture;
 using Autodesk.Revit.DB.Structure;
 using ExReaderConsole;
 using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace excavation
 {
@@ -32,9 +33,44 @@ namespace excavation
             get;
             set;
         }
+        public OpenFileDialog openFileDialog
+        {
+            get;
+            set;
+        }
         public void Execute(UIApplication app)
         {
             Document doc = app.ActiveUIDocument.Document;
+            Transaction tran = new Transaction(doc);
+
+            string dwg_file_name = "";
+            Transform project_transform = null;
+            GeometryElement geoLines = null;
+            try
+            {
+                dwg_file_name = openFileDialog.FileName;
+            }
+            catch { }
+
+            if (dwg_file_name.Contains(".dwg"))
+            {
+                tran.Start("CAD");
+                //插入CAD
+                Autodesk.Revit.DB.View view = doc.ActiveView;
+                DWGImportOptions dWGImportOptions = new DWGImportOptions();
+                dWGImportOptions.ColorMode = ImportColorMode.Preserved;
+                dWGImportOptions.Placement = ImportPlacement.Shared;
+                LinkLoadResult linkLoadResult = new LinkLoadResult();
+                ImportInstance toz = ImportInstance.Create(doc, view, dwg_file_name, dWGImportOptions, out linkLoadResult);
+                ElementId toz_id = toz.Id;
+
+                tran.Commit();
+                //取得CAD
+                ImportInstance importInstance = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(x => x.Id == toz_id).First();
+                project_transform = importInstance.GetTotalTransform();
+                GeometryElement geometryElement = importInstance.get_Geometry(new Options());
+                geoLines = (geometryElement.First() as GeometryInstance).SymbolGeometry;
+            }
 
             foreach (string file_path in files_path)
             {
@@ -65,7 +101,6 @@ namespace excavation
                 }
                 catch (Exception e) { sheet.CloseEx(); TaskDialog.Show("Error", e.Message + e.StackTrace); }
 
-                Transaction tran = new Transaction(doc);
                 SubTransaction subtran = new SubTransaction(doc);
                 tran.Start("create soldier pile");
 
@@ -96,16 +131,90 @@ namespace excavation
                     wall_level.Name = String.Format("斷面{0}-擋土壁深度", sheet.section); 
                 } 
                 catch { }
-                
-                //須回到原點
-                XYZ[] points = new XYZ[sheet.excaRange.Count()];
 
-                //依照xlsx內給定的xy座標建立開挖範圍
-                //讀取座標建立points
-                for (int i = 0; i != sheet.excaRange.Count(); i++)
+                //須回到原點
+                List<Line> lines = new List<Line>();
+                if (dwg_file_name.Contains(".dwg"))
                 {
-                    points[i] = new XYZ(sheet.excaRange[i].Item1 - xshift, sheet.excaRange[i].Item2 - yshift, 0) * 1000 / 304.8;
+                    IList<String> target_section = new List<String>();
+                    target_section.Add(sheet.section);
+                    IList<XYZ> allXYZs = new List<XYZ>();
+                    foreach (var v in geoLines)
+                    {
+                        allXYZs.Clear();
+                        try//處理polyline
+                        {
+                            PolyLine pline = v as PolyLine;
+                            GraphicsStyle check = doc.GetElement(pline.GraphicsStyleId) as GraphicsStyle;
+
+                            //檢查是否為所要圖層
+                            if (target_section.Contains(check.GraphicsStyleCategory.Name))
+                            {
+
+                                //撈取所有點位
+                                foreach (XYZ p in pline.GetCoordinates())
+                                {
+                                    allXYZs.Add(project_transform.OfPoint(p - new XYZ(xshift, yshift, 0)));
+                                }
+
+                                bool Clockdirection = ClockwiseDirection(allXYZs);
+
+                                //建置線段//
+                                if (Clockdirection == true)//若為順時針需要倒轉
+                                {
+                                    allXYZs = allXYZs.Reverse().ToList();
+                                }
+                                for (int i = 0; i < allXYZs.Count() - 1; i++)
+                                {
+                                    Line line = Line.CreateBound(allXYZs[i], allXYZs[i + 1]);
+                                    lines.Add(line);
+                                }
+                            }
+                        }
+                        catch (Exception e) { }
+
+                    }
+
+                    //處理Arc順逆時針問題
+                    foreach (var v in geoLines)
+                    {
+                        allXYZs.Clear();
+                        try
+                        {
+                            //處理ARC
+                            Arc pline = v as Arc;
+                            //檢查是否為所要圖層
+                            if (target_section.Contains((doc.GetElement(pline.GraphicsStyleId) as GraphicsStyle).GraphicsStyleCategory.Name))
+                            {
+                                //撈取所有點位
+                                foreach (XYZ p in pline.Tessellate())
+                                {
+                                    allXYZs.Add(project_transform.OfPoint(p - new XYZ(xshift, yshift, 0)));
+                                }
+
+                                for (int i = 0; i < allXYZs.Count() - 1; i++)
+                                {
+                                    Line line = Line.CreateBound(allXYZs[i], allXYZs[i + 1]);
+                                    lines.Add(line);
+                                }
+                            }
+                        }
+                        catch (Exception e) { }
+                    }
                 }
+                else
+                {
+                    //依照xlsx內給定的xy座標建立開挖範圍
+                    //讀取座標建立points
+                    for (int i = 0; i != sheet.excaRange.Count() - 1; i++)
+                    {
+                        XYZ point1 = new XYZ(sheet.excaRange[i].Item1 - xshift, sheet.excaRange[i].Item2 - yshift, 0) * 1000 / 304.8;
+                        XYZ point2 = new XYZ(sheet.excaRange[i + 1].Item1 - xshift, sheet.excaRange[i + 1].Item2 - yshift, 0) * 1000 / 304.8;
+
+                        lines.Add(Line.CreateBound(point1, point2));
+                    }
+                }
+
                 Level level = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().First();
 
                 double B = 0;
@@ -176,10 +285,10 @@ namespace excavation
                     wallType = new_wallFamSym;
                 }
 
-                for (int i = 0; i < points.Count() - 1; i++)
+                for (int i = 0; i < lines.Count(); i++)
                 {
                     subtran.Start();
-                    Line edge_line = Line.CreateBound(points[i], points[i + 1]);
+                    Line edge_line = lines[i];
                     // doc.Create.NewDetailCurve(doc.ActiveView, edge_line);
 
                     double slope = edge_line.Direction.Y / edge_line.Direction.X;
@@ -191,9 +300,9 @@ namespace excavation
                     List<XYZ> pre_rotate_point_list = new List<XYZ>();
 
                     XYZ nomal_vector = XYZ.BasisZ.CrossProduct(edge_line.Direction);
-
+                    
                     // create corner h beam in each edge_line
-                    XYZ corner_point = points[i + 1] + B / 2 / 304.8 * edge_line.Direction - (h / 2 / 304.8) * nomal_vector;
+                    XYZ corner_point = edge_line.GetEndPoint(1) + B / 2 / 304.8 * edge_line.Direction - (h / 2 / 304.8) * nomal_vector;
                     FamilyInstance instance3 = doc.Create.NewFamilyInstance(corner_point, fs, level, StructuralType.NonStructural);
                     ElementTransformUtils.RotateElement(doc, instance3.Id, Line.CreateBound(corner_point, (corner_point + XYZ.BasisZ)), Math.Atan(slope));
 
@@ -202,7 +311,7 @@ namespace excavation
                     FamilyInstance instance2;
                     for (int j = 0; j < pile_num; j++)
                     {
-                        XYZ point = points[i] + (j * distance + B / 2 / 304.8) * edge_line.Direction - (h / 2 / 304.8) * nomal_vector;
+                        XYZ point = edge_line.GetEndPoint(0) + (j * distance + B / 2 / 304.8) * edge_line.Direction - (h / 2 / 304.8) * nomal_vector;
                         XYZ next_point = point + distance * edge_line.Direction;
                         XYZ wall_point = point + (t1 / 2 / 304.8) * edge_line.Direction;
                         XYZ wall_next_point = point - (t1 / 2 / 304.8) * edge_line.Direction + distance * edge_line.Direction;
@@ -258,6 +367,38 @@ namespace excavation
         public string GetName()
         {
             return "Event handler is working now!!";
+        }
+
+        private bool ClockwiseDirection(IList<XYZ> points)
+        {
+            //計算多邊形邊界線順時鐘/逆時鐘
+            bool clock = true;
+            int i, j, k;
+            int count = 0;
+            double z;
+            int n = points.Count;
+            for (i = 0; i < n; i++)
+            {
+                j = (i + 1) % n;
+                k = (i + 2) % n;
+                z = (points[j].X - points[i].X) * (points[k].Y - points[j].Y);
+                z -= (points[j].Y - points[i].Y) * (points[k].X - points[j].X);
+                if (z < 0)
+                {
+                    count--;
+                }
+                else if (z > 0)
+                {
+                    count++;
+                }
+            }
+            if (count > 0)
+            {
+                clock = false;
+            }
+
+            return clock;
+
         }
 
     }

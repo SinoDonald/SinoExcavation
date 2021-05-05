@@ -80,7 +80,7 @@ namespace ExReaderConsole
 
         public void PassCircle()
         {
-            var pos = this.FindAddress("擋土壁厚度");
+            var pos = this.FindAddress("連續壁厚度");
             wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
 
             pos = this.FindAddress("分析斷面");
@@ -88,17 +88,20 @@ namespace ExReaderConsole
             
             pos = this.FindAddress("擋土壁長度");
             wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            pos = this.FindAddress("環形擋土直徑");
-            Diameter = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
+            //pos = this.FindAddress("環形擋土直徑");
+            //Diameter = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
             pos = this.FindAddress("開挖範圍");
             int i = 1;
-            do
+            try
             {
-                var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
-                excaRange.Add(data);
-                i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
-
+                do
+                {
+                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+                    excaRange.Add(data);
+                    i++;
+                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+            }
+            catch { centralCol.Add(4); }
             pos = this.FindAddress("開挖階數");
             i = 1;
             do
@@ -148,14 +151,19 @@ namespace ExReaderConsole
             int i = 0;
             if (excaRange.Count == 0)
             {
-                pos = this.FindAddress("開挖範圍");
-                i = 1;
-                do
+                try
                 {
-                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
-                    excaRange.Add(data);
-                    i++;
-                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+
+                    pos = this.FindAddress("開挖範圍");
+                    i = 1;
+                    do
+                    {
+                        var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+                        excaRange.Add(data);
+                        i++;
+                    } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                }
+                catch { centralCol.Add(4); }
             }
 
             pos = this.FindAddress("開挖階數");
@@ -189,15 +197,20 @@ namespace ExReaderConsole
 
             if (excaRange.Count == 0)
             {
-                pos = this.FindAddress("開挖範圍");
-                i = 1;
-                do
+                try
                 {
-                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
-                    excaRange.Add(data);
-                    i++;
-                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
-                centralCol.Add(4);
+                    pos = this.FindAddress("開挖範圍");
+                    i = 1;
+                    do
+                    {
+                        var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+                        excaRange.Add(data);
+                        i++;
+                    } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                    centralCol.Add(4);
+
+                }
+                catch { centralCol.Add(4); }
             }
         }
         public void PassSoldierPile()
@@ -278,7 +291,7 @@ namespace ExReaderConsole
                     i++;
                 } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
             }
-            catch { };
+            catch { centralCol.Add(4); };
         }
         public void PassSideData()
         {

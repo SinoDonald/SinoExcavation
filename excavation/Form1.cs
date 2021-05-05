@@ -205,7 +205,7 @@ namespace excavation
         private void button2_Click(object sender, EventArgs e)
         {
             //判斷是否有載入CAD，使用不同建置方法
-            if (textBox1.Text.Contains("dwg"))
+            if (textBox1.Text.Contains("dwg") && comboBox10.Text == "連續壁")
             {
                 //建立連續壁CADmode
                 handler_createWallCADmode.files_path = new List<string>();
@@ -525,7 +525,7 @@ namespace excavation
                 ExReader exReader = new ExReader();
                 exReader.SetData(file, 1);
                 exReader.PassColumnData();
-                // exReader.PassCircle();
+                exReader.PassCircle();
                 exReader.CloseEx();
                 comboBox1.Items.Add(new { Text = exReader.section, Value = exReader.centralCol[0] });
                 comboBox2.Items.Add(new { Text = exReader.section, Value = exReader.centralCol[0] });
@@ -801,6 +801,9 @@ namespace excavation
             OpenFileDialog openFileDialogFrame = new OpenFileDialog();
             openFileDialogFrame.ShowDialog();
             handler_createWallCADmode.openFileDialog = openFileDialogFrame;
+            handler_CreateSoldierPile.openFileDialog = openFileDialogFrame;
+            handler_sheet_pile_NoCAD.openFileDialog = openFileDialogFrame;
+
             textBox1.Text = openFileDialogFrame.SafeFileName;
         }
 

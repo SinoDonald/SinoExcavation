@@ -56,15 +56,10 @@ namespace excavation
 
                 trans.Commit();
                 //取得CAD
-
                 ImportInstance importInstance = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(x => x.Id == toz_id).First();
-
                 Transform project_transform = importInstance.GetTotalTransform();
-
                 GeometryElement geometryElement = importInstance.get_Geometry(new Options());
-
                 GeometryElement geoLines = (geometryElement.First() as GeometryInstance).SymbolGeometry;
-
 
                 IList<double> allThetas = new List<double>();
                 List<Wall> all_walls = new List<Wall>();
@@ -82,7 +77,6 @@ namespace excavation
                         dex.CloseEx();
                     }
                     catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
-
 
                     trans.Start("交易開始");
                     //開挖各階之深度輸入
@@ -136,21 +130,22 @@ namespace excavation
                     List<Wall> inner_wall_for_arc = new List<Wall>();
                     foreach (var v in geoLines)
                     {
-
                         allXYZs.Clear();
                         try//處理polyline
                         {
                             PolyLine pline = v as PolyLine;
                             GraphicsStyle check = doc.GetElement(pline.GraphicsStyleId) as GraphicsStyle;
+
                             //檢查是否為所要圖層
                             if (target_section.Contains(check.GraphicsStyleCategory.Name))
                             {
+
                                 //撈取所有點位
                                 foreach (XYZ p in pline.GetCoordinates())
                                 {
                                     allXYZs.Add(project_transform.OfPoint(p - new XYZ(xshift, yshift, 0)));
-                                }
 
+                                }
                                 bool Clockdirection = ClockwiseDirection(allXYZs);
 
                                 //建置線段
@@ -168,7 +163,6 @@ namespace excavation
                                     wall_profileloops.Add(line);
                                 }
 
-
                                 //建立牆
                                 for (int i = 0; i < allXYZs.Count<XYZ>() - 1; i++)
                                 {
@@ -184,7 +178,6 @@ namespace excavation
                             }
                         }
                         catch (Exception e) { }
-
                     }
 
                     IList<XYZ> poly_wall_points = new List<XYZ>();
@@ -269,7 +262,6 @@ namespace excavation
 
                     }
 
-
                     //蒐集所有連續壁點座標
                     IList<XYZ> wall_points = new List<XYZ>();
 
@@ -286,7 +278,7 @@ namespace excavation
                             }
                         }
                     }
-
+                    
                     //建置房間
                     Room room = doc.Create.NewRoom(wall_level, new UV(wall_points.Select(x => x.X).ToList().Average(), wall_points.Select(y => y.Y).ToList().Average()));
                     room.Name = "斷面" + dex.section;
