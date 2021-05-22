@@ -43,22 +43,23 @@ namespace excavation
             Transaction trans = new Transaction(doc);
             try
             {
+                
                 trans.Start("CAD");
                 //插入CAD
 
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
+                dWGImportOptions.Placement = ImportPlacement.Origin;
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
-                dWGImportOptions.Placement = ImportPlacement.Shared;
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance toz = ImportInstance.Create(doc, view, openFileDialog.FileName, dWGImportOptions, out linkLoadResult);
-                ElementId toz_id = toz.Id;
-
+                toz.Pinned = false;
+                ElementTransformUtils.MoveElement(doc, toz.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
                 trans.Commit();
+
                 //取得CAD
-                ImportInstance importInstance = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(x => x.Id == toz_id).First();
-                Transform project_transform = importInstance.GetTotalTransform();
-                GeometryElement geometryElement = importInstance.get_Geometry(new Options());
+                Transform project_transform = toz.GetTotalTransform();
+                GeometryElement geometryElement = toz.get_Geometry(new Options());
                 GeometryElement geoLines = (geometryElement.First() as GeometryInstance).SymbolGeometry;
 
                 IList<double> allThetas = new List<double>();
@@ -314,7 +315,7 @@ namespace excavation
 
                 transaction_RC.Commit();
                 */
-
+                
                 TaskDialog.Show("omg", "done");
             }
             catch (Exception e){ TaskDialog.Show("error test!!",e.Message + e.StackTrace); }

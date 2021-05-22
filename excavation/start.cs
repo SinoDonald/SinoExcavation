@@ -20,7 +20,7 @@ namespace excavation
             form2.Show();
             form2.Visible = false;//隱藏form2
             Form1 form1 = new Form1(commandData.Application.ActiveUIDocument, form2);//傳入doc以及form2
-            
+
             form1.Show();
             return Result.Succeeded;
         }

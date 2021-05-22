@@ -47,7 +47,7 @@ namespace excavation
                 dwg_file_name = openFileDialog.FileName;
             }
             catch { }
-
+            
             if (dwg_file_name.Contains(".dwg"))
             {
                 tran.Start("CAD");
@@ -55,16 +55,17 @@ namespace excavation
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
-                dWGImportOptions.Placement = ImportPlacement.Shared;
+                dWGImportOptions.Placement = ImportPlacement.Origin;
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance toz = ImportInstance.Create(doc, view, dwg_file_name, dWGImportOptions, out linkLoadResult);
-                ElementId toz_id = toz.Id;
+                toz.Pinned = false;
+                ElementTransformUtils.MoveElement(doc, toz.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
 
                 tran.Commit();
+
                 //取得CAD
-                ImportInstance importInstance = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(x => x.Id == toz_id).First();
-                project_transform = importInstance.GetTotalTransform();
-                GeometryElement geometryElement = importInstance.get_Geometry(new Options());
+                project_transform = toz.GetTotalTransform();
+                GeometryElement geometryElement = toz.get_Geometry(new Options());
                 geoLines = (geometryElement.First() as GeometryInstance).SymbolGeometry;
             }
 

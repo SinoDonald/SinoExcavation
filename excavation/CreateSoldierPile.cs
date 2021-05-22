@@ -59,16 +59,16 @@ namespace excavation
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
-                dWGImportOptions.Placement = ImportPlacement.Shared;
+                dWGImportOptions.Placement = ImportPlacement.Origin;
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance toz = ImportInstance.Create(doc, view, dwg_file_name, dWGImportOptions, out linkLoadResult);
-                ElementId toz_id = toz.Id;
-
+                toz.Pinned = false;
+                ElementTransformUtils.MoveElement(doc, toz.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
                 tran.Commit();
+
                 //取得CAD
-                ImportInstance importInstance = new FilteredElementCollector(doc).OfClass(typeof(ImportInstance)).Cast<ImportInstance>().Where(x => x.Id == toz_id).First();
-                project_transform = importInstance.GetTotalTransform();
-                GeometryElement geometryElement = importInstance.get_Geometry(new Options());
+                project_transform = toz.GetTotalTransform();
+                GeometryElement geometryElement = toz.get_Geometry(new Options());
                 geoLines = (geometryElement.First() as GeometryInstance).SymbolGeometry;
             }
 
@@ -281,6 +281,17 @@ namespace excavation
                     WallType new_wallFamSym = wallType.Duplicate("連續壁-" + wall_W + "mm") as WallType;
                     CompoundStructure ly = new_wallFamSym.GetCompoundStructure();
                     ly.SetLayerWidth(0, wall_W / 304.8);
+
+                    ElementId material_id = Material.Create(doc, "timber lagging");
+                    Material material = doc.GetElement(material_id) as Material;
+                    double timber_lagging_width = sheet.timber_lagging[0].Item1 / 10 / 304.8;
+                    FillPattern surface_pattern = new FillPattern("timber", FillPatternTarget.Drafting, FillPatternHostOrientation.ToView, 0, timber_lagging_width);
+                    FillPatternElement fillPatternElement = FillPatternElement.Create(doc, surface_pattern);
+                    material.SurfaceForegroundPatternId = fillPatternElement.Id;
+                    material.SurfaceForegroundPatternColor = new Color(255, 255, 255);
+                    material.Color = new Color(120, 120, 120);
+                    ly.SetMaterialId(0, material.Id);
+
                     new_wallFamSym.SetCompoundStructure(ly);
                     wallType = new_wallFamSym;
                 }

@@ -94,7 +94,7 @@
     </Compile>
     <Compile Include="PutDetect.cs" />
     <Compile Include="ReadPlane.cs" />
-    <Compile Include="sheet_pile_test.cs" />
+    <Compile Include="CreateSheetPile.cs" />
     <Compile Include="start.cs" />
     <Compile Include="CreateWallCADmode.cs" />
   </ItemGroup>
