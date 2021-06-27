@@ -102,6 +102,7 @@ namespace excavation
                     //建立連續壁
                     IList<Curve> inner_wall_curves = new List<Curve>();
                     double wall_W = dex.wall_width * 1000; //連續壁厚度
+
                     WallType wallType = null;
                     ICollection<WallType> walltype_familyinstance = new FilteredElementCollector(doc).OfClass(typeof(WallType)).Cast<WallType>().ToList();
                     //檢查擋土壁

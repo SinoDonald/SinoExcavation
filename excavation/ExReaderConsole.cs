@@ -80,9 +80,9 @@ namespace ExReaderConsole
 
         public void PassCircle()
         {
-            var pos = this.FindAddress("連續壁厚度");
+            var pos = this.FindAddress("擋土壁厚度");
             wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-
+            
             pos = this.FindAddress("分析斷面");
             section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
             
@@ -141,8 +141,9 @@ namespace ExReaderConsole
         }
         public void PassWallData()
         {
-            var pos = this.FindAddress("連續壁厚度");
+            var pos = this.FindAddress("擋土壁厚度");
             wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+
             pos = this.FindAddress("分析斷面");
             section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
             pos = this.FindAddress("擋土壁長度");
@@ -339,7 +340,7 @@ namespace ExReaderConsole
 
         public void PassDE()
         {
-            var pos = this.FindAddress("連續壁厚度");
+            var pos = this.FindAddress("擋土壁厚度");
             wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
             pos = this.FindAddress("擋土壁長度");
             wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;

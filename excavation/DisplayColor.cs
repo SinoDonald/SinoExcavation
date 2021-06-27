@@ -86,16 +86,23 @@ namespace excavation
 
             subtran.Start();
             SpatialFieldManager sfm = SpatialFieldManager.GetSpatialFieldManager(doc.ActiveView);
-            sfm.Clear();
-            if (null == sfm)
+            try
+            {
+                sfm.Clear();
+            }
+            catch { }
+            
+            if (sfm == null)
             {
                 sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
             }
 
             Reference reference = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Face, "Select a face");
             int idx = sfm.AddSpatialFieldPrimitive(reference);
-
+            TaskDialog.Show("1", idx.ToString());
             Face face = doc.GetElement(reference).GetGeometryObjectFromReference(reference) as Face;
+
+
 
             IList<UV> uvPts = new List<UV>();
             BoundingBoxUV bb = face.GetBoundingBox();
@@ -110,6 +117,17 @@ namespace excavation
             uvPts.Add(new UV(max.U, min.V));
             uvPts.Add(new UV(min.U, min.V));
 
+            UV faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
+            Transform computeDerivatives = face.ComputeDerivatives(faceCenter);
+            XYZ faceCenterNormal = computeDerivatives.BasisZ;
+
+            XYZ faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(2.5);
+            Transform transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
+
+            //SpatialFieldManager sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
+
+            //int idx = sfm.AddSpatialFieldPrimitive(face, transform);
+            TaskDialog.Show("1", idx.ToString());
 
             FieldDomainPointsByUV pnts = new FieldDomainPointsByUV(uvPts);
 

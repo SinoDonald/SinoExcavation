@@ -119,6 +119,11 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.gradientPanel1 = new auto_line.GradientPanel();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.select_floor_comboBox = new System.Windows.Forms.ComboBox();
             this.select_detector_comboBox = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -373,12 +378,12 @@
             this.上傳檔案ToolStripMenuItem,
             this.輸出ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(123, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(183, 76);
             // 
             // 上傳檔案ToolStripMenuItem
             // 
             this.上傳檔案ToolStripMenuItem.Name = "上傳檔案ToolStripMenuItem";
-            this.上傳檔案ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.上傳檔案ToolStripMenuItem.Size = new System.Drawing.Size(182, 36);
             this.上傳檔案ToolStripMenuItem.Text = "上傳檔案";
             // 
             // 輸出ToolStripMenuItem
@@ -387,7 +392,7 @@
             this.深開挖基礎ToolStripMenuItem,
             this.井式基礎ToolStripMenuItem});
             this.輸出ToolStripMenuItem.Name = "輸出ToolStripMenuItem";
-            this.輸出ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
+            this.輸出ToolStripMenuItem.Size = new System.Drawing.Size(182, 36);
             this.輸出ToolStripMenuItem.Text = "建置";
             // 
             // 深開挖基礎ToolStripMenuItem
@@ -400,49 +405,49 @@
             this.建置斜撐ToolStripMenuItem,
             this.建置回撐ToolStripMenuItem});
             this.深開挖基礎ToolStripMenuItem.Name = "深開挖基礎ToolStripMenuItem";
-            this.深開挖基礎ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.深開挖基礎ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.深開挖基礎ToolStripMenuItem.Text = "深開挖基礎";
             // 
             // 建置連續壁ToolStripMenuItem
             // 
             this.建置連續壁ToolStripMenuItem.Name = "建置連續壁ToolStripMenuItem";
-            this.建置連續壁ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置連續壁ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置連續壁ToolStripMenuItem.Text = "建置連續壁";
             // 
             // 建置中間樁ToolStripMenuItem
             // 
             this.建置中間樁ToolStripMenuItem.Name = "建置中間樁ToolStripMenuItem";
-            this.建置中間樁ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置中間樁ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置中間樁ToolStripMenuItem.Text = "建置中間樁";
             // 
             // 建置ToolStripMenuItem
             // 
             this.建置ToolStripMenuItem.Name = "建置ToolStripMenuItem";
-            this.建置ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置ToolStripMenuItem.Text = "建置圍囹";
             // 
             // 建置支撐ToolStripMenuItem
             // 
             this.建置支撐ToolStripMenuItem.Name = "建置支撐ToolStripMenuItem";
-            this.建置支撐ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置支撐ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置支撐ToolStripMenuItem.Text = "建置支撐";
             // 
             // 建置斜撐ToolStripMenuItem
             // 
             this.建置斜撐ToolStripMenuItem.Name = "建置斜撐ToolStripMenuItem";
-            this.建置斜撐ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置斜撐ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置斜撐ToolStripMenuItem.Text = "建置斜撐";
             // 
             // 建置回撐ToolStripMenuItem
             // 
             this.建置回撐ToolStripMenuItem.Name = "建置回撐ToolStripMenuItem";
-            this.建置回撐ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.建置回撐ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.建置回撐ToolStripMenuItem.Text = "建置回撐";
             // 
             // 井式基礎ToolStripMenuItem
             // 
             this.井式基礎ToolStripMenuItem.Name = "井式基礎ToolStripMenuItem";
-            this.井式基礎ToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.井式基礎ToolStripMenuItem.Size = new System.Drawing.Size(265, 44);
             this.井式基礎ToolStripMenuItem.Text = "井式基礎";
             // 
             // settingpanel1
@@ -495,7 +500,7 @@
             this.label1.Location = new System.Drawing.Point(39, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.Size = new System.Drawing.Size(150, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "X偏移量(m) :";
             // 
@@ -523,7 +528,7 @@
             this.label2.Location = new System.Drawing.Point(416, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(149, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Y偏移量(m) :";
             // 
@@ -571,7 +576,7 @@
             this.label6.Location = new System.Drawing.Point(72, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.Size = new System.Drawing.Size(121, 30);
             this.label6.TabIndex = 12;
             this.label6.Text = "修正斷面 :";
             // 
@@ -602,7 +607,7 @@
             this.label5.Location = new System.Drawing.Point(390, 104);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 16);
+            this.label5.Size = new System.Drawing.Size(183, 30);
             this.label5.TabIndex = 5;
             this.label5.Text = "Y向餘數刪減數 :";
             // 
@@ -623,7 +628,7 @@
             this.label3.Location = new System.Drawing.Point(431, 38);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.Size = new System.Drawing.Size(145, 30);
             this.label3.TabIndex = 3;
             this.label3.Text = "中間樁間距 :";
             // 
@@ -636,7 +641,7 @@
             this.label4.Location = new System.Drawing.Point(4, 104);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.Size = new System.Drawing.Size(184, 30);
             this.label4.TabIndex = 4;
             this.label4.Text = "X向餘數刪減數 :";
             // 
@@ -752,14 +757,14 @@
             this.step5.BackColor = System.Drawing.Color.AliceBlue;
             this.step5.FlatAppearance.BorderSize = 0;
             this.step5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step5.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step5.Location = new System.Drawing.Point(0, 342);
             this.step5.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.step5.Name = "step5";
             this.step5.Size = new System.Drawing.Size(163, 90);
             this.step5.TabIndex = 10;
-            this.step5.Text = "斜 撐";
+            this.step5.Text = "繪製支撐/斜撐";
             this.step5.UseVisualStyleBackColor = false;
             this.step5.Click += new System.EventHandler(this.step5_Click);
             // 
@@ -768,14 +773,14 @@
             this.step4.BackColor = System.Drawing.Color.AliceBlue;
             this.step4.FlatAppearance.BorderSize = 0;
             this.step4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step4.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step4.Location = new System.Drawing.Point(0, 260);
             this.step4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.step4.Name = "step4";
             this.step4.Size = new System.Drawing.Size(163, 90);
             this.step4.TabIndex = 9;
-            this.step4.Text = "支 撐";
+            this.step4.Text = "建置支撐/斜撐";
             this.step4.UseVisualStyleBackColor = false;
             this.step4.Click += new System.EventHandler(this.step4_Click);
             // 
@@ -827,10 +832,10 @@
             this.tabPage1.Controls.Add(this.shift_y);
             this.tabPage1.Controls.Add(this.shift_x);
             this.tabPage1.Controls.Add(this.continuouswall);
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Location = new System.Drawing.Point(8, 39);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(826, 584);
+            this.tabPage1.Size = new System.Drawing.Size(818, 575);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -843,7 +848,7 @@
             this.label23.Location = new System.Drawing.Point(63, 148);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(129, 20);
+            this.label23.Size = new System.Drawing.Size(256, 40);
             this.label23.TabIndex = 37;
             this.label23.Text = "連續壁建置模式 :";
             // 
@@ -870,7 +875,7 @@
             this.label18.Location = new System.Drawing.Point(173, 506);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(87, 20);
+            this.label18.Size = new System.Drawing.Size(172, 40);
             this.label18.TabIndex = 35;
             this.label18.Text = "旋轉角(度):";
             // 
@@ -880,7 +885,7 @@
             this.textBox7.Location = new System.Drawing.Point(373, 506);
             this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(195, 27);
+            this.textBox7.Size = new System.Drawing.Size(195, 46);
             this.textBox7.TabIndex = 34;
             // 
             // textBox1
@@ -920,7 +925,7 @@
             this.label15.Location = new System.Drawing.Point(78, 428);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 20);
+            this.label15.Size = new System.Drawing.Size(261, 40);
             this.label15.TabIndex = 10;
             this.label15.Text = "Y座標平移量(m) :";
             // 
@@ -933,7 +938,7 @@
             this.label12.Location = new System.Drawing.Point(78, 344);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 20);
+            this.label12.Size = new System.Drawing.Size(262, 40);
             this.label12.TabIndex = 9;
             this.label12.Text = "X座標平移量(m) :";
             // 
@@ -943,7 +948,7 @@
             this.shift_y.Location = new System.Drawing.Point(373, 428);
             this.shift_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.shift_y.Name = "shift_y";
-            this.shift_y.Size = new System.Drawing.Size(195, 27);
+            this.shift_y.Size = new System.Drawing.Size(195, 46);
             this.shift_y.TabIndex = 8;
             // 
             // shift_x
@@ -952,7 +957,7 @@
             this.shift_x.Location = new System.Drawing.Point(373, 342);
             this.shift_x.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.shift_x.Name = "shift_x";
-            this.shift_x.Size = new System.Drawing.Size(195, 27);
+            this.shift_x.Size = new System.Drawing.Size(195, 46);
             this.shift_x.TabIndex = 7;
             // 
             // tabPage2
@@ -961,11 +966,11 @@
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.middlepile);
             this.tabPage2.Controls.Add(this.settingpanel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Location = new System.Drawing.Point(8, 39);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage2.Size = new System.Drawing.Size(826, 584);
+            this.tabPage2.Size = new System.Drawing.Size(818, 575);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -975,11 +980,11 @@
             this.tabPage3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage3.BackgroundImage")));
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.gradientPanel2);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Location = new System.Drawing.Point(8, 39);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage3.Size = new System.Drawing.Size(826, 584);
+            this.tabPage3.Size = new System.Drawing.Size(818, 575);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -1038,7 +1043,7 @@
             this.label21.Location = new System.Drawing.Point(108, 222);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 16);
+            this.label21.Size = new System.Drawing.Size(121, 30);
             this.label21.TabIndex = 15;
             this.label21.Text = "建置方式 :";
             // 
@@ -1060,7 +1065,7 @@
             this.label22.Location = new System.Drawing.Point(108, 72);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(62, 16);
+            this.label22.Size = new System.Drawing.Size(121, 30);
             this.label22.TabIndex = 14;
             this.label22.Text = "選擇斷面 :";
             // 
@@ -1069,11 +1074,11 @@
             this.tabPage4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage4.BackgroundImage")));
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.supportpanel);
-            this.tabPage4.Location = new System.Drawing.Point(4, 34);
+            this.tabPage4.Location = new System.Drawing.Point(8, 39);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage4.Size = new System.Drawing.Size(826, 584);
+            this.tabPage4.Size = new System.Drawing.Size(818, 575);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1150,7 +1155,7 @@
             this.label8.Location = new System.Drawing.Point(108, 222);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 16);
+            this.label8.Size = new System.Drawing.Size(121, 30);
             this.label8.TabIndex = 15;
             this.label8.Text = "建置方向 :";
             // 
@@ -1172,7 +1177,7 @@
             this.label7.Location = new System.Drawing.Point(108, 72);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 16);
+            this.label7.Size = new System.Drawing.Size(121, 30);
             this.label7.TabIndex = 14;
             this.label7.Text = "選擇斷面 :";
             // 
@@ -1181,11 +1186,11 @@
             this.tabPage5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage5.BackgroundImage")));
             this.tabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage5.Controls.Add(this.diagonalpanel);
-            this.tabPage5.Location = new System.Drawing.Point(4, 34);
+            this.tabPage5.Location = new System.Drawing.Point(8, 39);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage5.Size = new System.Drawing.Size(826, 584);
+            this.tabPage5.Size = new System.Drawing.Size(818, 575);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1246,7 +1251,7 @@
             this.label11.Location = new System.Drawing.Point(108, 296);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 16);
+            this.label11.Size = new System.Drawing.Size(121, 30);
             this.label11.TabIndex = 20;
             this.label11.Text = "建置方向 :";
             // 
@@ -1280,7 +1285,7 @@
             this.label10.Location = new System.Drawing.Point(108, 198);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.Size = new System.Drawing.Size(121, 30);
             this.label10.TabIndex = 17;
             this.label10.Text = "支撐類型 :";
             // 
@@ -1293,7 +1298,7 @@
             this.label9.Location = new System.Drawing.Point(108, 86);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 16);
+            this.label9.Size = new System.Drawing.Size(121, 30);
             this.label9.TabIndex = 17;
             this.label9.Text = "選擇斷面 :";
             // 
@@ -1319,11 +1324,11 @@
             this.tabPage6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage6.BackgroundImage")));
             this.tabPage6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage6.Controls.Add(this.backsupport);
-            this.tabPage6.Location = new System.Drawing.Point(4, 34);
+            this.tabPage6.Location = new System.Drawing.Point(8, 39);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage6.Size = new System.Drawing.Size(826, 584);
+            this.tabPage6.Size = new System.Drawing.Size(818, 575);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -1332,11 +1337,11 @@
             // 
             this.tabPage7.BackColor = System.Drawing.Color.Lavender;
             this.tabPage7.Controls.Add(this.gradientPanel1);
-            this.tabPage7.Location = new System.Drawing.Point(4, 34);
+            this.tabPage7.Location = new System.Drawing.Point(8, 39);
             this.tabPage7.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.tabPage7.Size = new System.Drawing.Size(826, 584);
+            this.tabPage7.Size = new System.Drawing.Size(818, 575);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
             // 
@@ -1344,21 +1349,92 @@
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.DeepSkyBlue;
             this.gradientPanel1.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.gradientPanel1.Controls.Add(this.comboBox12);
+            this.gradientPanel1.Controls.Add(this.label25);
+            this.gradientPanel1.Controls.Add(this.button9);
+            this.gradientPanel1.Controls.Add(this.comboBox11);
+            this.gradientPanel1.Controls.Add(this.label24);
             this.gradientPanel1.Controls.Add(this.select_floor_comboBox);
             this.gradientPanel1.Controls.Add(this.select_detector_comboBox);
             this.gradientPanel1.Controls.Add(this.label13);
             this.gradientPanel1.Controls.Add(this.label14);
             this.gradientPanel1.Controls.Add(this.place_detector);
-            this.gradientPanel1.Location = new System.Drawing.Point(17, 84);
+            this.gradientPanel1.Location = new System.Drawing.Point(17, 12);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(782, 402);
+            this.gradientPanel1.Size = new System.Drawing.Size(782, 474);
             this.gradientPanel1.TabIndex = 30;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "單一牆面",
+            "所有牆面"});
+            this.comboBox12.Location = new System.Drawing.Point(338, 316);
+            this.comboBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(394, 32);
+            this.comboBox12.TabIndex = 22;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label25.Location = new System.Drawing.Point(189, 318);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(109, 30);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "顯示方式";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(494, 376);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(243, 80);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "顯示監測值";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "鋼筋拉應力",
+            "鋼筋壓應力"});
+            this.comboBox11.Location = new System.Drawing.Point(338, 254);
+            this.comboBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(394, 32);
+            this.comboBox11.TabIndex = 19;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label24.Location = new System.Drawing.Point(189, 254);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(85, 30);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "監測值";
             // 
             // select_floor_comboBox
             // 
             this.select_floor_comboBox.FormattingEnabled = true;
-            this.select_floor_comboBox.Location = new System.Drawing.Point(336, 184);
+            this.select_floor_comboBox.Location = new System.Drawing.Point(338, 100);
             this.select_floor_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.select_floor_comboBox.Name = "select_floor_comboBox";
             this.select_floor_comboBox.Size = new System.Drawing.Size(394, 32);
@@ -1376,7 +1452,7 @@
             "監測_連續壁沉陷觀測點",
             "監測_支撐應變計",
             "監測_支撐應變計_y"});
-            this.select_detector_comboBox.Location = new System.Drawing.Point(336, 124);
+            this.select_detector_comboBox.Location = new System.Drawing.Point(338, 36);
             this.select_detector_comboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.select_detector_comboBox.Name = "select_detector_comboBox";
             this.select_detector_comboBox.Size = new System.Drawing.Size(394, 32);
@@ -1388,10 +1464,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label13.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label13.Location = new System.Drawing.Point(189, 190);
+            this.label13.Location = new System.Drawing.Point(189, 102);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 16);
+            this.label13.Size = new System.Drawing.Size(127, 30);
             this.label13.TabIndex = 17;
             this.label13.Text = "放置階層 : ";
             // 
@@ -1401,10 +1477,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label14.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label14.Location = new System.Drawing.Point(89, 128);
+            this.label14.Location = new System.Drawing.Point(85, 44);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 16);
+            this.label14.Size = new System.Drawing.Size(223, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "欲放置之監測儀器 : ";
             // 
@@ -1416,7 +1492,7 @@
             this.place_detector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.place_detector.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.place_detector.ForeColor = System.Drawing.Color.White;
-            this.place_detector.Location = new System.Drawing.Point(492, 276);
+            this.place_detector.Location = new System.Drawing.Point(494, 158);
             this.place_detector.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.place_detector.Name = "place_detector";
             this.place_detector.Size = new System.Drawing.Size(243, 80);
@@ -1481,7 +1557,7 @@
             this.cir_shift_y.Location = new System.Drawing.Point(535, 496);
             this.cir_shift_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cir_shift_y.Name = "cir_shift_y";
-            this.cir_shift_y.Size = new System.Drawing.Size(195, 27);
+            this.cir_shift_y.Size = new System.Drawing.Size(195, 46);
             this.cir_shift_y.TabIndex = 13;
             // 
             // cir_shift_x
@@ -1490,7 +1566,7 @@
             this.cir_shift_x.Location = new System.Drawing.Point(535, 400);
             this.cir_shift_x.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cir_shift_x.Name = "cir_shift_x";
-            this.cir_shift_x.Size = new System.Drawing.Size(195, 27);
+            this.cir_shift_x.Size = new System.Drawing.Size(195, 46);
             this.cir_shift_x.TabIndex = 12;
             // 
             // label17
@@ -1502,7 +1578,7 @@
             this.label17.Location = new System.Drawing.Point(241, 496);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(132, 20);
+            this.label17.Size = new System.Drawing.Size(261, 40);
             this.label17.TabIndex = 11;
             this.label17.Text = "Y座標平移量(m) :";
             // 
@@ -1515,7 +1591,7 @@
             this.label16.Location = new System.Drawing.Point(241, 400);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(132, 20);
+            this.label16.Size = new System.Drawing.Size(262, 40);
             this.label16.TabIndex = 10;
             this.label16.Text = "X座標平移量(m) :";
             // 
@@ -1605,11 +1681,11 @@
             this.tabPage8.Controls.Add(this.upload_textBoxFrame);
             this.tabPage8.Controls.Add(this.picture_button);
             this.tabPage8.Controls.Add(this.button8);
-            this.tabPage8.Location = new System.Drawing.Point(4, 34);
+            this.tabPage8.Location = new System.Drawing.Point(8, 43);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage8.Size = new System.Drawing.Size(995, 574);
+            this.tabPage8.Size = new System.Drawing.Size(987, 561);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "tabPage8";
             // 
@@ -1709,11 +1785,11 @@
             this.tabPage9.Controls.Add(this.output_excel_textBox);
             this.tabPage9.Controls.Add(this.output_excel_read_button);
             this.tabPage9.Controls.Add(this.output_excel_button);
-            this.tabPage9.Location = new System.Drawing.Point(4, 34);
+            this.tabPage9.Location = new System.Drawing.Point(8, 43);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage9.Size = new System.Drawing.Size(995, 574);
+            this.tabPage9.Size = new System.Drawing.Size(987, 561);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "tabPage9";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -1770,11 +1846,11 @@
             this.tabPage10.Controls.Add(this.label19);
             this.tabPage10.Controls.Add(this.Save_loc_textbox);
             this.tabPage10.Controls.Add(this.CountBtm);
-            this.tabPage10.Location = new System.Drawing.Point(4, 34);
+            this.tabPage10.Location = new System.Drawing.Point(8, 43);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage10.Size = new System.Drawing.Size(995, 574);
+            this.tabPage10.Size = new System.Drawing.Size(987, 561);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "tabPage10";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -1802,7 +1878,7 @@
             this.label19.Location = new System.Drawing.Point(189, 98);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(141, 20);
+            this.label19.Size = new System.Drawing.Size(280, 40);
             this.label19.TabIndex = 36;
             this.label19.Text = "欲放置檔案之位置:";
             // 
@@ -1857,7 +1933,7 @@
             this.label20.Location = new System.Drawing.Point(1138, 74);
             this.label20.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(72, 26);
+            this.label20.Size = new System.Drawing.Size(143, 53);
             this.label20.TabIndex = 6;
             this.label20.Text = "v1.1.0";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -1871,7 +1947,7 @@
             this.topic.Location = new System.Drawing.Point(147, 36);
             this.topic.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.topic.Name = "topic";
-            this.topic.Size = new System.Drawing.Size(383, 37);
+            this.topic.Size = new System.Drawing.Size(768, 73);
             this.topic.TabIndex = 5;
             this.topic.Text = "— 深開挖自動化建模系統 —";
             // 
@@ -1924,7 +2000,7 @@
             this.title.Location = new System.Drawing.Point(26, 30);
             this.title.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(161, 25);
+            this.title.Size = new System.Drawing.Size(309, 48);
             this.title.TabIndex = 4;
             this.title.Text = "SinoExcavation";
             // 
@@ -1955,7 +2031,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1940, 1100);
+            this.ClientSize = new System.Drawing.Size(2687, 1408);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.header);
@@ -2153,5 +2229,10 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ComboBox comboBox12;
+        private System.Windows.Forms.Label label25;
     }
 }

@@ -288,8 +288,8 @@ namespace excavation
                     FillPattern surface_pattern = new FillPattern("timber", FillPatternTarget.Drafting, FillPatternHostOrientation.ToView, 0, timber_lagging_width);
                     FillPatternElement fillPatternElement = FillPatternElement.Create(doc, surface_pattern);
                     material.SurfaceForegroundPatternId = fillPatternElement.Id;
-                    material.SurfaceForegroundPatternColor = new Color(255, 255, 255);
-                    material.Color = new Color(120, 120, 120);
+                    material.SurfaceForegroundPatternColor = new Color(30, 30, 30);
+                    material.Color =  new Color(234, 214, 176);
                     ly.SetMaterialId(0, material.Id);
 
                     new_wallFamSym.SetCompoundStructure(ly);
