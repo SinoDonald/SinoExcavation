@@ -97,13 +97,32 @@ namespace excavation
                 sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
             }
 
-            Reference reference = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Face, "Select a face");
-            int idx = sfm.AddSpatialFieldPrimitive(reference);
-            TaskDialog.Show("1", idx.ToString());
-            Face face = doc.GetElement(reference).GetGeometryObjectFromReference(reference) as Face;
+            ProjectPosition projectPosition = doc.ActiveProjectLocation.GetProjectPosition(XYZ.Zero);
 
+            XYZ translationVector = new XYZ(projectPosition.EastWest, projectPosition.NorthSouth, projectPosition.Elevation);
 
+            TaskDialog.Show("1", translationVector.ToString());
 
+            /*
+            ElementId ele_id = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Element, "Select a face").ElementId;
+            Element ele = doc.GetElement(ele_id);
+            //int idx = sfm.AddSpatialFieldPrimitive(reference);
+            //TaskDialog.Show("1", idx.ToString());
+            //Wall wall = doc.GetElement(reference) as Wall;
+            ElementCategoryFilter filter = new ElementCategoryFilter(BuiltInCategory.wall);
+            FilteredElementCollector collector = new FilteredElementCollector(doc);
+            IList<Element> elementss = collector.WherePasses(filter).ToElements();
+            foreach (Element element in elementss)
+            {
+            double x = ele.get_Parameter(BuiltInParameter.BASEPOINT_EASTWEST_PARAM).AsDouble();
+            double y = ele.get_Parameter(BuiltInParameter.BASEPOINT_NORTHSOUTH_PARAM).AsDouble();
+            double elevation = ele.get_Parameter(BuiltInParameter.BASEPOINT_ELEVATION_PARAM).AsDouble();
+            TaskDialog.Show("1", x.ToString());
+            */
+            
+
+            //90 * 0.74029 * 304.8
+            /*
             IList<UV> uvPts = new List<UV>();
             BoundingBoxUV bb = face.GetBoundingBox();
             UV min = bb.Min;
@@ -149,6 +168,8 @@ namespace excavation
 
             int schemaIndex = sfm.RegisterResult(resultSchema);
             sfm.UpdateSpatialFieldPrimitive(idx, pnts, vals, schemaIndex);
+
+            */
             subtran.Commit();
             tran.Commit();
 

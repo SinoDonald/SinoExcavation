@@ -49,7 +49,7 @@ namespace excavation
 
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
-                dWGImportOptions.Placement = ImportPlacement.Origin;
+                dWGImportOptions.Placement = ImportPlacement.Shared;
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance toz = ImportInstance.Create(doc, view, openFileDialog.FileName, dWGImportOptions, out linkLoadResult);
@@ -149,7 +149,7 @@ namespace excavation
 
                                 }
                                 bool Clockdirection = ClockwiseDirection(allXYZs);
-
+                                
                                 //建置線段
                                 IList<Curve> wall_profileloops = new List<Curve>();
                                 if (Clockdirection == true)//若為順時針需要倒轉
@@ -282,10 +282,12 @@ namespace excavation
                     }
                     
                     //建置房間
+                    
                     Room room = doc.Create.NewRoom(wall_level, new UV(wall_points.Select(x => x.X).ToList().Average(), wall_points.Select(y => y.Y).ToList().Average()));
                     room.Name = "斷面" + dex.section;
                     room.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).Set(dex.section);
                     all_rooms.Add(room);
+                    
                     transaction.Commit();
 
 

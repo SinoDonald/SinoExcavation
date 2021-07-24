@@ -55,6 +55,9 @@ namespace excavation
         ExternalEvent externalEvent_CreateSoldierPile;
         CreateSoldierPile handler_CreateSoldierPile = new CreateSoldierPile();
 
+        ExternalEvent externalEvent_CreateRebar;
+        CreateRebar handler_CreateRebar = new CreateRebar();
+
         ExternalEvent externalEvent_CreateColumn;
         CreateColumn handler_createColumn = new CreateColumn();
 
@@ -112,6 +115,7 @@ namespace excavation
             externalEvent_CreateWallCADmode = ExternalEvent.Create(handler_createWallCADmode);
             externalEvent_CreateSheetPile = ExternalEvent.Create(handler_sheet_pile_NoCAD);
             externalEvent_CreateSoldierPile = ExternalEvent.Create(handler_CreateSoldierPile);
+            externalEvent_CreateRebar = ExternalEvent.Create(handler_CreateRebar);
             externalEvent_CreateColumn = ExternalEvent.Create(handler_createColumn);
             externalEvent_MoveColumn = ExternalEvent.Create(handler_moveColumn);
             externalEvent_CreateFrame = ExternalEvent.Create(handler_createFrame);
@@ -833,6 +837,13 @@ namespace excavation
         private void label20_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            handler_CreateRebar.files_path = new List<string>();
+            handler_CreateRebar.files_path = file_names;
+            externalEvent_CreateRebar.Raise();
         }
     }
 }

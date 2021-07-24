@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle_excavation.cs" />
+    <Compile Include="CreateRebar.cs" />
     <Compile Include="DisplayColor.cs" />
     <Compile Include="CreateSoldierPile.cs" />
     <Compile Include="Counting.cs" />
