@@ -50,9 +50,12 @@ namespace excavation
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
                 dWGImportOptions.Placement = ImportPlacement.Shared;
+                //dWGImportOptions.Placement = ImportPlacement.Origin;
+
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance toz = ImportInstance.Create(doc, view, openFileDialog.FileName, dWGImportOptions, out linkLoadResult);
+                
                 toz.Pinned = false;
                 ElementTransformUtils.MoveElement(doc, toz.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
                 trans.Commit();

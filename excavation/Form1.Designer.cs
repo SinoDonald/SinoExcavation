@@ -35,6 +35,7 @@
             this.middlepile = new System.Windows.Forms.Button();
             this.backsupport = new System.Windows.Forms.Button();
             this.homeleftpanel = new System.Windows.Forms.Panel();
+            this.button15 = new System.Windows.Forms.Button();
             this.pictureout = new System.Windows.Forms.Button();
             this.leftpanel = new System.Windows.Forms.Panel();
             this.outputbutton = new System.Windows.Forms.Button();
@@ -53,22 +54,6 @@
             this.建置回撐ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.井式基礎ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingpanel1 = new System.Windows.Forms.Panel();
-            this.Panel2 = new auto_line.GradientPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Panel1 = new auto_line.GradientPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.output1 = new System.Windows.Forms.Panel();
             this.step7 = new System.Windows.Forms.Button();
@@ -92,43 +77,10 @@
             this.shift_x = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.gradientPanel2 = new auto_line.GradientPanel();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.cofferdam = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.supportpanel = new auto_line.GradientPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.support = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.diagonalpanel = new auto_line.GradientPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.diagonalsupport = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.gradientPanel1 = new auto_line.GradientPanel();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button9 = new System.Windows.Forms.Button();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.select_floor_comboBox = new System.Windows.Forms.ComboBox();
-            this.select_detector_comboBox = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.place_detector = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.main = new System.Windows.Forms.Panel();
             this.upload_textbox = new System.Windows.Forms.TextBox();
@@ -166,27 +118,70 @@
             this.leavebutton = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.mini = new System.Windows.Forms.Button();
+            this.Panel2 = new auto_line.GradientPanel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Panel1 = new auto_line.GradientPanel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.gradientPanel2 = new auto_line.GradientPanel();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.cofferdam = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.supportpanel = new auto_line.GradientPanel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.support = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.diagonalpanel = new auto_line.GradientPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.diagonalsupport = new System.Windows.Forms.Button();
+            this.gradientPanel1 = new auto_line.GradientPanel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.select_floor_comboBox = new System.Windows.Forms.ComboBox();
+            this.select_detector_comboBox = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.place_detector = new System.Windows.Forms.Button();
             this.dragControl1 = new excavation.DragControl();
-            this.button15 = new System.Windows.Forms.Button();
             this.homeleftpanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.settingpanel1.SuspendLayout();
-            this.Panel2.SuspendLayout();
-            this.Panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.output1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.gradientPanel2.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.supportpanel.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.diagonalpanel.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
-            this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.main.SuspendLayout();
             this.output2.SuspendLayout();
@@ -198,6 +193,12 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.header.SuspendLayout();
+            this.Panel2.SuspendLayout();
+            this.Panel1.SuspendLayout();
+            this.gradientPanel2.SuspendLayout();
+            this.supportpanel.SuspendLayout();
+            this.diagonalpanel.SuspendLayout();
+            this.gradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // loadbutton
@@ -207,7 +208,7 @@
             this.loadbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.loadbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loadbutton.Location = new System.Drawing.Point(373, 70);
-            this.loadbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loadbutton.Margin = new System.Windows.Forms.Padding(2);
             this.loadbutton.Name = "loadbutton";
             this.loadbutton.Size = new System.Drawing.Size(50, 30);
             this.loadbutton.TabIndex = 1;
@@ -223,7 +224,7 @@
             this.continuouswall.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.continuouswall.ForeColor = System.Drawing.Color.White;
             this.continuouswall.Location = new System.Drawing.Point(33, 110);
-            this.continuouswall.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.continuouswall.Margin = new System.Windows.Forms.Padding(2);
             this.continuouswall.Name = "continuouswall";
             this.continuouswall.Size = new System.Drawing.Size(210, 40);
             this.continuouswall.TabIndex = 0;
@@ -240,7 +241,7 @@
             this.middlepile.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.middlepile.ForeColor = System.Drawing.Color.White;
             this.middlepile.Location = new System.Drawing.Point(2, 2);
-            this.middlepile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.middlepile.Margin = new System.Windows.Forms.Padding(2);
             this.middlepile.Name = "middlepile";
             this.middlepile.Size = new System.Drawing.Size(141, 35);
             this.middlepile.TabIndex = 0;
@@ -257,7 +258,7 @@
             this.backsupport.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.backsupport.ForeColor = System.Drawing.Color.White;
             this.backsupport.Location = new System.Drawing.Point(80, 106);
-            this.backsupport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backsupport.Margin = new System.Windows.Forms.Padding(2);
             this.backsupport.Name = "backsupport";
             this.backsupport.Size = new System.Drawing.Size(210, 40);
             this.backsupport.TabIndex = 0;
@@ -277,6 +278,16 @@
             this.homeleftpanel.Name = "homeleftpanel";
             this.homeleftpanel.Size = new System.Drawing.Size(150, 304);
             this.homeleftpanel.TabIndex = 3;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(17, 259);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(110, 23);
+            this.button15.TabIndex = 18;
+            this.button15.Text = "建置單元分割";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // pictureout
             // 
@@ -455,196 +466,6 @@
             this.settingpanel1.Size = new System.Drawing.Size(367, 207);
             this.settingpanel1.TabIndex = 17;
             // 
-            // Panel2
-            // 
-            this.Panel2.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.Panel2.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.Panel2.Controls.Add(this.button5);
-            this.Panel2.Controls.Add(this.label1);
-            this.Panel2.Controls.Add(this.textBox3);
-            this.Panel2.Controls.Add(this.textBox2);
-            this.Panel2.Controls.Add(this.label2);
-            this.Panel2.Location = new System.Drawing.Point(2, 122);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(360, 82);
-            this.Panel2.TabIndex = 28;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button5.Location = new System.Drawing.Point(291, 43);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(56, 31);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "偏移";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(18, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "X偏移量(m) :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(272, 15);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(76, 22);
-            this.textBox3.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(99, 15);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 22);
-            this.textBox2.TabIndex = 6;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(192, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Y偏移量(m) :";
-            // 
-            // Panel1
-            // 
-            this.Panel1.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.Panel1.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.Panel1.Controls.Add(this.button4);
-            this.Panel1.Controls.Add(this.label6);
-            this.Panel1.Controls.Add(this.textBox6);
-            this.Panel1.Controls.Add(this.comboBox1);
-            this.Panel1.Controls.Add(this.label5);
-            this.Panel1.Controls.Add(this.textBox5);
-            this.Panel1.Controls.Add(this.label3);
-            this.Panel1.Controls.Add(this.label4);
-            this.Panel1.Controls.Add(this.textBox4);
-            this.Panel1.Location = new System.Drawing.Point(2, 6);
-            this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(360, 115);
-            this.Panel1.TabIndex = 28;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.button4.Location = new System.Drawing.Point(292, 76);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(56, 32);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "修正";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label6.Location = new System.Drawing.Point(33, 19);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "修正斷面 :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(272, 50);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(76, 22);
-            this.textBox6.TabIndex = 10;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(99, 18);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(76, 20);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label5.Location = new System.Drawing.Point(180, 52);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 16);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Y向餘數刪減數 :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(99, 50);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(76, 22);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label3.Location = new System.Drawing.Point(199, 19);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 16);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "中間樁間距 :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label4.Location = new System.Drawing.Point(2, 52);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "X向餘數刪減數 :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(272, 17);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(76, 22);
-            this.textBox4.TabIndex = 8;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -714,9 +535,9 @@
             this.step1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.step1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.step1.Location = new System.Drawing.Point(0, 1);
+            this.step1.Location = new System.Drawing.Point(0, 0);
             this.step1.Name = "step1";
-            this.step1.Size = new System.Drawing.Size(75, 45);
+            this.step1.Size = new System.Drawing.Size(75, 46);
             this.step1.TabIndex = 6;
             this.step1.Text = "連續壁";
             this.step1.UseVisualStyleBackColor = false;
@@ -840,7 +661,8 @@
             "連續壁",
             "鋼板樁",
             "型鋼樁",
-            "鋼軌樁"});
+            "鋼軌樁",
+            "單元分割"});
             this.comboBox10.Location = new System.Drawing.Point(172, 74);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(121, 20);
@@ -863,7 +685,7 @@
             // 
             this.textBox7.Font = new System.Drawing.Font("新細明體", 12F);
             this.textBox7.Location = new System.Drawing.Point(172, 253);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(92, 27);
             this.textBox7.TabIndex = 34;
@@ -874,7 +696,7 @@
             this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox1.Location = new System.Drawing.Point(33, 20);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 36);
@@ -888,7 +710,7 @@
             this.button13.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button13.Location = new System.Drawing.Point(259, 22);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(91, 34);
             this.button13.TabIndex = 32;
@@ -926,7 +748,7 @@
             // 
             this.shift_y.Font = new System.Drawing.Font("新細明體", 12F);
             this.shift_y.Location = new System.Drawing.Point(172, 214);
-            this.shift_y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shift_y.Margin = new System.Windows.Forms.Padding(2);
             this.shift_y.Name = "shift_y";
             this.shift_y.Size = new System.Drawing.Size(92, 27);
             this.shift_y.TabIndex = 8;
@@ -935,7 +757,7 @@
             // 
             this.shift_x.Font = new System.Drawing.Font("新細明體", 12F);
             this.shift_x.Location = new System.Drawing.Point(172, 171);
-            this.shift_x.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.shift_x.Margin = new System.Windows.Forms.Padding(2);
             this.shift_x.Name = "shift_x";
             this.shift_x.Size = new System.Drawing.Size(92, 27);
             this.shift_x.TabIndex = 7;
@@ -948,7 +770,7 @@
             this.tabPage2.Controls.Add(this.settingpanel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(377, 285);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
@@ -961,90 +783,11 @@
             this.tabPage3.Controls.Add(this.gradientPanel2);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(377, 285);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // gradientPanel2
-            // 
-            this.gradientPanel2.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.gradientPanel2.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.gradientPanel2.Controls.Add(this.comboBox8);
-            this.gradientPanel2.Controls.Add(this.cofferdam);
-            this.gradientPanel2.Controls.Add(this.label21);
-            this.gradientPanel2.Controls.Add(this.comboBox9);
-            this.gradientPanel2.Controls.Add(this.label22);
-            this.gradientPanel2.Location = new System.Drawing.Point(10, 20);
-            this.gradientPanel2.Name = "gradientPanel2";
-            this.gradientPanel2.Size = new System.Drawing.Size(361, 201);
-            this.gradientPanel2.TabIndex = 29;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
-            "搭接",
-            "x向重疊",
-            "y向重疊"});
-            this.comboBox8.Location = new System.Drawing.Point(116, 107);
-            this.comboBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(101, 20);
-            this.comboBox8.TabIndex = 16;
-            // 
-            // cofferdam
-            // 
-            this.cofferdam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.cofferdam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cofferdam.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cofferdam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cofferdam.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
-            this.cofferdam.ForeColor = System.Drawing.Color.White;
-            this.cofferdam.Location = new System.Drawing.Point(231, 152);
-            this.cofferdam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cofferdam.Name = "cofferdam";
-            this.cofferdam.Size = new System.Drawing.Size(121, 40);
-            this.cofferdam.TabIndex = 0;
-            this.cofferdam.Text = "建置圍囹";
-            this.cofferdam.UseVisualStyleBackColor = false;
-            this.cofferdam.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label21.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label21.Location = new System.Drawing.Point(50, 111);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(62, 16);
-            this.label21.TabIndex = 15;
-            this.label21.Text = "建置方式 :";
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(116, 35);
-            this.comboBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(101, 20);
-            this.comboBox9.TabIndex = 14;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label22.Location = new System.Drawing.Point(50, 36);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(62, 16);
-            this.label22.TabIndex = 14;
-            this.label22.Text = "選擇斷面 :";
             // 
             // tabPage4
             // 
@@ -1053,108 +796,11 @@
             this.tabPage4.Controls.Add(this.supportpanel);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(377, 285);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // supportpanel
-            // 
-            this.supportpanel.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.supportpanel.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.supportpanel.Controls.Add(this.button6);
-            this.supportpanel.Controls.Add(this.support);
-            this.supportpanel.Controls.Add(this.comboBox3);
-            this.supportpanel.Controls.Add(this.label8);
-            this.supportpanel.Controls.Add(this.comboBox2);
-            this.supportpanel.Controls.Add(this.label7);
-            this.supportpanel.Location = new System.Drawing.Point(3, 17);
-            this.supportpanel.Name = "supportpanel";
-            this.supportpanel.Size = new System.Drawing.Size(361, 201);
-            this.supportpanel.TabIndex = 28;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(240, 104);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(112, 40);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "建置斜撐";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
-            // 
-            // support
-            // 
-            this.support.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.support.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.support.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.support.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.support.ForeColor = System.Drawing.Color.White;
-            this.support.Location = new System.Drawing.Point(240, 148);
-            this.support.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.support.Name = "support";
-            this.support.Size = new System.Drawing.Size(112, 40);
-            this.support.TabIndex = 0;
-            this.support.Text = "建置支撐";
-            this.support.UseVisualStyleBackColor = false;
-            this.support.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "x向",
-            "y向",
-            "雙向"});
-            this.comboBox3.Location = new System.Drawing.Point(116, 107);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(101, 20);
-            this.comboBox3.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label8.Location = new System.Drawing.Point(50, 111);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 16);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "建置方向 :";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(116, 35);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(101, 20);
-            this.comboBox2.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label7.Location = new System.Drawing.Point(50, 36);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 16);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "選擇斷面 :";
             // 
             // tabPage5
             // 
@@ -1163,134 +809,11 @@
             this.tabPage5.Controls.Add(this.diagonalpanel);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage5.Size = new System.Drawing.Size(377, 285);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // diagonalpanel
-            // 
-            this.diagonalpanel.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.diagonalpanel.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.diagonalpanel.Controls.Add(this.button3);
-            this.diagonalpanel.Controls.Add(this.comboBox6);
-            this.diagonalpanel.Controls.Add(this.label11);
-            this.diagonalpanel.Controls.Add(this.comboBox5);
-            this.diagonalpanel.Controls.Add(this.comboBox4);
-            this.diagonalpanel.Controls.Add(this.label10);
-            this.diagonalpanel.Controls.Add(this.label9);
-            this.diagonalpanel.Controls.Add(this.diagonalsupport);
-            this.diagonalpanel.Location = new System.Drawing.Point(3, 17);
-            this.diagonalpanel.Name = "diagonalpanel";
-            this.diagonalpanel.Size = new System.Drawing.Size(361, 201);
-            this.diagonalpanel.TabIndex = 29;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(240, 106);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(112, 40);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "繪製支撐";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "x向",
-            "y向"});
-            this.comboBox6.Location = new System.Drawing.Point(116, 147);
-            this.comboBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(101, 20);
-            this.comboBox6.TabIndex = 20;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label11.Location = new System.Drawing.Point(50, 148);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(62, 16);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "建置方向 :";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Items.AddRange(new object[] {
-            "單排",
-            "雙排"});
-            this.comboBox5.Location = new System.Drawing.Point(116, 95);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(101, 20);
-            this.comboBox5.TabIndex = 17;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(116, 42);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(101, 20);
-            this.comboBox4.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label10.Location = new System.Drawing.Point(50, 99);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 16);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "支撐類型 :";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label9.Location = new System.Drawing.Point(50, 43);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 16);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "選擇斷面 :";
-            // 
-            // diagonalsupport
-            // 
-            this.diagonalsupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.diagonalsupport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.diagonalsupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.diagonalsupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diagonalsupport.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.diagonalsupport.ForeColor = System.Drawing.Color.White;
-            this.diagonalsupport.Location = new System.Drawing.Point(240, 150);
-            this.diagonalsupport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.diagonalsupport.Name = "diagonalsupport";
-            this.diagonalsupport.Size = new System.Drawing.Size(112, 40);
-            this.diagonalsupport.TabIndex = 0;
-            this.diagonalsupport.Text = "繪製斜撐";
-            this.diagonalsupport.UseVisualStyleBackColor = false;
-            this.diagonalsupport.Click += new System.EventHandler(this.button8_Click);
             // 
             // tabPage6
             // 
@@ -1299,7 +822,7 @@
             this.tabPage6.Controls.Add(this.backsupport);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(377, 285);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
@@ -1311,165 +834,10 @@
             this.tabPage7.Controls.Add(this.gradientPanel1);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(377, 285);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "tabPage7";
-            // 
-            // gradientPanel1
-            // 
-            this.gradientPanel1.ColorBottom = System.Drawing.Color.DeepSkyBlue;
-            this.gradientPanel1.ColorTop = System.Drawing.Color.DodgerBlue;
-            this.gradientPanel1.Controls.Add(this.comboBox12);
-            this.gradientPanel1.Controls.Add(this.label25);
-            this.gradientPanel1.Controls.Add(this.button9);
-            this.gradientPanel1.Controls.Add(this.comboBox11);
-            this.gradientPanel1.Controls.Add(this.label24);
-            this.gradientPanel1.Controls.Add(this.select_floor_comboBox);
-            this.gradientPanel1.Controls.Add(this.select_detector_comboBox);
-            this.gradientPanel1.Controls.Add(this.label13);
-            this.gradientPanel1.Controls.Add(this.label14);
-            this.gradientPanel1.Controls.Add(this.place_detector);
-            this.gradientPanel1.Location = new System.Drawing.Point(8, 6);
-            this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(361, 237);
-            this.gradientPanel1.TabIndex = 30;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "單一牆面",
-            "所有牆面"});
-            this.comboBox12.Location = new System.Drawing.Point(156, 158);
-            this.comboBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(184, 20);
-            this.comboBox12.TabIndex = 22;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label25.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label25.Location = new System.Drawing.Point(87, 159);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(56, 16);
-            this.label25.TabIndex = 21;
-            this.label25.Text = "顯示方式";
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(228, 188);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(112, 40);
-            this.button9.TabIndex = 20;
-            this.button9.Text = "顯示監測值";
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "鋼筋拉應力",
-            "鋼筋壓應力"});
-            this.comboBox11.Location = new System.Drawing.Point(156, 127);
-            this.comboBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(184, 20);
-            this.comboBox11.TabIndex = 19;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label24.Location = new System.Drawing.Point(87, 127);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 16);
-            this.label24.TabIndex = 18;
-            this.label24.Text = "監測值";
-            // 
-            // select_floor_comboBox
-            // 
-            this.select_floor_comboBox.FormattingEnabled = true;
-            this.select_floor_comboBox.Location = new System.Drawing.Point(156, 50);
-            this.select_floor_comboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.select_floor_comboBox.Name = "select_floor_comboBox";
-            this.select_floor_comboBox.Size = new System.Drawing.Size(184, 20);
-            this.select_floor_comboBox.TabIndex = 17;
-            this.select_floor_comboBox.DropDown += new System.EventHandler(this.Floor_dropdown);
-            // 
-            // select_detector_comboBox
-            // 
-            this.select_detector_comboBox.FormattingEnabled = true;
-            this.select_detector_comboBox.Items.AddRange(new object[] {
-            "監測_壁中傾度管",
-            "監測_土中傾度管",
-            "監測_水壓計",
-            "監測_觀測井",
-            "監測_連續壁沉陷觀測點",
-            "監測_支撐應變計",
-            "監測_支撐應變計_y"});
-            this.select_detector_comboBox.Location = new System.Drawing.Point(156, 18);
-            this.select_detector_comboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.select_detector_comboBox.Name = "select_detector_comboBox";
-            this.select_detector_comboBox.Size = new System.Drawing.Size(184, 20);
-            this.select_detector_comboBox.TabIndex = 17;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label13.Location = new System.Drawing.Point(87, 51);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 16);
-            this.label13.TabIndex = 17;
-            this.label13.Text = "放置階層 : ";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label14.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label14.Location = new System.Drawing.Point(39, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 16);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "欲放置之監測儀器 : ";
-            // 
-            // place_detector
-            // 
-            this.place_detector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.place_detector.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.place_detector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.place_detector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.place_detector.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.place_detector.ForeColor = System.Drawing.Color.White;
-            this.place_detector.Location = new System.Drawing.Point(228, 79);
-            this.place_detector.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.place_detector.Name = "place_detector";
-            this.place_detector.Size = new System.Drawing.Size(112, 40);
-            this.place_detector.TabIndex = 0;
-            this.place_detector.Text = "建置";
-            this.place_detector.UseVisualStyleBackColor = false;
-            this.place_detector.Click += new System.EventHandler(this.place_detector_Click);
             // 
             // pictureBox2
             // 
@@ -1498,7 +866,7 @@
             this.upload_textbox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.upload_textbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.upload_textbox.Location = new System.Drawing.Point(19, 70);
-            this.upload_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upload_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.upload_textbox.Multiline = true;
             this.upload_textbox.Name = "upload_textbox";
             this.upload_textbox.Size = new System.Drawing.Size(335, 32);
@@ -1522,7 +890,7 @@
             // 
             this.cir_shift_y.Font = new System.Drawing.Font("新細明體", 12F);
             this.cir_shift_y.Location = new System.Drawing.Point(247, 248);
-            this.cir_shift_y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cir_shift_y.Margin = new System.Windows.Forms.Padding(2);
             this.cir_shift_y.Name = "cir_shift_y";
             this.cir_shift_y.Size = new System.Drawing.Size(92, 27);
             this.cir_shift_y.TabIndex = 13;
@@ -1531,7 +899,7 @@
             // 
             this.cir_shift_x.Font = new System.Drawing.Font("新細明體", 12F);
             this.cir_shift_x.Location = new System.Drawing.Point(247, 200);
-            this.cir_shift_x.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cir_shift_x.Margin = new System.Windows.Forms.Padding(2);
             this.cir_shift_x.Name = "cir_shift_x";
             this.cir_shift_x.Size = new System.Drawing.Size(92, 27);
             this.cir_shift_x.TabIndex = 12;
@@ -1571,7 +939,7 @@
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(129, 115);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(210, 45);
             this.button2.TabIndex = 6;
@@ -1646,9 +1014,9 @@
             this.tabPage8.Controls.Add(this.picture_button);
             this.tabPage8.Controls.Add(this.button8);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage8.Size = new System.Drawing.Size(455, 280);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "tabPage8";
@@ -1662,7 +1030,7 @@
             this.button14.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button14.Location = new System.Drawing.Point(346, 110);
-            this.button14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(87, 30);
             this.button14.TabIndex = 32;
@@ -1679,7 +1047,7 @@
             this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Location = new System.Drawing.Point(346, 59);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(87, 30);
             this.button7.TabIndex = 30;
@@ -1702,7 +1070,7 @@
             this.upload_textBoxFrame.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.upload_textBoxFrame.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.upload_textBoxFrame.Location = new System.Drawing.Point(133, 57);
-            this.upload_textBoxFrame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upload_textBoxFrame.Margin = new System.Windows.Forms.Padding(2);
             this.upload_textBoxFrame.Multiline = true;
             this.upload_textBoxFrame.Name = "upload_textBoxFrame";
             this.upload_textBoxFrame.Size = new System.Drawing.Size(210, 33);
@@ -1747,9 +1115,9 @@
             this.tabPage9.Controls.Add(this.output_excel_read_button);
             this.tabPage9.Controls.Add(this.output_excel_button);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage9.Size = new System.Drawing.Size(455, 280);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "tabPage9";
@@ -1761,7 +1129,7 @@
             this.output_excel_textBox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.output_excel_textBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.output_excel_textBox.Location = new System.Drawing.Point(160, 72);
-            this.output_excel_textBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.output_excel_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.output_excel_textBox.Multiline = true;
             this.output_excel_textBox.Name = "output_excel_textBox";
             this.output_excel_textBox.Size = new System.Drawing.Size(171, 32);
@@ -1774,7 +1142,7 @@
             this.output_excel_read_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.output_excel_read_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.output_excel_read_button.Location = new System.Drawing.Point(334, 74);
-            this.output_excel_read_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.output_excel_read_button.Margin = new System.Windows.Forms.Padding(2);
             this.output_excel_read_button.Name = "output_excel_read_button";
             this.output_excel_read_button.Size = new System.Drawing.Size(50, 30);
             this.output_excel_read_button.TabIndex = 37;
@@ -1807,9 +1175,9 @@
             this.tabPage10.Controls.Add(this.Save_loc_textbox);
             this.tabPage10.Controls.Add(this.CountBtm);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage10.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage10.Size = new System.Drawing.Size(455, 280);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "tabPage10";
@@ -1822,7 +1190,7 @@
             this.Save_loc_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Save_loc_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Save_loc_btn.Location = new System.Drawing.Point(380, 45);
-            this.Save_loc_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save_loc_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Save_loc_btn.Name = "Save_loc_btn";
             this.Save_loc_btn.Size = new System.Drawing.Size(50, 30);
             this.Save_loc_btn.TabIndex = 37;
@@ -1848,7 +1216,7 @@
             this.Save_loc_textbox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Save_loc_textbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.Save_loc_textbox.Location = new System.Drawing.Point(232, 44);
-            this.Save_loc_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Save_loc_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Save_loc_textbox.Multiline = true;
             this.Save_loc_textbox.Name = "Save_loc_textbox";
             this.Save_loc_textbox.Size = new System.Drawing.Size(144, 32);
@@ -1863,7 +1231,7 @@
             this.CountBtm.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.CountBtm.ForeColor = System.Drawing.Color.White;
             this.CountBtm.Location = new System.Drawing.Point(160, 211);
-            this.CountBtm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CountBtm.Margin = new System.Windows.Forms.Padding(2);
             this.CountBtm.Name = "CountBtm";
             this.CountBtm.Size = new System.Drawing.Size(144, 40);
             this.CountBtm.TabIndex = 32;
@@ -1971,19 +1339,674 @@
             this.mini.UseVisualStyleBackColor = false;
             this.mini.Click += new System.EventHandler(this.mini_Click);
             // 
+            // Panel2
+            // 
+            this.Panel2.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.Panel2.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.Panel2.Controls.Add(this.button5);
+            this.Panel2.Controls.Add(this.label1);
+            this.Panel2.Controls.Add(this.textBox3);
+            this.Panel2.Controls.Add(this.textBox2);
+            this.Panel2.Controls.Add(this.label2);
+            this.Panel2.Location = new System.Drawing.Point(2, 122);
+            this.Panel2.Name = "Panel2";
+            this.Panel2.Size = new System.Drawing.Size(360, 82);
+            this.Panel2.TabIndex = 28;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.ForeColor = System.Drawing.Color.AliceBlue;
+            this.button5.Location = new System.Drawing.Point(291, 43);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(56, 31);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "偏移";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label1.Location = new System.Drawing.Point(18, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "X偏移量(m) :";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(272, 15);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(76, 22);
+            this.textBox3.TabIndex = 7;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(99, 15);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(76, 22);
+            this.textBox2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(192, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Y偏移量(m) :";
+            // 
+            // Panel1
+            // 
+            this.Panel1.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.Panel1.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.Panel1.Controls.Add(this.button4);
+            this.Panel1.Controls.Add(this.label6);
+            this.Panel1.Controls.Add(this.textBox6);
+            this.Panel1.Controls.Add(this.comboBox1);
+            this.Panel1.Controls.Add(this.label5);
+            this.Panel1.Controls.Add(this.textBox5);
+            this.Panel1.Controls.Add(this.label3);
+            this.Panel1.Controls.Add(this.label4);
+            this.Panel1.Controls.Add(this.textBox4);
+            this.Panel1.Location = new System.Drawing.Point(2, 6);
+            this.Panel1.Name = "Panel1";
+            this.Panel1.Size = new System.Drawing.Size(360, 115);
+            this.Panel1.TabIndex = 28;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button4.ForeColor = System.Drawing.Color.AliceBlue;
+            this.button4.Location = new System.Drawing.Point(292, 76);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(56, 32);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "修正";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label6.Location = new System.Drawing.Point(33, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 16);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "修正斷面 :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(272, 50);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(76, 22);
+            this.textBox6.TabIndex = 10;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(99, 18);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(76, 20);
+            this.comboBox1.TabIndex = 11;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label5.Location = new System.Drawing.Point(180, 52);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 16);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Y向餘數刪減數 :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(99, 50);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(76, 22);
+            this.textBox5.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label3.Location = new System.Drawing.Point(199, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 16);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "中間樁間距 :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label4.Location = new System.Drawing.Point(2, 52);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "X向餘數刪減數 :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(272, 17);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(76, 22);
+            this.textBox4.TabIndex = 8;
+            // 
+            // gradientPanel2
+            // 
+            this.gradientPanel2.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.gradientPanel2.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.gradientPanel2.Controls.Add(this.comboBox8);
+            this.gradientPanel2.Controls.Add(this.cofferdam);
+            this.gradientPanel2.Controls.Add(this.label21);
+            this.gradientPanel2.Controls.Add(this.comboBox9);
+            this.gradientPanel2.Controls.Add(this.label22);
+            this.gradientPanel2.Location = new System.Drawing.Point(10, 20);
+            this.gradientPanel2.Name = "gradientPanel2";
+            this.gradientPanel2.Size = new System.Drawing.Size(361, 201);
+            this.gradientPanel2.TabIndex = 29;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Items.AddRange(new object[] {
+            "搭接",
+            "x向重疊",
+            "y向重疊"});
+            this.comboBox8.Location = new System.Drawing.Point(116, 107);
+            this.comboBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(101, 20);
+            this.comboBox8.TabIndex = 16;
+            // 
+            // cofferdam
+            // 
+            this.cofferdam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.cofferdam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cofferdam.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cofferdam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cofferdam.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
+            this.cofferdam.ForeColor = System.Drawing.Color.White;
+            this.cofferdam.Location = new System.Drawing.Point(231, 152);
+            this.cofferdam.Margin = new System.Windows.Forms.Padding(2);
+            this.cofferdam.Name = "cofferdam";
+            this.cofferdam.Size = new System.Drawing.Size(121, 40);
+            this.cofferdam.TabIndex = 0;
+            this.cofferdam.Text = "建置圍囹";
+            this.cofferdam.UseVisualStyleBackColor = false;
+            this.cofferdam.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.Transparent;
+            this.label21.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label21.Location = new System.Drawing.Point(50, 111);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(62, 16);
+            this.label21.TabIndex = 15;
+            this.label21.Text = "建置方式 :";
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(116, 35);
+            this.comboBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(101, 20);
+            this.comboBox9.TabIndex = 14;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.Color.Transparent;
+            this.label22.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label22.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label22.Location = new System.Drawing.Point(50, 36);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(62, 16);
+            this.label22.TabIndex = 14;
+            this.label22.Text = "選擇斷面 :";
+            // 
+            // supportpanel
+            // 
+            this.supportpanel.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.supportpanel.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.supportpanel.Controls.Add(this.button6);
+            this.supportpanel.Controls.Add(this.support);
+            this.supportpanel.Controls.Add(this.comboBox3);
+            this.supportpanel.Controls.Add(this.label8);
+            this.supportpanel.Controls.Add(this.comboBox2);
+            this.supportpanel.Controls.Add(this.label7);
+            this.supportpanel.Location = new System.Drawing.Point(3, 17);
+            this.supportpanel.Name = "supportpanel";
+            this.supportpanel.Size = new System.Drawing.Size(361, 201);
+            this.supportpanel.TabIndex = 28;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(240, 104);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(112, 40);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "建置斜撐";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            // 
+            // support
+            // 
+            this.support.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.support.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.support.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.support.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.support.ForeColor = System.Drawing.Color.White;
+            this.support.Location = new System.Drawing.Point(240, 148);
+            this.support.Margin = new System.Windows.Forms.Padding(2);
+            this.support.Name = "support";
+            this.support.Size = new System.Drawing.Size(112, 40);
+            this.support.TabIndex = 0;
+            this.support.Text = "建置支撐";
+            this.support.UseVisualStyleBackColor = false;
+            this.support.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "x向",
+            "y向",
+            "雙向"});
+            this.comboBox3.Location = new System.Drawing.Point(116, 107);
+            this.comboBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(101, 20);
+            this.comboBox3.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label8.Location = new System.Drawing.Point(50, 111);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 16);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "建置方向 :";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(116, 35);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(101, 20);
+            this.comboBox2.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label7.Location = new System.Drawing.Point(50, 36);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(62, 16);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "選擇斷面 :";
+            // 
+            // diagonalpanel
+            // 
+            this.diagonalpanel.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.diagonalpanel.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.diagonalpanel.Controls.Add(this.button3);
+            this.diagonalpanel.Controls.Add(this.comboBox6);
+            this.diagonalpanel.Controls.Add(this.label11);
+            this.diagonalpanel.Controls.Add(this.comboBox5);
+            this.diagonalpanel.Controls.Add(this.comboBox4);
+            this.diagonalpanel.Controls.Add(this.label10);
+            this.diagonalpanel.Controls.Add(this.label9);
+            this.diagonalpanel.Controls.Add(this.diagonalsupport);
+            this.diagonalpanel.Location = new System.Drawing.Point(3, 17);
+            this.diagonalpanel.Name = "diagonalpanel";
+            this.diagonalpanel.Size = new System.Drawing.Size(361, 201);
+            this.diagonalpanel.TabIndex = 29;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(240, 106);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 40);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "繪製支撐";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "x向",
+            "y向"});
+            this.comboBox6.Location = new System.Drawing.Point(116, 147);
+            this.comboBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(101, 20);
+            this.comboBox6.TabIndex = 20;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label11.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label11.Location = new System.Drawing.Point(50, 148);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(62, 16);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "建置方向 :";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "單排",
+            "雙排"});
+            this.comboBox5.Location = new System.Drawing.Point(116, 95);
+            this.comboBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(101, 20);
+            this.comboBox5.TabIndex = 17;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(116, 42);
+            this.comboBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(101, 20);
+            this.comboBox4.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label10.Location = new System.Drawing.Point(50, 99);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "支撐類型 :";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label9.Location = new System.Drawing.Point(50, 43);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 16);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "選擇斷面 :";
+            // 
+            // diagonalsupport
+            // 
+            this.diagonalsupport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.diagonalsupport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.diagonalsupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.diagonalsupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.diagonalsupport.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.diagonalsupport.ForeColor = System.Drawing.Color.White;
+            this.diagonalsupport.Location = new System.Drawing.Point(240, 150);
+            this.diagonalsupport.Margin = new System.Windows.Forms.Padding(2);
+            this.diagonalsupport.Name = "diagonalsupport";
+            this.diagonalsupport.Size = new System.Drawing.Size(112, 40);
+            this.diagonalsupport.TabIndex = 0;
+            this.diagonalsupport.Text = "繪製斜撐";
+            this.diagonalsupport.UseVisualStyleBackColor = false;
+            this.diagonalsupport.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.DeepSkyBlue;
+            this.gradientPanel1.ColorTop = System.Drawing.Color.DodgerBlue;
+            this.gradientPanel1.Controls.Add(this.button16);
+            this.gradientPanel1.Controls.Add(this.textBox8);
+            this.gradientPanel1.Controls.Add(this.comboBox12);
+            this.gradientPanel1.Controls.Add(this.label25);
+            this.gradientPanel1.Controls.Add(this.button9);
+            this.gradientPanel1.Controls.Add(this.label24);
+            this.gradientPanel1.Controls.Add(this.select_floor_comboBox);
+            this.gradientPanel1.Controls.Add(this.select_detector_comboBox);
+            this.gradientPanel1.Controls.Add(this.label13);
+            this.gradientPanel1.Controls.Add(this.label14);
+            this.gradientPanel1.Controls.Add(this.place_detector);
+            this.gradientPanel1.Location = new System.Drawing.Point(8, 6);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(361, 237);
+            this.gradientPanel1.TabIndex = 30;
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(291, 162);
+            this.button16.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(57, 18);
+            this.button16.TabIndex = 24;
+            this.button16.Text = "瀏覽";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(113, 162);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(169, 22);
+            this.textBox8.TabIndex = 23;
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Items.AddRange(new object[] {
+            "土中傾度管",
+            "支撐應變計",
+            "水壓計",
+            "永久水準點",
+            "地面沉陷點",
+            "沉陷計",
+            "建物沉陷點",
+            "建物傾斜計",
+            "淺層沉陷點",
+            "壁中傾度管",
+            "鋼筋計",
+            "隧道收斂點",
+            "觀測井",
+            "沉陷"});
+            this.comboBox12.Location = new System.Drawing.Point(113, 128);
+            this.comboBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(169, 20);
+            this.comboBox12.TabIndex = 22;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label25.Location = new System.Drawing.Point(6, 164);
+            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(104, 16);
+            this.label25.TabIndex = 21;
+            this.label25.Text = "選取監測儀器參考";
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(228, 188);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(112, 40);
+            this.button9.TabIndex = 20;
+            this.button9.Text = "建置監測儀器";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click_1);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label24.Location = new System.Drawing.Point(29, 131);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(80, 16);
+            this.label24.TabIndex = 18;
+            this.label24.Text = "監測儀器種類";
+            // 
+            // select_floor_comboBox
+            // 
+            this.select_floor_comboBox.FormattingEnabled = true;
+            this.select_floor_comboBox.Location = new System.Drawing.Point(156, 50);
+            this.select_floor_comboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.select_floor_comboBox.Name = "select_floor_comboBox";
+            this.select_floor_comboBox.Size = new System.Drawing.Size(184, 20);
+            this.select_floor_comboBox.TabIndex = 17;
+            this.select_floor_comboBox.DropDown += new System.EventHandler(this.Floor_dropdown);
+            // 
+            // select_detector_comboBox
+            // 
+            this.select_detector_comboBox.FormattingEnabled = true;
+            this.select_detector_comboBox.Items.AddRange(new object[] {
+            "監測_壁中傾度管",
+            "監測_土中傾度管",
+            "監測_水壓計",
+            "監測_觀測井",
+            "監測_連續壁沉陷觀測點",
+            "監測_支撐應變計",
+            "監測_支撐應變計_y"});
+            this.select_detector_comboBox.Location = new System.Drawing.Point(156, 18);
+            this.select_detector_comboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.select_detector_comboBox.Name = "select_detector_comboBox";
+            this.select_detector_comboBox.Size = new System.Drawing.Size(184, 20);
+            this.select_detector_comboBox.TabIndex = 17;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label13.Location = new System.Drawing.Point(87, 51);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 16);
+            this.label13.TabIndex = 17;
+            this.label13.Text = "放置階層 : ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label14.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label14.Location = new System.Drawing.Point(39, 22);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(113, 16);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "欲放置之監測儀器 : ";
+            // 
+            // place_detector
+            // 
+            this.place_detector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.place_detector.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.place_detector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.place_detector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.place_detector.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.place_detector.ForeColor = System.Drawing.Color.White;
+            this.place_detector.Location = new System.Drawing.Point(228, 79);
+            this.place_detector.Margin = new System.Windows.Forms.Padding(2);
+            this.place_detector.Name = "place_detector";
+            this.place_detector.Size = new System.Drawing.Size(112, 40);
+            this.place_detector.TabIndex = 0;
+            this.place_detector.Text = "放置監測儀器";
+            this.place_detector.UseVisualStyleBackColor = false;
+            this.place_detector.Click += new System.EventHandler(this.place_detector_Click);
+            // 
             // dragControl1
             // 
             this.dragControl1.SelectControl = this.header;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(17, 259);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(110, 23);
-            this.button15.TabIndex = 18;
-            this.button15.Text = "建置單元分割";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
@@ -1993,7 +2016,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1202, 664);
+            this.ClientSize = new System.Drawing.Size(1205, 704);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.header);
@@ -2005,7 +2028,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.ShowIcon = false;
             this.Text = "SinoExcavation深開挖自動化建模系統";
@@ -2013,10 +2036,6 @@
             this.homeleftpanel.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
             this.settingpanel1.ResumeLayout(false);
-            this.Panel2.ResumeLayout(false);
-            this.Panel2.PerformLayout();
-            this.Panel1.ResumeLayout(false);
-            this.Panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.output1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -2024,18 +2043,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.gradientPanel2.ResumeLayout(false);
-            this.gradientPanel2.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.supportpanel.ResumeLayout(false);
-            this.supportpanel.PerformLayout();
             this.tabPage5.ResumeLayout(false);
-            this.diagonalpanel.ResumeLayout(false);
-            this.diagonalpanel.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
-            this.gradientPanel1.ResumeLayout(false);
-            this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.main.ResumeLayout(false);
             this.main.PerformLayout();
@@ -2054,6 +2065,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
+            this.Panel2.ResumeLayout(false);
+            this.Panel2.PerformLayout();
+            this.Panel1.ResumeLayout(false);
+            this.Panel1.PerformLayout();
+            this.gradientPanel2.ResumeLayout(false);
+            this.gradientPanel2.PerformLayout();
+            this.supportpanel.ResumeLayout(false);
+            this.supportpanel.PerformLayout();
+            this.diagonalpanel.ResumeLayout(false);
+            this.diagonalpanel.PerformLayout();
+            this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2191,11 +2214,12 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button16;
     }
 }

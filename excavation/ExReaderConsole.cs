@@ -54,6 +54,9 @@ namespace ExReaderConsole
         public List<Tuple<double, double>> shear_rebar_depth = new List<Tuple<double, double>>();
         public List<Tuple<string, string, double, string, string, double>> shear_rebar = new List<Tuple<string, string, double, string, string, double>>();
 
+        public List<double> monitor_double = new List<double>();
+        public List<string> monitor_string = new List<string>();
+
         //MH part
         public List<List<string>> MHdata = new List<List<string>>();
 
@@ -509,6 +512,35 @@ namespace ExReaderConsole
             
             SetPage(1);
         }
+
+        public List<double> PassMonitorDouble(string column_name, int i)
+        {
+            monitor_double.Clear();
+
+            var pos = this.FindAddress(column_name);
+            do
+            {
+                monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
+                i++;
+            } while (xlRange.Cells[pos.Item1 + i, pos.Item2].Value2 != null);
+
+            return monitor_double;
+        }
+
+        public List<string> PassMonitortString(string column_name, int i = 3)
+        {
+            monitor_string.Clear();
+
+            var pos = this.FindAddress(column_name);
+            do
+            {
+                monitor_string.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
+                i++;
+            } while (xlRange.Cells[pos.Item1 + i, pos.Item2].Value2 != null);
+
+            return monitor_string;
+        }
+
 
 
         public Tuple<int, int> FindAddress(string name)

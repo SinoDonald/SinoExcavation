@@ -58,6 +58,12 @@ namespace excavation
         ExternalEvent externalEvent_CreateRebar;
         CreateRebar handler_CreateRebar = new CreateRebar();
 
+        ExternalEvent externalEvent_CreateMonitor;
+        CreateMonitor handler_CreateMonitor = new CreateMonitor();
+
+        ExternalEvent externalEvent_CreateUnit;
+        CreateUnit handler_CreateUnit = new CreateUnit();
+
         ExternalEvent externalEvent_CreateColumn;
         CreateColumn handler_createColumn = new CreateColumn();
 
@@ -116,6 +122,8 @@ namespace excavation
             externalEvent_CreateSheetPile = ExternalEvent.Create(handler_sheet_pile_NoCAD);
             externalEvent_CreateSoldierPile = ExternalEvent.Create(handler_CreateSoldierPile);
             externalEvent_CreateRebar = ExternalEvent.Create(handler_CreateRebar);
+            externalEvent_CreateMonitor = ExternalEvent.Create(handler_CreateMonitor);
+            externalEvent_CreateUnit = ExternalEvent.Create(handler_CreateUnit);
             externalEvent_CreateColumn = ExternalEvent.Create(handler_createColumn);
             externalEvent_MoveColumn = ExternalEvent.Create(handler_moveColumn);
             externalEvent_CreateFrame = ExternalEvent.Create(handler_createFrame);
@@ -211,6 +219,7 @@ namespace excavation
             //判斷是否有載入CAD，使用不同建置方法
             if (textBox1.Text.Contains("dwg") && comboBox10.Text == "連續壁")
             {
+                
                 //建立連續壁CADmode
                 handler_createWallCADmode.files_path = new List<string>();
                 handler_createWallCADmode.files_path = file_names;
@@ -219,7 +228,6 @@ namespace excavation
                 handler_createWallCADmode.xy_shift.Add(double.Parse(shift_y.Text));
                 externalEvent_CreateWallCADmode.Raise();
                 handler_createWallCADmode.ReturnDegreeCallback += new CreateWallCADmode.ReturnDegree(this.SetReturnDegree);//委派方法給這個事件
-
             }
             else
             {
@@ -256,6 +264,18 @@ namespace excavation
                     handler_CreateSoldierPile.type = comboBox10.Text;
                     externalEvent_CreateSoldierPile.Raise();
                     textBox7.Text = "0";
+                }
+                else if (comboBox10.Text == "單元分割")
+                {
+                    
+                    //建立連續壁CADmode
+                    handler_CreateUnit.files_path = new List<string>();
+                    handler_CreateUnit.files_path = file_names;
+                    handler_CreateUnit.xy_shift = new List<double>();
+                    handler_CreateUnit.xy_shift.Add(double.Parse(shift_x.Text));
+                    handler_CreateUnit.xy_shift.Add(double.Parse(shift_y.Text));
+                    externalEvent_CreateUnit.Raise();
+                    
                 }
 
 
@@ -499,7 +519,12 @@ namespace excavation
                 main.Hide();
             }
             else
-                MessageBox.Show("請選擇建置形式");
+            {
+                output1.Show();
+                output3.Hide();
+                main.Hide();
+                //MessageBox.Show("請選擇建置形式");
+            }
 
 
         }
@@ -831,7 +856,11 @@ namespace excavation
 
         private void button9_Click_1(object sender, EventArgs e)
         {
+            handler_CreateMonitor.files_path = new List<string>();
+            handler_CreateMonitor.files_path = file_names;
+            handler_CreateMonitor.type = comboBox12.Text;
 
+            externalEvent_CreateMonitor.Raise();
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -844,6 +873,18 @@ namespace excavation
             handler_CreateRebar.files_path = new List<string>();
             handler_CreateRebar.files_path = file_names;
             externalEvent_CreateRebar.Raise();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            //讀取斷面資料
+            textBox8.Text = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.ShowDialog();
+            file_names = openFileDialog.FileNames;
+            textBox8.Text = file_names[0];
+            
         }
     }
 }
