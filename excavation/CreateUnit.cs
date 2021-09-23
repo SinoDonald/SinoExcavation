@@ -39,6 +39,7 @@ namespace excavation
             Document document = app.ActiveUIDocument.Document;
             UIDocument uidoc = new UIDocument(document);
             Document doc = uidoc.Document;
+            ProjectPosition projectPosition = doc.ActiveProjectLocation.GetProjectPosition(XYZ.Zero);
 
             Transaction trans = new Transaction(doc);
             try
@@ -49,10 +50,12 @@ namespace excavation
                 try
                 {
                     dex.PassWallData();
+                    dex.SetData(@"\\Mac\Home\Desktop\excavation\test.xlsx", 1);
+                    dex.PassUnitText();
                     dex.CloseEx();
                 }
                 catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
-
+                                
                 //插入CAD
                 trans.Start("CAD");
                 string unit_dwg_file_name = @"\\Mac\Home\Desktop\excavation\LG05連續壁單元分割圖.dwg";
@@ -143,7 +146,7 @@ namespace excavation
 
                 // get wall coordinate from CreateWallCADmode
                 IList<Element> walls = new FilteredElementCollector(doc).WhereElementIsNotElementType().OfCategory(BuiltInCategory.OST_Walls).ToElements();
-
+                int k = 0;
                 foreach (Element e in walls)
                 {
                     Plane plane = Plane.CreateByNormalAndOrigin(XYZ.BasisZ, new XYZ(0, 0, 0));
@@ -165,7 +168,6 @@ namespace excavation
                     List<XYZ> wall_point_list = new List<XYZ>();
                     wall_point_list.Add(start_point);
                     wall_point_list.Add(end_point);
-
                     foreach (XYZ point in unit_point)
                     {
                         double wall_slope = Math.Atan((start_point.X - end_point.X) / (start_point.Y - end_point.Y));
@@ -174,7 +176,7 @@ namespace excavation
                         // check unit point and slope whether between wall
                         if ( 
                              (((start_point.X - point.X) * (end_point.X - point.X) < 0 ) || ((start_point.Y - point.Y) * (end_point.Y - point.Y) < 0)) &&
-                             Math.Abs(wall_slope - unit_slope) < 0.001 
+                             Math.Abs(wall_slope - unit_slope) < 0.01 
                              )
                         {
                             wall_point_list.Add(point);
@@ -183,29 +185,52 @@ namespace excavation
 
                     // sort by x direction
                     wall_point_list.Sort((x, y) => x.X.CompareTo(y.X));
-
+                    TextNote note = TextNote.Create(doc, view.Id, wall_point_list[0], k.ToString() + "start", textNoteOptions);
+                    TextNote note2 = TextNote.Create(doc, view.Id, wall_point_list.Last(), k.ToString() + "end", textNoteOptions);
+                    k++; 
                     // check sorting result
-                    int k = 0;
+                    //int k = 0;
                     foreach (XYZ point in wall_point_list)
                     {
                         Arc arc3 = Arc.Create(project_transform.OfPoint(point), 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
                         ModelCurve mc3 = doc.Create.NewModelCurve(arc3, sp);
-                        TextNote note = TextNote.Create(doc, view.Id, point, k.ToString(), textNoteOptions);
-                        k++;
+                        //TextNote note = TextNote.Create(doc, view.Id, point, k.ToString(), textNoteOptions);
+                        //k++;
                     }
 
                     // create unit wall
                     doc.Delete(wall.Id);
-                    for (int j = 0 ; j < wall_point_list.Count() - 1 ; j++)
+                    // 7000 mm
+                    double wall_length_limit = 7000 / 304.8;
+                    double wall_length = wall_point_list[0].DistanceTo(wall_point_list.Last());
+                    if (wall_point_list.Count() > 2)
                     {
-                        Line line = Line.CreateBound(wall_point_list[j], wall_point_list[j + 1]);
-                        Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
+                        for (int j = 0 ; j < wall_point_list.Count() - 1 ; j++)
+                        {
+                            Line line = Line.CreateBound(wall_point_list[j], wall_point_list[j + 1]);
+                            Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
+                        }
+
+                    }else if(wall_length < wall_length_limit)
+                    {
+                        for (int j = 0; j < wall_point_list.Count() - 1; j++)
+                        {
+                            Line line = Line.CreateBound(wall_point_list[j], wall_point_list[j + 1]);
+                            Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
+                        }
                     }
 
                     wall_point_list.Clear();
                 }
 
-                doc.Delete(unit_dwg.Id);
+                foreach (Tuple<string, double, double> unit_text in dex.unit_text)
+                {
+                    XYZ unit_text_point = new XYZ(unit_text.Item2 - projectPosition.NorthSouth, unit_text.Item3 - projectPosition.EastWest, 0);
+                    TaskDialog.Show("1", unit_text_point.ToString());
+                    TextNote note = TextNote.Create(doc, view.Id, unit_text_point, unit_text.Item1, textNoteOptions);
+                }
+
+                //doc.Delete(unit_dwg.Id);
                 //doc.Delete(diaphragm_dwg.Id);
                 trans.Commit();
             }

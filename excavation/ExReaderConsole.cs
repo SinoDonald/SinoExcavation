@@ -40,6 +40,7 @@ namespace ExReaderConsole
         public List<Tuple<double, double, string>> timber_lagging = new List<Tuple<double, double, string>>();
         public List<Tuple<double, double, double, double>> soldier_pile = new List<Tuple<double, double, double, double>>();
         public List<Tuple<double, double, double, double, double, double, double>> rail_soldier_pile = new List<Tuple<double, double, double, double, double, double, double>>();
+        public List<Tuple<string, double, double>> unit_text = new List<Tuple<string, double, double>>();
         public List<double> centralCol = new List<double>();
         public double wall_width;
         public double wall_high;
@@ -247,6 +248,18 @@ namespace ExReaderConsole
                 xlRange.Cells[pos.Item1 + 1, pos.Item2 + 2].Value2,
                 xlRange.Cells[pos.Item1 + 1, pos.Item2 + 3].Value2);
             timber_lagging.Add(data);
+        }
+        public void PassUnitText()
+        {
+            int i = 0;
+            var pos = Tuple.Create(1, 1);
+            do
+            {
+                var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, 
+                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+                unit_text.Add(data);
+                i++;
+            } while (xlRange.Cells[pos.Item1 + i, pos.Item2].Value2 != null);
         }
         public void PassFrameData()
         {
