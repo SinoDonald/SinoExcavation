@@ -27,17 +27,45 @@ namespace excavation
         {
             Document doc = app.ActiveUIDocument.Document;
             Transaction tran = new Transaction(doc);
+            int i = 0;
 
             List<double> coordinate_n = new List<double>();
             List<double> coordinate_e = new List<double>();
             List<string> equipment_id = new List<string>();
             ProjectPosition projectPosition = doc.ActiveProjectLocation.GetProjectPosition(XYZ.Zero);
 
-            int i = 0;
+            View view = doc.ActiveView;
+
+            TextNoteOptions textNoteOptions = new TextNoteOptions();
+            TextNoteType tType = new FilteredElementCollector(doc).OfClass(typeof(TextNoteType)).Cast<TextNoteType>().FirstOrDefault();
+            textNoteOptions.HorizontalAlignment = HorizontalTextAlignment.Left;
+            textNoteOptions.TypeId = tType.Id;
+
+            //讀取資料
+            ExReader dex = new ExReader();
+            dex.SetData(@"\\Mac\Home\Desktop\excavation\20210615給台大範例\CQ852_20210415.XLS", 1);
+            try
+            {
+                coordinate_n = dex.PassMonitorDouble("N座標", 3).ToList();
+                coordinate_e = dex.PassMonitorDouble("E座標", 3).ToList();
+                equipment_id = dex.PassMonitortString("儀器編號", 3).ToList();
+
+                dex.CloseEx();
+            }
+            catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
+
+            List<XYZ> monitor_point_list = new List<XYZ>();
+            for (i = 0; i != coordinate_n.Count(); i++)
+            {
+                coordinate_e[i] = coordinate_e[i] * 1000 / 304.8 - projectPosition.EastWest;
+                coordinate_n[i] = coordinate_n[i] * 1000 / 304.8 - projectPosition.NorthSouth;
+                XYZ monitor_point = new XYZ(coordinate_e[i], coordinate_n[i], 0);
+                monitor_point_list.Add(monitor_point);
+            }
+
             tran.Start("start");
             if (files_path[0].Contains("dwg"))
             {
-                View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
                 dWGImportOptions.ColorMode = ImportColorMode.Preserved;
                 dWGImportOptions.Placement = ImportPlacement.Shared;
@@ -89,7 +117,8 @@ namespace excavation
                             }
 
                             FamilyInstance monitor = doc.Create.NewFamilyInstance(middle_point, familySymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
-
+                            int nearest_index = FindNearest(middle_point, monitor_point_list);
+                            TextNote note3 = TextNote.Create(doc, view.Id, monitor_point_list[nearest_index], equipment_id[nearest_index], textNoteOptions);
                         }
                     }
                     catch { }
@@ -98,45 +127,24 @@ namespace excavation
 
             } else if (files_path[0].Contains("xls") || files_path[0].Contains("XLS"))
             {
-                View view = doc.ActiveView;
-
-                TextNoteOptions textNoteOptions = new TextNoteOptions();
-                TextNoteType tType = new FilteredElementCollector(doc).OfClass(typeof(TextNoteType)).Cast<TextNoteType>().FirstOrDefault();
-                textNoteOptions.HorizontalAlignment = HorizontalTextAlignment.Left;
-                textNoteOptions.TypeId = tType.Id;
-
-                //讀取資料
-                ExReader dex = new ExReader();
-                dex.SetData(files_path[0], 1);
-                try
-                {
-                    coordinate_n = dex.PassMonitorDouble("N座標", 3).ToList();
-                    coordinate_e = dex.PassMonitorDouble("E座標", 3).ToList();
-                    equipment_id = dex.PassMonitortString("儀器編號", 3).ToList();
-
-                    dex.CloseEx();
-                }
-                catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
-
                 List<ElementId> elementIds = new List<ElementId>();
 
-                
                 i = 0;
                 for (i = 0; i != coordinate_n.Count(); i++)
                 {
 
-                    coordinate_e[i] = coordinate_e[i] * 1000 / 304.8 - projectPosition.EastWest;
-                    coordinate_n[i] = coordinate_n[i] * 1000 / 304.8 - projectPosition.NorthSouth;
+                    //coordinate_e[i] = coordinate_e[i] * 1000 / 304.8 - projectPosition.EastWest;
+                    //coordinate_n[i] = coordinate_n[i] * 1000 / 304.8 - projectPosition.NorthSouth;
 
-                    XYZ origin = new XYZ(coordinate_e[i], coordinate_n[i], 0);
+                    //XYZ origin = new XYZ(coordinate_e[i], coordinate_n[i], 0);
                     string detectObject = "監測_土中傾度管";
 
                     FamilySymbol familySymbol = new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>().Where(x => x.Name == detectObject).First();
                     //familySymbol.LookupParameter("儀器編號").Set(equipment_id[i]);
                     //familySymbol.LookupParameter("N").SetValueString(coordinate_n[i].ToString());
                     //familySymbol.LookupParameter("E").SetValueString(coordinate_e[i].ToString());
-                    FamilyInstance monitor = doc.Create.NewFamilyInstance(origin, familySymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
-                    TextNote note = TextNote.Create(doc, view.Id, origin, equipment_id[i], textNoteOptions);
+                    FamilyInstance monitor = doc.Create.NewFamilyInstance(monitor_point_list[i], familySymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
+                    TextNote note = TextNote.Create(doc, view.Id, monitor_point_list[i], "*" + equipment_id[i], textNoteOptions);
 
                     elementIds.Add(monitor.Id);
                     //TaskDialog.Show("1", monitor.Id.ToString());
@@ -179,6 +187,26 @@ namespace excavation
         public string GetName()
         {
             return "Event handler is working now!!";
+        }
+
+        public int FindNearest(XYZ element_point, List<XYZ> point_list)
+        {
+            double distance = element_point.DistanceTo(point_list[0]);
+            int nearest_index = 0;
+            int i = 0;
+
+            foreach (XYZ point in point_list)
+            {
+                if (element_point.DistanceTo(point) < distance)
+                {
+                    distance = element_point.DistanceTo(point);
+                    nearest_index = i;
+                }
+                i++;
+            }
+
+            return nearest_index;
+
         }
     }
 }

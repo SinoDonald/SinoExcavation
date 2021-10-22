@@ -92,7 +92,7 @@ namespace excavation
                     double xshift = xy_shift[0];
                     double yshift = xy_shift[1];
 
-                    //建立開挖階數            
+                    //建立開挖階數
                     Level[] levlist = new Level[height.Count()];
                     for (int i = 0; i != height.Count(); i++)
                     {

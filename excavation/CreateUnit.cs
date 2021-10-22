@@ -107,6 +107,16 @@ namespace excavation
                     wallType = new_wallFamSym;
                 }
 
+                List<XYZ> unit_text_point_list = new List<XYZ>();
+                List<string> unit_text_list = new List<string>();
+                foreach (Tuple<string, double, double> unit_text in dex.unit_text)
+                {
+                    XYZ unit_text_point = new XYZ(unit_text.Item2 * 1000 / 304.8 - projectPosition.EastWest, unit_text.Item3 * 1000 / 304.8 - projectPosition.NorthSouth, 0);
+                    unit_text_point_list.Add(unit_text_point);
+                    unit_text_list.Add(unit_text.Item1);
+                    //TextNote note = TextNote.Create(doc, view.Id, unit_text_point, unit_text.Item1, textNoteOptions);
+                }
+
                 trans.Commit();
 
                 // get unit point
@@ -185,8 +195,8 @@ namespace excavation
 
                     // sort by x direction
                     wall_point_list.Sort((x, y) => x.X.CompareTo(y.X));
-                    TextNote note = TextNote.Create(doc, view.Id, wall_point_list[0], k.ToString() + "start", textNoteOptions);
-                    TextNote note2 = TextNote.Create(doc, view.Id, wall_point_list.Last(), k.ToString() + "end", textNoteOptions);
+                    //TextNote note = TextNote.Create(doc, view.Id, wall_point_list[0], k.ToString() + "start", textNoteOptions);
+                    //TextNote note2 = TextNote.Create(doc, view.Id, wall_point_list.Last(), k.ToString() + "end", textNoteOptions);
                     k++; 
                     // check sorting result
                     //int k = 0;
@@ -208,7 +218,10 @@ namespace excavation
                         for (int j = 0 ; j < wall_point_list.Count() - 1 ; j++)
                         {
                             Line line = Line.CreateBound(wall_point_list[j], wall_point_list[j + 1]);
+                            XYZ middle_point = (wall_point_list[j] + wall_point_list[j + 1]) / 2;
                             Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
+                            int nearest_index = FindNearest(middle_point, unit_text_point_list);
+                            TextNote note3 = TextNote.Create(doc, view.Id, unit_text_point_list[nearest_index], unit_text_list[nearest_index], textNoteOptions);
                         }
 
                     }else if(wall_length < wall_length_limit)
@@ -219,16 +232,11 @@ namespace excavation
                             Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
                         }
                     }
-
+                    
                     wall_point_list.Clear();
                 }
 
-                foreach (Tuple<string, double, double> unit_text in dex.unit_text)
-                {
-                    XYZ unit_text_point = new XYZ(unit_text.Item2 - projectPosition.NorthSouth, unit_text.Item3 - projectPosition.EastWest, 0);
-                    TaskDialog.Show("1", unit_text_point.ToString());
-                    TextNote note = TextNote.Create(doc, view.Id, unit_text_point, unit_text.Item1, textNoteOptions);
-                }
+                
 
                 //doc.Delete(unit_dwg.Id);
                 //doc.Delete(diaphragm_dwg.Id);
@@ -240,6 +248,26 @@ namespace excavation
         public string GetName()
         {
             return "Event handler is working now!!";
+        }
+
+        public int FindNearest(XYZ element_point, List<XYZ> point_list)
+        {
+            double distance = element_point.DistanceTo(point_list[0]);
+            int nearest_index = 0;
+            int i = 0;
+
+            foreach (XYZ point in point_list)
+            {
+                if (element_point.DistanceTo(point) < distance)
+                {
+                    distance = element_point.DistanceTo(point);
+                    nearest_index = i;
+                }
+                i++;
+            }
+
+            return nearest_index;
+
         }
 
     }
