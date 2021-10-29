@@ -636,3 +636,15 @@ C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.dll
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.pdb
 C:\Users\weiluntsai\Documents\excavation\excavation\bin\Debug\excavation.dll
 C:\Users\weiluntsai\Documents\excavation\excavation\bin\Debug\excavation.pdb
+E:\Projects\RevitAPI\excavation\bin\Debug\excavation.dll
+E:\Projects\RevitAPI\excavation\bin\Debug\excavation.pdb
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
+E:\Projects\RevitAPI\excavation\obj\Debug\Interop.MsoEuro.dll
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.Form1.resources
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.form2.resources
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.Properties.Resources.resources
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.dll
+E:\Projects\RevitAPI\excavation\obj\Debug\excavation.pdb

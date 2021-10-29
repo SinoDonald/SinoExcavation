@@ -104,6 +104,9 @@ namespace excavation
         ExternalEvent ExternalEvent_output_excel;
         OutputExcel handler_output_excel = new OutputExcel();
 
+        ExternalEvent ExternalEvent_DrawJack;
+        DrawJack handler_drawjack = new DrawJack();
+
         public Form1(UIDocument uIDocument, form2 form2)
         {
             //初始化視窗
@@ -137,6 +140,7 @@ namespace excavation
             externalEvent_DetecLevel = ExternalEvent.Create(handler_deteclevel);
             ExternalEvent_counting = ExternalEvent.Create(handler_counting);
             ExternalEvent_output_excel = ExternalEvent.Create(handler_output_excel);
+            ExternalEvent_DrawJack = ExternalEvent.Create(handler_drawjack);
 
             //剖面數量
             comboBox7.Items.Add(1);
@@ -885,6 +889,37 @@ namespace excavation
             file_names = openFileDialog.FileNames;
             textBox8.Text = file_names[0];
             
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            //選擇方向及單雙向後開始繪製支撐
+            bool sel_combo_xy = new bool();
+            bool sel_single_double = new bool();
+            if (comboBox6.Text == "x向")
+            {
+                sel_combo_xy = true;
+            }
+            else if (comboBox6.Text == "y向")
+            {
+                sel_combo_xy = false;
+            }
+            if (comboBox5.Text == "單排")
+            {
+                sel_single_double = true;
+            }
+            else if (comboBox5.Text == "雙排")
+            {
+                sel_single_double = false;
+            }
+            handler_drawjack.files_path = new List<string>();
+            handler_drawjack.files_path.Add(file_names[comboBox4.SelectedIndex]);
+            handler_drawjack.sel_combo_xy = sel_combo_xy;
+            handler_drawjack.sel_single_double = sel_single_double;
+            handler_drawjack.jack_array = new List<string>();
+            handler_drawjack.jack_array.Add(textBox9.Text);
+            handler_drawjack.jack_array.Add(textBox11.Text);
+            ExternalEvent_DrawJack.Raise();
         }
     }
 }
