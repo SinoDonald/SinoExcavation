@@ -226,6 +226,16 @@ namespace excavation
                                         column_instance.LookupParameter("樁深埋入深度").SetValueString((dex.column[0].Item3 * 1000).ToString());
                                         column_instance.LookupParameter("型鋼埋入深度").SetValueString(column_bury);
                                         column_instance.LookupParameter("樁徑").SetValueString((dex.column[0].Item4 * 1000 / 2).ToString());
+
+                                        // 中間柱方向 : 0 = 工, other = H  
+                                        if (dex.column[0].Item7 != 0)
+                                        {
+                                            Line axis = Line.CreateBound(column_location, column_location + XYZ.BasisZ);
+                                            ElementTransformUtils.RotateElement(doc, column_instance.Id, axis, Math.PI / 2);
+
+                                        }
+
+
                                     }
                                 }
                             }

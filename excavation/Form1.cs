@@ -107,6 +107,17 @@ namespace excavation
         ExternalEvent ExternalEvent_DrawJack;
         DrawJack handler_drawjack = new DrawJack();
 
+        ExternalEvent ExternalEvent_DrawChannelSteel;
+        DrawChannelSteel handler_draw_channelsteel = new DrawChannelSteel();
+
+        ExternalEvent ExternalEvent_CreateTriSupportofBeam;
+        CreateTriSupportofBeam handler_create_trisupport_beam = new CreateTriSupportofBeam();
+
+        ExternalEvent ExternalEvent_CreateTriSupportOfFrame;
+        CreateTriSupportOfFrame handler_create_trisupport_frame = new CreateTriSupportOfFrame();
+
+
+
         public Form1(UIDocument uIDocument, form2 form2)
         {
             //初始化視窗
@@ -141,6 +152,9 @@ namespace excavation
             ExternalEvent_counting = ExternalEvent.Create(handler_counting);
             ExternalEvent_output_excel = ExternalEvent.Create(handler_output_excel);
             ExternalEvent_DrawJack = ExternalEvent.Create(handler_drawjack);
+            ExternalEvent_DrawChannelSteel = ExternalEvent.Create(handler_draw_channelsteel);
+            ExternalEvent_CreateTriSupportofBeam = ExternalEvent.Create(handler_create_trisupport_beam);
+            ExternalEvent_CreateTriSupportOfFrame = ExternalEvent.Create(handler_create_trisupport_frame);
 
             //剖面數量
             comboBox7.Items.Add(1);
@@ -372,6 +386,9 @@ namespace excavation
                     handler_createFrame.draw_dir[0] = true;
                     handler_createFrame.draw_dir[1] = true;
                 }
+
+                handler_createFrame.draw_channel_steel = checkBox1.Checked;
+
                 externalEvent_CreateFrame.Raise();
 
             }
@@ -920,6 +937,102 @@ namespace excavation
             handler_drawjack.jack_array.Add(textBox9.Text);
             handler_drawjack.jack_array.Add(textBox11.Text);
             ExternalEvent_DrawJack.Raise();
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            //選擇方向及單雙向後開始繪製支撐
+            bool sel_combo_xy = new bool();
+            bool sel_single_double = new bool();
+            if (comboBox6.Text == "x向")
+            {
+                sel_combo_xy = true;
+            }
+            else if (comboBox6.Text == "y向")
+            {
+                sel_combo_xy = false;
+            }
+            if (comboBox5.Text == "單排")
+            {
+                sel_single_double = true;
+            }
+            else if (comboBox5.Text == "雙排")
+            {
+                sel_single_double = false;
+            }
+            handler_draw_channelsteel.files_path = new List<string>();
+            handler_draw_channelsteel.files_path.Add(file_names[comboBox4.SelectedIndex]);
+            handler_draw_channelsteel.sel_combo_xy = sel_combo_xy;
+            handler_draw_channelsteel.sel_single_double = sel_single_double;
+            handler_draw_channelsteel.frame_or_slope = "Jack";
+            ExternalEvent_DrawChannelSteel.Raise();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (comboBox9.SelectedItem != null)
+            {
+                handler_create_trisupport_beam.files_path = new List<string>();
+                handler_create_trisupport_beam.files_path.Add(file_names[comboBox9.SelectedIndex]);
+                handler_create_trisupport_beam.elevation_decide = new bool[2];
+                if (comboBox8.Text == "搭接")
+                {
+                    handler_create_trisupport_beam.elevation_decide[0] = true;
+                    handler_create_trisupport_beam.elevation_decide[1] = true;
+                }
+                if (comboBox8.Text == "x向重疊")
+                {
+                    handler_create_trisupport_beam.elevation_decide[0] = false;
+                    handler_create_trisupport_beam.elevation_decide[1] = false;
+                }
+                if (comboBox8.Text == "y向重疊")
+                {
+                    handler_create_trisupport_beam.elevation_decide[0] = false;
+                    handler_create_trisupport_beam.elevation_decide[1] = true;
+                }
+
+                ExternalEvent_CreateTriSupportofBeam.Raise();
+            }
+            else
+            {
+                MessageBox.Show("請選擇欲修正斷面");
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            //選擇方向向後建置支撐
+            if (comboBox2.SelectedItem != null)
+            {
+                handler_create_trisupport_frame.files_path = new List<string>();
+                handler_create_trisupport_frame.files_path.Add(file_names[comboBox2.SelectedIndex]);
+                handler_create_trisupport_frame.draw_dir = new bool[2];
+
+                if (comboBox3.Text == "x向")
+                {
+                    handler_create_trisupport_frame.draw_dir[0] = true;
+                    handler_create_trisupport_frame.draw_dir[1] = false;
+                }
+                if (comboBox3.Text == "y向")
+                {
+                    handler_create_trisupport_frame.draw_dir[0] = false;
+                    handler_create_trisupport_frame.draw_dir[1] = true;
+                }
+                if (comboBox3.Text == "雙向")
+                {
+                    handler_create_trisupport_frame.draw_dir[0] = true;
+                    handler_create_trisupport_frame.draw_dir[1] = true;
+                }
+
+                handler_create_trisupport_frame.draw_channel_steel = checkBox1.Checked;
+
+                ExternalEvent_CreateTriSupportOfFrame.Raise();
+
+            }
+            else
+            {
+                MessageBox.Show("請選擇欲修正斷面");
+            }
         }
     }
 }

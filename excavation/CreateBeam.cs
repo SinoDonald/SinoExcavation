@@ -51,7 +51,6 @@ namespace excavation
                     ICollection<Level> levels = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().ToList();
                     Level levdeep = levels.Where(x => x.Name.Contains("斷面" + dex.section+"-"+"開挖階數1")).ToList().First();
 
-
                     Room room = null;
                     foreach (SpatialElement spelement in new FilteredElementCollector(doc).OfClass(typeof(SpatialElement)).Cast<SpatialElement>().ToList())
                     {
@@ -81,7 +80,9 @@ namespace excavation
                         for (int i = 0; i < wall_count; i++)
                         {
                             //inner
-                            innerwall_points[i] = boundarySegments[i].GetCurve().Tessellate()[0];
+                            //innerwall_points[i] = boundarySegments[i].GetCurve().Tessellate()[0];
+                            innerwall_points[i] = new XYZ(boundarySegments[i].GetCurve().Tessellate()[0].X, boundarySegments[i].GetCurve().Tessellate()[0].Y, 0);
+                            
                         }
                         innerwall_points[wall_count] = innerwall_points[0];
                     }

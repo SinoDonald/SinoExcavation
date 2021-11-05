@@ -53,6 +53,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle_excavation.cs" />
+    <Compile Include="CreateTriSupportofBeam.cs" />
+    <Compile Include="CreateTriSupportOfFrame.cs" />
     <Compile Include="CreateUnit.cs" />
     <Compile Include="CreateMonitor.cs" />
     <Compile Include="CreateRebar.cs" />
@@ -69,6 +71,7 @@
     <Compile Include="DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DrawChannelSteel.cs" />
     <Compile Include="DrawJack.cs" />
     <Compile Include="DrawSlope.cs" />
     <Compile Include="ExReaderConsole.cs" />

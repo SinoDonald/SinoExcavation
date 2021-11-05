@@ -24,6 +24,12 @@ namespace excavation
             get;
             set;
         }
+
+        public bool draw_channel_steel
+        {
+            get;
+            set;
+        }
         public void Execute(UIApplication app)
         {
             Autodesk.Revit.DB.Document document = app.ActiveUIDocument.Document;
@@ -47,7 +53,6 @@ namespace excavation
                     catch (Exception e) { dex.CloseEx(); TaskDialog.Show("error", new StackTrace(e, true).GetFrame(0).GetFileLineNumber() + Environment.NewLine + e.Message); }
 
 
-
                     ICollection<Level> levels = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().ToList();
                     Level levdeep = levels.Where(x => x.Name.Contains("斷面" + dex.section) && !(x.Name.Contains("擋土壁深度"))).OrderBy(x => x.Elevation).ToList()[0];
 
@@ -60,6 +65,7 @@ namespace excavation
                             room = r;
                         }
                     }
+
 
                     IList<BoundarySegment> boundarySegments = null;
                     int wall_count = 0;
@@ -93,13 +99,21 @@ namespace excavation
                             innerwall_points[i] = new XYZ(dex.excaRange[i].Item1, dex.excaRange[i].Item2, 0) * 1000 / 304.8;
                         }
                     }
-                    //取得中間樁元件
-                    ICollection<FamilyInstance> columns_instance = (from x in new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>().ToList()
+
+                    
+                    //取得中間樁元件  (先篩選名字 因為會有其他instance沒有特定參數)
+                    ICollection<FamilyInstance> columns_instance = (from x in new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>()
+                                                                    where x.Name.Contains("中間樁")
                                                                     where x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString().Split(':')[0] == "斷面" + dex.section
                                                                     select x).ToList();
-                    IList<XYZ> columns_xyz = (from x in new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>().ToList()
+
+
+                    IList<XYZ> columns_xyz = (from x in new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>()
+                                              where x.Name.Contains("中間樁")
                                               where x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString().Split(':')[0] == "斷面" + dex.section
                                               select (x.Location as LocationPoint).Point).ToList();
+
+
                     //取得所有XY數值
                     List<double> Xs = new List<double>();
                     List<double> Ys = new List<double>();
@@ -138,6 +152,65 @@ namespace excavation
                     double columns_H = double.Parse(columns_instance.First().Symbol.Name.Split('H')[1].Split('x')[0].ToString());//透過中間樁品類讀取中間樁H|||
                     double columns_B = double.Parse(columns_instance.First().Symbol.Name.Split('H')[1].Split('x')[1].ToString());//透過中間樁品類讀取中間樁B---
 
+                    // 判斷中間樁方向 交換H&B
+                    if ((columns_instance.First().Location as LocationPoint).Rotation != 0)
+                    {
+                        (columns_H, columns_B) = (columns_B, columns_H);
+                    }
+
+                    // 槽鋼元件 目前固定型號 C200X80
+                    FamilySymbol channelSteel_symbol = (from x in new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>()
+                                                        where x.Name == "C200x80"
+                                                        select x).ToList().First();
+
+                    
+                    // 槽鋼自動放X向 
+                    // 槽鋼端點點位 (不碰到圍囹,中間柱為端點)
+
+                    List<Tuple<XYZ, XYZ>> channelSteel_columnPos = new List<Tuple<XYZ, XYZ>>();
+
+                    if(draw_channel_steel == true)
+                    {
+                        for (int j = 0; j < Math.Abs(Ys.Max() - Ys.Min()) / columns_dis + 1; j++)
+                        {
+
+                            IList<XYZ> columns_y = columns_xyz.Where(pos => Math.Abs(pos.Y - (Ys.Min() + (j) * columns_dis)) < 0.01).OrderBy(pos => pos.X).ToList();
+                            int start_idx = 0, end_idx = 0;
+
+                            for (int k = 1; k < columns_y.Count; k++)
+                            {
+                                double dis = columns_y[k].X - columns_y[k - 1].X;
+                                if (dis > columns_dis * 1.1)  // magic !! 用1.0會有小數點計算問題
+                                {
+                                    if (end_idx > start_idx)
+                                    {
+                                        var columns_pair = Tuple.Create(columns_y[start_idx], columns_y[end_idx]);
+                                        channelSteel_columnPos.Add(columns_pair);
+                                    }
+
+                                    start_idx = k;
+
+                                }
+                                else
+                                {
+                                    end_idx = k;
+                                    if (end_idx == columns_y.Count - 1)
+                                    {
+                                        var columns_pair = Tuple.Create(columns_y[start_idx], columns_y[end_idx]);
+                                        channelSteel_columnPos.Add(columns_pair);
+                                    }
+
+                                }
+                            }
+
+
+                        }
+                    }
+                    
+
+
+
+
                     Transaction trans_2 = new Transaction(doc);
                     trans_2.Start("交易開始");
                     string erroemessage = "";
@@ -175,7 +248,7 @@ namespace excavation
                                         dou_frame_H = frame_H;
                                     }
                                     //X向支撐----------
-                                    if (draw_dir[0] == true)
+                                    if (draw_dir[0] == true && draw_channel_steel == false)
                                     {
                                         for (int j = 0; j < Math.Abs(Ys.Max() - Ys.Min()) / columns_dis + 1; j++)
                                         {
@@ -234,7 +307,7 @@ namespace excavation
 
                                                         //處理偏移與延伸問題
                                                         //double offset =double.Parse(frame_instance.LookupParameter("H").AsValueString());
-                                                        frame_instance.get_Parameter(BuiltInParameter.Z_OFFSET_VALUE).SetValueString((dex.supLevel[lev].Item2 * -1000 + frame_B).ToString());//2000為支撐階數深度，表1中
+                                                        frame_instance.get_Parameter(BuiltInParameter.Z_OFFSET_VALUE).SetValueString((dex.supLevel[lev].Item2 * -1000 + (frame_B + Fframe_H) / 2).ToString());//2000為支撐階數深度，表1中
                                                         frame_instance.get_Parameter(BuiltInParameter.Y_OFFSET_VALUE).SetValueString((-Fframe_B - (columns_B - Fframe_B) / 2).ToString());
                                                         frame_instance.get_Parameter(BuiltInParameter.START_EXTENSION).SetValueString((-dou_frame_H).ToString());
                                                         frame_instance.get_Parameter(BuiltInParameter.END_EXTENSION).SetValueString((-dou_frame_H).ToString());
@@ -254,6 +327,36 @@ namespace excavation
                                             }
                                         }
                                     }
+
+
+                                    //X向槽鋼
+
+                                    if (draw_dir[0] == true && draw_channel_steel == true)
+                                    {
+                                        foreach (Tuple<XYZ, XYZ> column_pair in channelSteel_columnPos)
+                                        {
+                                            try
+                                            {
+                                                XYZ channel_steel_start = new XYZ(column_pair.Item1.X, column_pair.Item1.Y + columns_H / 2 / 304.8, 0);
+                                                XYZ channel_steel_end = new XYZ(column_pair.Item2.X, column_pair.Item2.Y + columns_H / 2 / 304.8, 0);
+                                                Line line = Line.CreateBound(channel_steel_start, channel_steel_end);
+                                                FamilyInstance channelSteel_instance = doc.Create.NewFamilyInstance(line, channelSteel_symbol, levdeep, Autodesk.Revit.DB.Structure.StructuralType.Beam);
+
+                                                channelSteel_instance.get_Parameter(BuiltInParameter.Z_OFFSET_VALUE).SetValueString(((dex.supLevel[lev].Item2) * -1000).ToString());
+
+                                                //取消接合
+                                                StructuralFramingUtils.DisallowJoinAtEnd(channelSteel_instance, 0);
+                                                StructuralFramingUtils.DisallowJoinAtEnd(channelSteel_instance, 1);
+                                                //鏡像
+                                                ElementTransformUtils.MirrorElement(doc, channelSteel_instance.Id, Plane.CreateByNormalAndOrigin(XYZ.BasisY, column_pair.Item1));
+                                            }
+                                            catch (Exception e) { erroemessage = new StackTrace(e, true).GetFrame(0).GetFileLineNumber() + Environment.NewLine + e.Message; break; };
+
+                                        }
+
+                                    }
+
+
                                 }
                             }
                         }

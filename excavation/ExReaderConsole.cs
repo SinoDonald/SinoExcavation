@@ -33,7 +33,7 @@ namespace ExReaderConsole
         public List<Tuple<int, double>> excaLevel = new List<Tuple<int, double>>();   // 階數 深度
         public List<Tuple<string, double, int, string, int>> supLevel = new List<Tuple<string, double, int, string, int>>();
         public List<Tuple<string, int, string>> beamLevel = new List<Tuple<string, int, string>>();
-        public List<Tuple<double, double, double, double, string, double>> column = new List<Tuple<double, double, double, double, string, double>>();
+        public List<Tuple<double, double, double, double, string, double, double>> column = new List<Tuple<double, double, double, double, string, double, double>>();
         public List<Tuple<string, double, double>> sideWall = new List<Tuple<string, double, double>>();
         public List<Tuple<string, double, double, string>> back = new List<Tuple<string, double, double, string>>();
         public List<Tuple<string, double, double, double, double>> circle_floor = new List<Tuple<string, double, double, double, double>>();
@@ -199,7 +199,8 @@ namespace ExReaderConsole
             {
                 var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
                     xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2);
+                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2,
+                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 7].Value2);
                 column.Add(data);
                 i++;
             } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
