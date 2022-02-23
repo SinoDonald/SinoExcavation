@@ -222,9 +222,12 @@ namespace excavation
                             Wall w = Wall.Create(doc, line, wallType.Id, wall_level.Id, dex.wall_high * 1000 / 304.8, 0, false, false);
                             int nearest_index = FindNearest(middle_point, unit_text_point_list);
                             TextNote note3 = TextNote.Create(doc, view.Id, unit_text_point_list[nearest_index], unit_text_list[nearest_index], textNoteOptions);
+                            w.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).Set(unit_text_list[nearest_index]);
+
                         }
 
-                    }else if(wall_length < wall_length_limit)
+                    }
+                    else if(wall_length < wall_length_limit)
                     {
                         for (int j = 0; j < wall_point_list.Count() - 1; j++)
                         {

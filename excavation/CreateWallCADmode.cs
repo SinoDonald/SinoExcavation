@@ -96,11 +96,19 @@ namespace excavation
                     Level[] levlist = new Level[height.Count()];
                     for (int i = 0; i != height.Count(); i++)
                     {
-                        levlist[i] = Level.Create(doc, height[i] * 1000 / 304.8);
-                        levlist[i].Name = String.Format("斷面{0}-開挖階數" + (i + 1).ToString(), dex.section);
+                        try
+                        {
+                            levlist[i] = Level.Create(doc, height[i] * 1000 / 304.8);
+                            levlist[i].Name = String.Format("斷面{0}-開挖階數" + (i + 1).ToString(), dex.section);
+
+                        }
+                        catch { }
                     }
                     Level wall_level = Level.Create(doc, dex.wall_high * 1000 * -1 / 304.8);
-                    wall_level.Name = String.Format("斷面{0}-擋土壁深度", dex.section);
+                    try { 
+                        wall_level.Name = String.Format("斷面{0}-擋土壁深度", dex.section);
+                    }
+                    catch { }
 
                     //建立連續壁
                     IList<Curve> inner_wall_curves = new List<Curve>();

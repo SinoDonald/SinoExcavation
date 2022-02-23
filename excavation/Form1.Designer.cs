@@ -102,6 +102,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.supportpanel = new auto_line.GradientPanel();
+            this.button20 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button6 = new System.Windows.Forms.Button();
             this.support = new System.Windows.Forms.Button();
@@ -177,7 +178,6 @@
             this.title = new System.Windows.Forms.Label();
             this.mini = new System.Windows.Forms.Button();
             this.dragControl1 = new excavation.DragControl();
-            this.button20 = new System.Windows.Forms.Button();
             this.homeleftpanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.settingpanel1.SuspendLayout();
@@ -230,14 +230,14 @@
             this.continuouswall.Cursor = System.Windows.Forms.Cursors.Hand;
             this.continuouswall.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.continuouswall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.continuouswall.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.continuouswall.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.continuouswall.ForeColor = System.Drawing.Color.White;
             this.continuouswall.Location = new System.Drawing.Point(33, 110);
             this.continuouswall.Margin = new System.Windows.Forms.Padding(2);
             this.continuouswall.Name = "continuouswall";
             this.continuouswall.Size = new System.Drawing.Size(210, 40);
             this.continuouswall.TabIndex = 0;
-            this.continuouswall.Text = "建置連續壁";
+            this.continuouswall.Text = "建置擋土壁";
             this.continuouswall.UseVisualStyleBackColor = false;
             this.continuouswall.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -247,7 +247,7 @@
             this.middlepile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.middlepile.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.middlepile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.middlepile.Font = new System.Drawing.Font("Microsoft JhengHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.middlepile.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.middlepile.ForeColor = System.Drawing.Color.White;
             this.middlepile.Location = new System.Drawing.Point(2, 2);
             this.middlepile.Margin = new System.Windows.Forms.Padding(2);
@@ -264,7 +264,7 @@
             this.backsupport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backsupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.backsupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backsupport.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.backsupport.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.backsupport.ForeColor = System.Drawing.Color.White;
             this.backsupport.Location = new System.Drawing.Point(80, 106);
             this.backsupport.Margin = new System.Windows.Forms.Padding(2);
@@ -303,7 +303,7 @@
             this.pictureout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.pictureout.FlatAppearance.BorderSize = 0;
             this.pictureout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pictureout.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pictureout.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pictureout.ForeColor = System.Drawing.Color.AliceBlue;
             this.pictureout.Location = new System.Drawing.Point(0, 160);
             this.pictureout.Name = "pictureout";
@@ -326,7 +326,7 @@
             this.outputbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
             this.outputbutton.FlatAppearance.BorderSize = 0;
             this.outputbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.outputbutton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputbutton.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputbutton.ForeColor = System.Drawing.Color.AliceBlue;
             this.outputbutton.Location = new System.Drawing.Point(0, 80);
             this.outputbutton.Name = "outputbutton";
@@ -342,7 +342,7 @@
             this.uploadbutton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.uploadbutton.FlatAppearance.BorderSize = 0;
             this.uploadbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.uploadbutton.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.uploadbutton.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.uploadbutton.ForeColor = System.Drawing.Color.AliceBlue;
             this.uploadbutton.Location = new System.Drawing.Point(0, 0);
             this.uploadbutton.Name = "uploadbutton";
@@ -358,7 +358,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(71, 28);
             this.button1.Name = "button1";
@@ -375,7 +375,7 @@
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button10.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(210, 28);
             this.button10.Name = "button10";
@@ -494,7 +494,7 @@
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button5.ForeColor = System.Drawing.Color.AliceBlue;
             this.button5.Location = new System.Drawing.Point(291, 43);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
@@ -508,7 +508,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.AliceBlue;
             this.label1.Location = new System.Drawing.Point(18, 16);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -536,7 +536,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.AliceBlue;
             this.label2.Location = new System.Drawing.Point(192, 16);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -568,7 +568,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button4.ForeColor = System.Drawing.Color.AliceBlue;
             this.button4.Location = new System.Drawing.Point(292, 76);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
@@ -583,7 +583,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label6.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label6.ForeColor = System.Drawing.Color.AliceBlue;
             this.label6.Location = new System.Drawing.Point(33, 19);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -614,7 +614,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.AliceBlue;
             this.label5.Location = new System.Drawing.Point(180, 52);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -635,7 +635,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.AliceBlue;
             this.label3.Location = new System.Drawing.Point(199, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -648,7 +648,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.AliceBlue;
             this.label4.Location = new System.Drawing.Point(2, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -671,7 +671,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button10);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(19, 150);
             this.groupBox1.Name = "groupBox1";
@@ -702,7 +702,7 @@
             this.step7.BackColor = System.Drawing.Color.AliceBlue;
             this.step7.FlatAppearance.BorderSize = 0;
             this.step7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step7.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step7.Location = new System.Drawing.Point(0, 259);
             this.step7.Name = "step7";
@@ -717,7 +717,7 @@
             this.step2.BackColor = System.Drawing.Color.AliceBlue;
             this.step2.FlatAppearance.BorderSize = 0;
             this.step2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step2.Location = new System.Drawing.Point(0, 42);
             this.step2.Name = "step2";
@@ -732,13 +732,13 @@
             this.step1.BackColor = System.Drawing.Color.AliceBlue;
             this.step1.FlatAppearance.BorderSize = 0;
             this.step1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step1.Location = new System.Drawing.Point(0, 0);
             this.step1.Name = "step1";
             this.step1.Size = new System.Drawing.Size(75, 46);
             this.step1.TabIndex = 6;
-            this.step1.Text = "連續壁";
+            this.step1.Text = "擋土壁";
             this.step1.UseVisualStyleBackColor = false;
             this.step1.Click += new System.EventHandler(this.step1_Click);
             // 
@@ -747,7 +747,7 @@
             this.step6.BackColor = System.Drawing.Color.AliceBlue;
             this.step6.FlatAppearance.BorderSize = 0;
             this.step6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step6.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step6.Location = new System.Drawing.Point(0, 216);
             this.step6.Name = "step6";
@@ -762,7 +762,7 @@
             this.step5.BackColor = System.Drawing.Color.AliceBlue;
             this.step5.FlatAppearance.BorderSize = 0;
             this.step5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step5.Font = new System.Drawing.Font("Microsoft JhengHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step5.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step5.Location = new System.Drawing.Point(0, 171);
             this.step5.Name = "step5";
@@ -777,7 +777,7 @@
             this.step4.BackColor = System.Drawing.Color.AliceBlue;
             this.step4.FlatAppearance.BorderSize = 0;
             this.step4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step4.Font = new System.Drawing.Font("Microsoft JhengHei", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step4.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step4.Location = new System.Drawing.Point(0, 130);
             this.step4.Name = "step4";
@@ -792,7 +792,7 @@
             this.step3.BackColor = System.Drawing.Color.AliceBlue;
             this.step3.FlatAppearance.BorderSize = 0;
             this.step3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.step3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.step3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.step3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.step3.Location = new System.Drawing.Point(0, 86);
             this.step3.Name = "step3";
@@ -844,14 +844,14 @@
             // 
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label23.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label23.Location = new System.Drawing.Point(29, 74);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(129, 20);
             this.label23.TabIndex = 37;
-            this.label23.Text = "連續壁建置模式 :";
+            this.label23.Text = "擋土壁建置模式 :";
             // 
             // comboBox10
             // 
@@ -871,7 +871,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label18.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label18.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label18.Location = new System.Drawing.Point(80, 253);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -882,7 +882,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.textBox7.Font = new System.Drawing.Font("新細明體", 12F);
             this.textBox7.Location = new System.Drawing.Point(172, 253);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
@@ -892,7 +892,7 @@
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.textBox1.Location = new System.Drawing.Point(33, 20);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -906,7 +906,7 @@
             this.button13.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button13.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button13.Location = new System.Drawing.Point(259, 22);
             this.button13.Margin = new System.Windows.Forms.Padding(2);
@@ -921,7 +921,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label15.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label15.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label15.Location = new System.Drawing.Point(36, 214);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -934,7 +934,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label12.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label12.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label12.Location = new System.Drawing.Point(36, 172);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -945,7 +945,7 @@
             // 
             // shift_y
             // 
-            this.shift_y.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.shift_y.Font = new System.Drawing.Font("新細明體", 12F);
             this.shift_y.Location = new System.Drawing.Point(172, 214);
             this.shift_y.Margin = new System.Windows.Forms.Padding(2);
             this.shift_y.Name = "shift_y";
@@ -954,7 +954,7 @@
             // 
             // shift_x
             // 
-            this.shift_x.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.shift_x.Font = new System.Drawing.Font("新細明體", 12F);
             this.shift_x.Location = new System.Drawing.Point(172, 171);
             this.shift_x.Margin = new System.Windows.Forms.Padding(2);
             this.shift_x.Name = "shift_x";
@@ -1009,7 +1009,7 @@
             this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button19.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.button19.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.button19.ForeColor = System.Drawing.Color.White;
             this.button19.Location = new System.Drawing.Point(231, 159);
             this.button19.Margin = new System.Windows.Forms.Padding(2);
@@ -1039,7 +1039,7 @@
             this.cofferdam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cofferdam.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cofferdam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cofferdam.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.cofferdam.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.cofferdam.ForeColor = System.Drawing.Color.White;
             this.cofferdam.Location = new System.Drawing.Point(231, 107);
             this.cofferdam.Margin = new System.Windows.Forms.Padding(2);
@@ -1054,7 +1054,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label21.ForeColor = System.Drawing.Color.AliceBlue;
             this.label21.Location = new System.Drawing.Point(50, 111);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1076,7 +1076,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label22.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label22.ForeColor = System.Drawing.Color.AliceBlue;
             this.label22.Location = new System.Drawing.Point(50, 36);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1115,6 +1115,23 @@
             this.supportpanel.Size = new System.Drawing.Size(361, 247);
             this.supportpanel.TabIndex = 28;
             // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
+            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button20.ForeColor = System.Drawing.Color.White;
+            this.button20.Location = new System.Drawing.Point(240, 192);
+            this.button20.Margin = new System.Windows.Forms.Padding(2);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(112, 40);
+            this.button20.TabIndex = 30;
+            this.button20.Text = "三角托架";
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -1135,7 +1152,7 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(240, 104);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
@@ -1152,7 +1169,7 @@
             this.support.Cursor = System.Windows.Forms.Cursors.Hand;
             this.support.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.support.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.support.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.support.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.support.ForeColor = System.Drawing.Color.White;
             this.support.Location = new System.Drawing.Point(240, 148);
             this.support.Margin = new System.Windows.Forms.Padding(2);
@@ -1180,7 +1197,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label8.ForeColor = System.Drawing.Color.AliceBlue;
             this.label8.Location = new System.Drawing.Point(50, 111);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1202,7 +1219,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label7.ForeColor = System.Drawing.Color.AliceBlue;
             this.label7.Location = new System.Drawing.Point(50, 36);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1262,7 +1279,7 @@
             this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button18.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button18.ForeColor = System.Drawing.Color.White;
             this.button18.Location = new System.Drawing.Point(240, 170);
             this.button18.Margin = new System.Windows.Forms.Padding(2);
@@ -1279,7 +1296,7 @@
             this.button17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button17.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button17.ForeColor = System.Drawing.Color.White;
             this.button17.Location = new System.Drawing.Point(240, 214);
             this.button17.Margin = new System.Windows.Forms.Padding(2);
@@ -1294,7 +1311,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label28.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label28.ForeColor = System.Drawing.Color.AliceBlue;
             this.label28.Location = new System.Drawing.Point(97, 226);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1307,7 +1324,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label26.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label26.ForeColor = System.Drawing.Color.AliceBlue;
             this.label26.Location = new System.Drawing.Point(97, 194);
             this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1331,7 +1348,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(240, 81);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
@@ -1358,7 +1375,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label11.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label11.ForeColor = System.Drawing.Color.AliceBlue;
             this.label11.Location = new System.Drawing.Point(50, 148);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1392,7 +1409,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label10.ForeColor = System.Drawing.Color.AliceBlue;
             this.label10.Location = new System.Drawing.Point(50, 99);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1405,7 +1422,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label9.ForeColor = System.Drawing.Color.AliceBlue;
             this.label9.Location = new System.Drawing.Point(50, 43);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1420,7 +1437,7 @@
             this.diagonalsupport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.diagonalsupport.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.diagonalsupport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.diagonalsupport.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.diagonalsupport.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.diagonalsupport.ForeColor = System.Drawing.Color.White;
             this.diagonalsupport.Location = new System.Drawing.Point(240, 125);
             this.diagonalsupport.Margin = new System.Windows.Forms.Padding(2);
@@ -1522,7 +1539,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label25.ForeColor = System.Drawing.Color.AliceBlue;
             this.label25.Location = new System.Drawing.Point(6, 164);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1537,7 +1554,7 @@
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button9.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(228, 188);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
@@ -1552,7 +1569,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label24.ForeColor = System.Drawing.Color.AliceBlue;
             this.label24.Location = new System.Drawing.Point(29, 131);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1592,7 +1609,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label13.ForeColor = System.Drawing.Color.AliceBlue;
             this.label13.Location = new System.Drawing.Point(87, 51);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1605,7 +1622,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Microsoft JhengHei", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label14.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label14.ForeColor = System.Drawing.Color.AliceBlue;
             this.label14.Location = new System.Drawing.Point(39, 22);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1620,7 +1637,7 @@
             this.place_detector.Cursor = System.Windows.Forms.Cursors.Hand;
             this.place_detector.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.place_detector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.place_detector.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.place_detector.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.place_detector.ForeColor = System.Drawing.Color.White;
             this.place_detector.Location = new System.Drawing.Point(228, 79);
             this.place_detector.Margin = new System.Windows.Forms.Padding(2);
@@ -1655,7 +1672,7 @@
             // upload_textbox
             // 
             this.upload_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.upload_textbox.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.upload_textbox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.upload_textbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.upload_textbox.Location = new System.Drawing.Point(19, 70);
             this.upload_textbox.Margin = new System.Windows.Forms.Padding(2);
@@ -1680,7 +1697,7 @@
             // 
             // cir_shift_y
             // 
-            this.cir_shift_y.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.cir_shift_y.Font = new System.Drawing.Font("新細明體", 12F);
             this.cir_shift_y.Location = new System.Drawing.Point(247, 248);
             this.cir_shift_y.Margin = new System.Windows.Forms.Padding(2);
             this.cir_shift_y.Name = "cir_shift_y";
@@ -1689,7 +1706,7 @@
             // 
             // cir_shift_x
             // 
-            this.cir_shift_x.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.cir_shift_x.Font = new System.Drawing.Font("新細明體", 12F);
             this.cir_shift_x.Location = new System.Drawing.Point(247, 200);
             this.cir_shift_x.Margin = new System.Windows.Forms.Padding(2);
             this.cir_shift_x.Name = "cir_shift_x";
@@ -1700,7 +1717,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label17.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label17.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label17.Location = new System.Drawing.Point(111, 248);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1713,7 +1730,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label16.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label16.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label16.Location = new System.Drawing.Point(111, 200);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -1728,7 +1745,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(129, 115);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -1756,7 +1773,7 @@
             this.button11.BackColor = System.Drawing.Color.AliceBlue;
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button11.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.button11.Location = new System.Drawing.Point(0, 24);
             this.button11.Name = "button11";
@@ -1771,7 +1788,7 @@
             this.button12.BackColor = System.Drawing.Color.AliceBlue;
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.button12.Location = new System.Drawing.Point(0, 68);
             this.button12.Name = "button12";
@@ -1819,7 +1836,7 @@
             this.button14.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button14.BackgroundImage")));
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button14.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button14.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button14.Location = new System.Drawing.Point(346, 110);
             this.button14.Margin = new System.Windows.Forms.Padding(2);
@@ -1836,7 +1853,7 @@
             this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
             this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button7.Location = new System.Drawing.Point(346, 59);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
@@ -1859,7 +1876,7 @@
             // upload_textBoxFrame
             // 
             this.upload_textBoxFrame.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.upload_textBoxFrame.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.upload_textBoxFrame.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.upload_textBoxFrame.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.upload_textBoxFrame.Location = new System.Drawing.Point(133, 57);
             this.upload_textBoxFrame.Margin = new System.Windows.Forms.Padding(2);
@@ -1874,7 +1891,7 @@
             this.picture_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_button.FlatAppearance.BorderSize = 0;
             this.picture_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.picture_button.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.picture_button.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.picture_button.ForeColor = System.Drawing.Color.White;
             this.picture_button.Location = new System.Drawing.Point(133, 162);
             this.picture_button.Name = "picture_button";
@@ -1890,7 +1907,7 @@
             this.button8.BackColor = System.Drawing.Color.AliceBlue;
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.button8.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.button8.Location = new System.Drawing.Point(133, 108);
             this.button8.Name = "button8";
@@ -1918,7 +1935,7 @@
             // output_excel_textBox
             // 
             this.output_excel_textBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.output_excel_textBox.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.output_excel_textBox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.output_excel_textBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.output_excel_textBox.Location = new System.Drawing.Point(160, 72);
             this.output_excel_textBox.Margin = new System.Windows.Forms.Padding(2);
@@ -1947,7 +1964,7 @@
             this.output_excel_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.output_excel_button.FlatAppearance.BorderSize = 0;
             this.output_excel_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.output_excel_button.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.output_excel_button.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.output_excel_button.ForeColor = System.Drawing.Color.White;
             this.output_excel_button.Location = new System.Drawing.Point(160, 130);
             this.output_excel_button.Name = "output_excel_button";
@@ -1993,7 +2010,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label19.Font = new System.Drawing.Font("Microsoft JhengHei", 12F);
+            this.label19.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label19.Location = new System.Drawing.Point(87, 49);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -2005,7 +2022,7 @@
             // Save_loc_textbox
             // 
             this.Save_loc_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Save_loc_textbox.Font = new System.Drawing.Font("Microsoft JhengHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Save_loc_textbox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Save_loc_textbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.Save_loc_textbox.Location = new System.Drawing.Point(232, 44);
             this.Save_loc_textbox.Margin = new System.Windows.Forms.Padding(2);
@@ -2020,7 +2037,7 @@
             this.CountBtm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CountBtm.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.CountBtm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CountBtm.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F);
+            this.CountBtm.Font = new System.Drawing.Font("微軟正黑體", 15.75F);
             this.CountBtm.ForeColor = System.Drawing.Color.White;
             this.CountBtm.Location = new System.Drawing.Point(160, 211);
             this.CountBtm.Margin = new System.Windows.Forms.Padding(2);
@@ -2047,7 +2064,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Microsoft JhengHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.Font = new System.Drawing.Font("微軟正黑體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.label20.Location = new System.Drawing.Point(525, 37);
             this.label20.Name = "label20";
@@ -2060,7 +2077,7 @@
             // 
             this.topic.AutoSize = true;
             this.topic.BackColor = System.Drawing.Color.Transparent;
-            this.topic.Font = new System.Drawing.Font("Microsoft JhengHei", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.topic.Font = new System.Drawing.Font("微軟正黑體", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.topic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.topic.Location = new System.Drawing.Point(68, 18);
             this.topic.Name = "topic";
@@ -2134,23 +2151,6 @@
             // dragControl1
             // 
             this.dragControl1.SelectControl = this.header;
-            // 
-            // button20
-            // 
-            this.button20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(240, 192);
-            this.button20.Margin = new System.Windows.Forms.Padding(2);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(112, 40);
-            this.button20.TabIndex = 30;
-            this.button20.Text = "三角托架";
-            this.button20.UseVisualStyleBackColor = false;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // Form1
             // 

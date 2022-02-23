@@ -555,6 +555,19 @@ namespace ExReaderConsole
             return monitor_string;
         }
 
+        public List<double> PassFirstRowDouble(string column_name, int i = 3)
+        {
+            monitor_double.Clear();
+
+            var pos = this.FindAddress(column_name);
+            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
+            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2);
+            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2);
+
+            return monitor_double;
+        }
+
 
 
         public Tuple<int, int> FindAddress(string name)

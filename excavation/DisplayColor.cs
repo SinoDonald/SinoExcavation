@@ -20,6 +20,10 @@ namespace excavation
             Document doc = commandData.Application.ActiveUIDocument.Document;
             UIDocument uiDoc = commandData.Application.ActiveUIDocument;
 
+            List<string> equipment_id = new List<string>();
+            List<double> settlement = new List<double>();
+            List<double> depth = new List<double>();
+
             Transaction tran = new Transaction(doc);
             SubTransaction subtran = new SubTransaction(doc);
             tran.Start("start");
@@ -30,8 +34,21 @@ namespace excavation
             FilteredElementCollector collector1 = new FilteredElementCollector(doc);
             ICollection<Element> collection = collector1.OfClass(typeof(AnalysisDisplayStyle)).ToElements();
             var displayStyle = from element in collection
-                               where element.Name == "Display Style 1"
+                               where element.Name == "Display Style 2"
                                select element;
+
+            //讀取資料
+            ExReader dex = new ExReader();
+            dex.SetData(@"\\Mac\Home\Desktop\excavation\20211209_制式化表單-監測儀器data.xlsx", 1);
+            try
+            {
+                equipment_id = dex.PassMonitortString("儀器編號", 1).ToList();
+                settlement = dex.PassMonitorDouble("位移量", 1).ToList();
+                depth = dex.PassMonitorDouble("觀測深度", 1).ToList();
+
+                dex.CloseEx();
+            }
+            catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
 
             // If display style does not already exist in the document, create it
             if (displayStyle.Count() == 0)
@@ -54,10 +71,10 @@ namespace excavation
                 colorSettings.MaxColor = red;
                 colorSettings.SetIntermediateColors(new List<AnalysisDisplayColorEntry>
                                                     {
-                                                        new AnalysisDisplayColorEntry(red, -3000),
-                                                        new AnalysisDisplayColorEntry(orange, -2500),
-                                                        new AnalysisDisplayColorEntry(lightGreen, 2500),
-                                                        new AnalysisDisplayColorEntry(orange, 3000),
+                                                        new AnalysisDisplayColorEntry(red, -20),
+                                                        new AnalysisDisplayColorEntry(orange, 10),
+                                                        new AnalysisDisplayColorEntry(lightGreen, 20),
+                                                        new AnalysisDisplayColorEntry(orange, 30),
 
                                                     });
                 
@@ -73,7 +90,7 @@ namespace excavation
                 };                
 
 
-                analysisDisplayStyle = AnalysisDisplayStyle.CreateAnalysisDisplayStyle(doc, "Display Style 1", coloredSurfaceSettings, colorSettings, legendSettings);
+                analysisDisplayStyle = AnalysisDisplayStyle.CreateAnalysisDisplayStyle(doc, "Display Style 2", coloredSurfaceSettings, colorSettings, legendSettings);
             }
             else
             {
@@ -97,44 +114,30 @@ namespace excavation
                 sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
             }
 
+            Reference reference = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Face, "Select a face");
+            int idx = sfm.AddSpatialFieldPrimitive(reference);
+
+            Face face = doc.GetElement(reference).GetGeometryObjectFromReference(reference) as Face;
+
             ProjectPosition projectPosition = doc.ActiveProjectLocation.GetProjectPosition(XYZ.Zero);
 
             XYZ translationVector = new XYZ(projectPosition.EastWest, projectPosition.NorthSouth, projectPosition.Elevation);
 
             TaskDialog.Show("1", translationVector.ToString());
 
-            /*
-            ElementId ele_id = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Element, "Select a face").ElementId;
-            Element ele = doc.GetElement(ele_id);
-            //int idx = sfm.AddSpatialFieldPrimitive(reference);
-            //TaskDialog.Show("1", idx.ToString());
-            //Wall wall = doc.GetElement(reference) as Wall;
-            ElementCategoryFilter filter = new ElementCategoryFilter(BuiltInCategory.wall);
-            FilteredElementCollector collector = new FilteredElementCollector(doc);
-            IList<Element> elementss = collector.WherePasses(filter).ToElements();
-            foreach (Element element in elementss)
-            {
-            double x = ele.get_Parameter(BuiltInParameter.BASEPOINT_EASTWEST_PARAM).AsDouble();
-            double y = ele.get_Parameter(BuiltInParameter.BASEPOINT_NORTHSOUTH_PARAM).AsDouble();
-            double elevation = ele.get_Parameter(BuiltInParameter.BASEPOINT_ELEVATION_PARAM).AsDouble();
-            TaskDialog.Show("1", x.ToString());
-            */
-
-
-            //90 * 0.74029 * 304.8
-            /*
             IList<UV> uvPts = new List<UV>();
             BoundingBoxUV bb = face.GetBoundingBox();
             UV min = bb.Min;
             UV max = bb.Max;
-            uvPts.Add(new UV(max.U, max.V));
-            uvPts.Add(new UV(min.U, max.V));
 
-            uvPts.Add(new UV(max.U, max.V/2));
-            uvPts.Add(new UV(min.U, max.V/2));
+            int n = settlement.Count();
+            double delta = (max.V - min.V) / n;
 
-            uvPts.Add(new UV(max.U, min.V));
-            uvPts.Add(new UV(min.U, min.V));
+            for (int i = 0; i < n; i++)
+            {
+                uvPts.Add(new UV(max.U, max.V - delta * i));
+                //uvPts.Add(new UV(min.U, max.V - delta * i));
+            }
 
             UV faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
             Transform computeDerivatives = face.ComputeDerivatives(faceCenter);
@@ -143,22 +146,17 @@ namespace excavation
             XYZ faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(2.5);
             Transform transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
 
-            //SpatialFieldManager sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
-
-            //int idx = sfm.AddSpatialFieldPrimitive(face, transform);
             TaskDialog.Show("1", idx.ToString());
 
             FieldDomainPointsByUV pnts = new FieldDomainPointsByUV(uvPts);
 
             IList<ValueAtPoint> valList = new List<ValueAtPoint>();
-            valList.Add(new ValueAtPoint(new List<double> { -133 }));
-            valList.Add(new ValueAtPoint(new List<double> { 29 }));
 
-            valList.Add(new ValueAtPoint(new List<double> { 4000 }));
-            valList.Add(new ValueAtPoint(new List<double> { -430 }));
+            for (int i = 0; i < n; i++)
+            {
+                valList.Add(new ValueAtPoint(new List<double> { settlement[i] }));
+            }
 
-            valList.Add(new ValueAtPoint(new List<double> { -158 }));
-            valList.Add(new ValueAtPoint(new List<double> { -2900 }));
             FieldValues vals = new FieldValues(valList);
 
             AnalysisResultSchema resultSchema = new AnalysisResultSchema("鋼筋應力", "Description");
@@ -169,7 +167,7 @@ namespace excavation
             int schemaIndex = sfm.RegisterResult(resultSchema);
             sfm.UpdateSpatialFieldPrimitive(idx, pnts, vals, schemaIndex);
 
-            */
+            
             subtran.Commit();
             tran.Commit();
 
