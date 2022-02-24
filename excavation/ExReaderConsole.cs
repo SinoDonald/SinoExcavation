@@ -47,6 +47,9 @@ namespace ExReaderConsole
         public double Diameter;
         public string First_single = "";
         public string First_double = "";
+        public double pileBent_diameter;
+        public double pileBent_space;
+
 
         public double protection_width;
         public List<Tuple<double, double, string, double, string, double>> vertical_r_rebar = new List<Tuple<double, double, string, double, string, double>>();
@@ -226,6 +229,17 @@ namespace ExReaderConsole
                 catch { centralCol.Add(4); }
             }
         }
+
+        public void PassPileBentData()
+        {
+            var pos = this.FindAddress("擋土壁尺寸");
+            pileBent_diameter = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+            pos = this.FindAddress("擋土壁間距");
+            pileBent_space = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+            int i = 1;
+           
+        }
+
         public void PassSoldierPile()
         {
             var pos = this.FindAddress(column[0].Item5);

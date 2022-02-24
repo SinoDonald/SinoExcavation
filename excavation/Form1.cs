@@ -116,7 +116,8 @@ namespace excavation
         ExternalEvent ExternalEvent_CreateTriSupportOfFrame;
         CreateTriSupportOfFrame handler_create_trisupport_frame = new CreateTriSupportOfFrame();
 
-
+        ExternalEvent externalEvent_CreateBentPile;
+        CreateBentPile handler_CreateBentPile = new CreateBentPile();
 
         public Form1(UIDocument uIDocument, form2 form2)
         {
@@ -155,6 +156,7 @@ namespace excavation
             ExternalEvent_DrawChannelSteel = ExternalEvent.Create(handler_draw_channelsteel);
             ExternalEvent_CreateTriSupportofBeam = ExternalEvent.Create(handler_create_trisupport_beam);
             ExternalEvent_CreateTriSupportOfFrame = ExternalEvent.Create(handler_create_trisupport_frame);
+            externalEvent_CreateBentPile = ExternalEvent.Create(handler_CreateBentPile);
 
             //剖面數量
             comboBox7.Items.Add(1);
@@ -258,6 +260,17 @@ namespace excavation
                     handler_createWall.xy_shift.Add(double.Parse(shift_x.Text));
                     handler_createWall.xy_shift.Add(double.Parse(shift_y.Text));
                     externalEvent_CreateWall.Raise();
+                    textBox7.Text = "0";
+                }
+                else if (comboBox10.Text == "排樁")
+                {
+                    //建立排樁
+                    handler_CreateBentPile.files_path = new List<string>();
+                    handler_CreateBentPile.files_path = file_names;
+                    handler_CreateBentPile.xy_shift = new List<double>();
+                    handler_CreateBentPile.xy_shift.Add(double.Parse(shift_x.Text));
+                    handler_CreateBentPile.xy_shift.Add(double.Parse(shift_y.Text));
+                    externalEvent_CreateBentPile.Raise();
                     textBox7.Text = "0";
                 }
                 else if(comboBox10.Text == "鋼板樁")
@@ -853,6 +866,7 @@ namespace excavation
             handler_createWallCADmode.openFileDialog = openFileDialogFrame;
             handler_CreateSoldierPile.openFileDialog = openFileDialogFrame;
             handler_sheet_pile_NoCAD.openFileDialog = openFileDialogFrame;
+            handler_CreateBentPile.openFileDialog = openFileDialogFrame;
 
             textBox1.Text = openFileDialogFrame.SafeFileName;
         }

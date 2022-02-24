@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle_excavation.cs" />
+    <Compile Include="CreateBentPile.cs" />
     <Compile Include="CreateTriSupportofBeam.cs" />
     <Compile Include="CreateTriSupportOfFrame.cs" />
     <Compile Include="CreateUnit.cs" />
