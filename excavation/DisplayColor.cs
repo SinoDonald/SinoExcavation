@@ -42,9 +42,9 @@ namespace excavation
             dex.SetData(@"\\Mac\Home\Desktop\excavation\20211209_制式化表單-監測儀器data.xlsx", 1);
             try
             {
-                equipment_id = dex.PassMonitortString("儀器編號", 1).ToList();
-                settlement = dex.PassMonitorDouble("位移量", 1).ToList();
-                depth = dex.PassMonitorDouble("觀測深度", 1).ToList();
+                equipment_id = dex.PassColumntString("儀器編號", 1).ToList();
+                settlement = dex.PassColumnDouble("位移量", 1).ToList();
+                depth = dex.PassColumnDouble("觀測深度", 1).ToList();
 
                 dex.CloseEx();
             }

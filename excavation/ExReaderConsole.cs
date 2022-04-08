@@ -541,48 +541,59 @@ namespace ExReaderConsole
             SetPage(1);
         }
 
-        public List<double> PassMonitorDouble(string column_name, int i)
+        public List<double> PassColumnDouble(string column_name, int start_row = 3, int start_column = 0)
         {
             monitor_double.Clear();
-
             var pos = this.FindAddress(column_name);
+            int i = 0;
             do
             {
-                monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
+                monitor_double.Add(xlRange.Cells[pos.Item1 + start_row + i, pos.Item2 + start_column].Value2);
                 i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2].Value2 != null);
+            } while (xlRange.Cells[pos.Item1 + start_row + i, pos.Item2 + start_column].Value2 is double);
 
             return monitor_double;
         }
 
-        public List<string> PassMonitortString(string column_name, int i = 3)
+        public List<string> PassColumntString(string column_name, int start_row = 3, int start_column = 0)
         {
             monitor_string.Clear();
-
             var pos = this.FindAddress(column_name);
+            int i = 0;
             do
             {
-                monitor_string.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
+                monitor_string.Add(xlRange.Cells[pos.Item1 + start_row + i, pos.Item2 + start_column].Value2);
                 i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2].Value2 != null);
+            } while (xlRange.Cells[pos.Item1 + start_row + i, pos.Item2 + start_column].Value2 is string);
 
             return monitor_string;
         }
 
-        public List<double> PassFirstRowDouble(string column_name, int i = 3)
+        public List<double> PassRowDouble(string column_name, int start_row = 3, int start_column = 0)
         {
             monitor_double.Clear();
-
             var pos = this.FindAddress(column_name);
-            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2].Value2);
-            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2);
-            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
-            monitor_double.Add(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2);
-
+            int i = 0;
+            do
+            {
+                monitor_double.Add(xlRange.Cells[pos.Item1 + start_row, pos.Item2 + start_column + i].Value2);
+                i++;
+            } while (xlRange.Cells[pos.Item1 + start_row, pos.Item2 + start_column + i].Value2 is double);
             return monitor_double;
         }
 
-
+        public List<string> PassRowString(string column_name, int start_row = 3, int start_column = 0)
+        {
+            monitor_string.Clear();
+            var pos = this.FindAddress(column_name);
+            int i = 0;
+            do
+            {
+                monitor_string.Add(xlRange.Cells[pos.Item1 + start_row, pos.Item2 + start_column + i].Value2);
+                i++;
+            } while (xlRange.Cells[pos.Item1 + start_row, pos.Item2 + start_column + i].Value2 is string);
+            return monitor_string;
+        }
 
         public Tuple<int, int> FindAddress(string name)
         {
