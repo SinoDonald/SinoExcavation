@@ -50,16 +50,26 @@ namespace ExReaderConsole
         public double pileBent_diameter;
         public double pileBent_space;
 
+        public List<double> monitor_double = new List<double>();
+        public List<string> monitor_string = new List<string>();
 
+        //鋼筋配筋
         public double protection_width;
+        public double m_length;
+        public double m_connector;
+        public double m_connector2;
+        public string m_main;
+        public double m_space;
+        public double f_length;
+        public double f_connector;
+        public string f_plate;
+        public string f_style;
         public List<Tuple<double, double, string, double, string, double>> vertical_r_rebar = new List<Tuple<double, double, string, double, string, double>>();
         public List<Tuple<double, double, string, double, string, double>> vertical_e_rebar = new List<Tuple<double, double, string, double, string, double>>();
         public List<Tuple<double, double, string, double>> horizontal_rebar = new List<Tuple<double, double, string, double>>();
         public List<Tuple<double, double>> shear_rebar_depth = new List<Tuple<double, double>>();
         public List<Tuple<string, string, double, string, string, double>> shear_rebar = new List<Tuple<string, string, double, string, string, double>>();
 
-        public List<double> monitor_double = new List<double>();
-        public List<string> monitor_string = new List<string>();
 
         //MH part
         public List<List<string>> MHdata = new List<List<string>>();
@@ -483,13 +493,25 @@ namespace ExReaderConsole
             wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
             pos = this.FindAddress("保護層厚度");
             protection_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+            pos = this.FindAddress("M"); //公單元參數
+            m_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
+            m_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
+            m_connector2 = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2;
+            pos = this.FindAddress("接頭主筋");
+            m_main = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+            m_space = xlRange.Cells[pos.Item1, pos.Item2 + 3].Value2;
+            pos = this.FindAddress("F"); //母單元參數
+            f_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
+            f_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
+            f_plate = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2.ToString();
+            f_style = xlRange.Cells[pos.Item1 + 4, pos.Item2].Value2.ToString();
 
             // 垂直筋擋土側
             int i = 1;
-              
+
             pos = this.FindAddress("擋土側");
             i = 2;
-            do 
+            do
             {
                 var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
                     xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
@@ -497,7 +519,7 @@ namespace ExReaderConsole
                 vertical_r_rebar.Add(data);
                 i++;
             } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
-            
+
             // 垂直筋開挖側
             pos = this.FindAddress("開挖側");
             i = 2;
@@ -521,7 +543,7 @@ namespace ExReaderConsole
                 i++;
             } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
 
-            
+
             //剪力筋
             pos = this.FindAddress("擋土牆剪力筋設計");
             i = 2;
@@ -530,14 +552,14 @@ namespace ExReaderConsole
                 var data1 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
                 shear_rebar_depth.Add(data1);
 
-                var data2 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2, 
+                var data2 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
                     xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2,
                     xlRange.Cells[pos.Item1 + i, pos.Item2 + 7].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 8].Value2);
                 shear_rebar.Add(data2);
 
                 i++;
             } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
-            
+
             SetPage(1);
         }
 
@@ -617,8 +639,8 @@ namespace ExReaderConsole
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            //Marshal.ReleaseComObject(xlWorkbook);
-            //Marshal.ReleaseComObject(xlWorkbooks);
+            /*Marshal.ReleaseComObject(xlWorkbook);
+            Marshal.ReleaseComObject(xlWorkbooks);*/
             xlApp.Quit();
             Marshal.ReleaseComObject(xlApp);
 

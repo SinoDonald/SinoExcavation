@@ -62,8 +62,6 @@ namespace excavation
                     Level S1 = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().Where(x => x.Name == "斷面" + check_str + "-擋土壁深度").ToList().First();
                     List<Wall> wall_list = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().Where(x => x.LevelId == S1.Id).ToList();
 
-                    TaskDialog.Show("1", S1.Name);
-                    TaskDialog.Show("1", wall_list.Count().ToString());
                     //找到長度
                     double total_l = 0;
                     foreach (Wall a in wall_list)
@@ -84,7 +82,7 @@ namespace excavation
 
                     IList<FamilyInstance> mid_zhang = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("中間樁")).Cast<FamilyInstance>().ToList();
                     FamilyInstance Column = mid_zhang.First();
-                    IList<double> count_mid = new List<double>(); 
+                    IList<double> count_mid = new List<double>();
                     double col_depth = double.Parse(Column.LookupParameter("樁深埋入深度").AsValueString()) / 1000;
                     double ste_depth = (double.Parse(Column.LookupParameter("型鋼埋入深度").AsValueString()) / 1000);
                     string rad = (double.Parse(Column.LookupParameter("樁徑").AsValueString()) / 1000).ToString();
@@ -599,14 +597,13 @@ namespace excavation
                     {
                         Excel.Application Eapp = new Excel.Application();
 
-                        /*
                         if (files_path[0] == file_path)
                         {
                             string example = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString().Substring(6);
                             example += @"\數量表_test.xls";
                             Excel.Workbook EWB2 = Eapp.Workbooks.Open(example);
                             EWB2.SaveAs(path, Type.Missing, "", "", Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange, 1, false, Type.Missing, Type.Missing, Type.Missing);
-                        }*/
+                        }
                         Excel.Workbook EWb = Eapp.Workbooks.Open(path);
                         Excel.Worksheet EWs = EWb.Worksheets[1];
                         Excel.Worksheet DataSheet = EWb.Worksheets[5]; //型鋼資料庫
@@ -896,7 +893,7 @@ namespace excavation
                         Eapp.Quit();
                         Eapp = null;
                     }
-                    catch (Exception e) { TaskDialog.Show("error", e.ToString()); }
+                    catch (Exception e) { reader.CloseEx(); TaskDialog.Show("error", Environment.NewLine + e.Message); }
                 }
                 //最後寫入土方量
                 try

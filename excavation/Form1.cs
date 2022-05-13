@@ -1048,5 +1048,25 @@ namespace excavation
                 MessageBox.Show("請選擇欲修正斷面");
             }
         }
+
+        private void leftpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox10_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void shift_x_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void select_floor_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
