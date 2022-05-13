@@ -617,8 +617,8 @@ namespace ExReaderConsole
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
-            /*Marshal.ReleaseComObject(xlWorkbook);
-            Marshal.ReleaseComObject(xlWorkbooks);*/
+            //Marshal.ReleaseComObject(xlWorkbook);
+            //Marshal.ReleaseComObject(xlWorkbooks);
             xlApp.Quit();
             Marshal.ReleaseComObject(xlApp);
 
