@@ -112,9 +112,12 @@ namespace excavation
                 foreach (Tuple<string, double, double> unit_text in dex.unit_text)
                 {
                     XYZ unit_text_point = new XYZ(unit_text.Item2 * 1000 / 304.8 - projectPosition.EastWest, unit_text.Item3 * 1000 / 304.8 - projectPosition.NorthSouth, 0);
+                    Transform rotate = Transform.CreateRotationAtPoint(new XYZ(0, 0, 10), 48.6 / 180 * Math.PI, new XYZ(0, 0, 0));
+                    unit_text_point = rotate.OfPoint(unit_text_point);
+
                     unit_text_point_list.Add(unit_text_point);
                     unit_text_list.Add(unit_text.Item1);
-                    //TextNote note = TextNote.Create(doc, view.Id, unit_text_point, unit_text.Item1, textNoteOptions);
+                    TextNote note = TextNote.Create(doc, view.Id, unit_text_point, unit_text.Item1, textNoteOptions);
                 }
 
                 trans.Commit();

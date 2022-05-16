@@ -62,18 +62,20 @@ namespace excavation
             textNoteOptions.HorizontalAlignment = HorizontalTextAlignment.Left;
             textNoteOptions.TypeId = tType.Id;
 
-
             //List<string> monitor_id_list = new List<string>{ "SB0022", "SB0017", "SB0018", "SB0032", "SB0033", "SB0034", "SB0035", "SB0036", "SB0037", "SB0038" };
 
             //讀取資料
             ExReader dex = new ExReader();
             string excel_path = @"\\Mac\Home\Desktop\excavation\filter_data.xlsx";
-            
+
             try
             {
                 dex.SetData(excel_path, 1);
                 unit_id_list = dex.PassRowString("單元名稱編號", 0, 1).ToList();
                 int unit_amount = unit_id_list.Count();
+
+
+
 
                 foreach (string unit_id in unit_id_list.ToArray())
                 {
@@ -116,7 +118,7 @@ namespace excavation
 
             }
             catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.ToString()); }
-            
+
             dex.SetData(@"\\Mac\Home\Desktop\excavation\20210615給台大範例\CQ852_20210415.XLS", 4);
             //dex.SetData(@"\\Mac\Home\Deskt op\excavation\20211209_制式化表單-監測儀器data.xlsx", 4);
             try
@@ -154,28 +156,27 @@ namespace excavation
                 coloredSurfaceSettings.ShowGridLines = true;
 
                 AnalysisDisplayColorSettings colorSettings = new AnalysisDisplayColorSettings();
-                colorSettings.ColorSettingsType = AnalysisDisplayStyleColorSettingsType.SolidColorRanges;
+                colorSettings.ColorSettingsType = AnalysisDisplayStyleColorSettingsType.GradientColor;
 
                 Color deepRed = new Color(166, 0, 0);
                 Color red = new Color(255, 44, 01);
                 Color green = new Color(0, 253, 0);
                 Color lightGreen = new Color(128, 255, 12);
                 Color orange = new Color(255, 205, 0);
+                Color yellow = new Color(255, 255, 0);
                 Color purple = new Color(200, 0, 200);
                 Color white = new Color(255, 255, 255);
 
 
-                colorSettings.MaxColor = red;
+
+                colorSettings.MinColor = lightGreen;
                 colorSettings.SetIntermediateColors(new List<AnalysisDisplayColorEntry>
                                                 {
-                                                    new AnalysisDisplayColorEntry(red, -25),
-                                                    new AnalysisDisplayColorEntry(orange, -15),
-                                                    new AnalysisDisplayColorEntry(lightGreen, 0),
-                                                    new AnalysisDisplayColorEntry(orange, 10),
-
+                                                    new AnalysisDisplayColorEntry(orange),
+                                                    new AnalysisDisplayColorEntry(red),
                                                 });
+                colorSettings.MaxColor = purple;
 
-                colorSettings.MinColor = purple;
 
                 AnalysisDisplayLegendSettings legendSettings = new AnalysisDisplayLegendSettings
                 {
@@ -195,258 +196,358 @@ namespace excavation
             doc.ActiveView.AnalysisDisplayStyleId = analysisDisplayStyle.Id;
 
             SpatialFieldManager sfm = SpatialFieldManager.GetSpatialFieldManager(doc.ActiveView);
-
             try
             {
-                sfm.Clear();
+                doc.Delete(sfm.Id);
             }
-            catch { }
+            catch { TaskDialog.Show("!", "There is no spatial field manager"); }
 
-            if (sfm == null)
+            sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 1);
+            sfm.SetMeasurementNames(new List<string> { "資料 1" });
+
+            AnalysisResultSchema resultSchema_displacement = new AnalysisResultSchema("位移量", "Description");
+            AnalysisResultSchema resultSchema_settlement = new AnalysisResultSchema("沉陷量", "Description2");
+            resultSchema_displacement.SetUnits(new List<string> { "mm" }, new List<double> { 1 });
+            resultSchema_settlement.SetUnits(new List<string> { "mm" }, new List<double> { 1 });
+            int schemaIndex_displacement = sfm.RegisterResult(resultSchema_displacement);
+            int schemaIndex_settlement = sfm.RegisterResult(resultSchema_settlement);
+
+
+            // rotate all element
+            ICollection<ElementId> element_ids = new FilteredElementCollector(doc).WhereElementIsNotElementType().WhereElementIsViewIndependent().ToElementIds();
+            ICollection<ElementId> textnote_ids = new FilteredElementCollector(doc).OfClass(typeof(TextNote)).ToElementIds();
+            Line origin_axis = Line.CreateBound(new XYZ(0, 0, 0), new XYZ(0, 0, 10));
+            double angle = -48.6 / 180 * Math.PI;
+            ElementTransformUtils.RotateElements(doc, element_ids, origin_axis, angle);
+            ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
+
+            // rotate base point
+            BasePoint basePoint = new FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_ProjectBasePoint).FirstOrDefault() as BasePoint;
+            basePoint.get_Parameter(BuiltInParameter.BASEPOINT_ANGLETON_PARAM).Set(0);
+
+
+            double previous_distance = 100000;
+            XYZ target_mid = new XYZ(0, 0, 0);
+            List<FamilyInstance> target_frame_list = new List<FamilyInstance>();
+            List<FamilyInstance> familyInstance = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>().Where(x => x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString().Contains("支撐")).ToList();
+            //try
+            //{
+            for (int unit_index = 0; unit_index != unit_id_list.Count(); unit_index++)
             {
-                sfm = SpatialFieldManager.CreateSpatialFieldManager(doc.ActiveView, 2);
-            }
+                TaskDialog.Show("index", unit_index.ToString());
+                string detectObject = "監測_土中傾度管";
 
-            AnalysisResultSchema resultSchema = new AnalysisResultSchema("位移量", "Description");
-            resultSchema.SetUnits(new List<string> { "mm" }, new List<double> { 1 });
-            int schemaIndex = sfm.RegisterResult(resultSchema);
+                // find target wall by unit id
+                Wall target_wall = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>()
+                            .Where(x => x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString() == unit_id_list[unit_index]).First();
 
-            try
-            {
-                int unit_index = 0;
-                for (unit_index = 0; unit_index != unit_id_list.Count(); unit_index++)
+                IList<Wall> wall_list = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().ToList();
+
+                LocationCurve target_lc = target_wall.Location as LocationCurve;
+                XYZ target_start = target_lc.Curve.GetEndPoint(0);
+                XYZ target_end = target_lc.Curve.GetEndPoint(1);
+                target_mid = (target_start + target_end) / 2;
+
+                double target_slope = (target_start.Y - target_end.Y) / (target_start.X - target_end.X);
+                double target_normal = -1 / target_slope;
+                double target_normal_b = target_mid.Y - target_normal * target_mid.X;
+
+                double except_distance = 50;
+                previous_distance = 10000;
+                Wall source_wall = target_wall;
+
+                // find unit on the other side
+                foreach (Wall w in wall_list)
                 {
-                    TaskDialog.Show("index", unit_index.ToString());
-                    string detectObject = "監測_土中傾度管";
+                    LocationCurve source_lc = w.Location as LocationCurve;
+                    XYZ source_start = source_lc.Curve.GetEndPoint(0);
+                    XYZ source_end = source_lc.Curve.GetEndPoint(1);
+                    XYZ source_mid = (source_start + source_end) / 2;
 
-                    Wall target_wall = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>()
-                                .Where(x => x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString() == unit_id_list[unit_index]).First();
+                    double source_slope = (source_start.Y - source_end.Y) / (source_start.X - source_end.X);
 
-                    IList<Wall> wall_list = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().ToList();
-
-                    LocationCurve target_lc = target_wall.Location as LocationCurve;
-                    XYZ target_start = target_lc.Curve.GetEndPoint(0);
-                    XYZ target_end = target_lc.Curve.GetEndPoint(1);
-                    XYZ target_mid = (target_start + target_end) / 2;
-
-                    double target_slope = (target_start.Y - target_end.Y) / (target_start.X - target_end.X);
-                    double target_normal = -1 / target_slope;
-                    double target_normal_b = target_mid.Y - target_normal * target_mid.X;
-
-                    double except_distance = 50;
-                    double previous_distance = 10000;
-                    Wall source_wall = target_wall;
-
-                    foreach (Wall w in wall_list)
+                    double mid_distance = target_mid.DistanceTo(source_mid);
+                    double project_distance = Math.Abs(target_normal * source_mid.X + target_normal_b - source_mid.Y);
+                    if (project_distance < previous_distance && mid_distance > except_distance && Math.Abs(target_slope - source_slope) < 1)
                     {
-                        LocationCurve source_lc = w.Location as LocationCurve;
-                        XYZ source_start = source_lc.Curve.GetEndPoint(0);
-                        XYZ source_end = source_lc.Curve.GetEndPoint(1);
-                        XYZ source_mid = (source_start + source_end) / 2;
-
-                        double source_slope = (source_start.Y - source_end.Y) / (source_start.X - source_end.X);
-
-                        double mid_distance = target_mid.DistanceTo(source_mid);
-                        double project_distance = Math.Abs(target_normal * source_mid.X + target_normal_b - source_mid.Y);
-                        if (project_distance < previous_distance && mid_distance > except_distance && Math.Abs(target_slope - source_slope) < 1)
-                        {
-                            previous_distance = project_distance;
-                            source_wall = w;
-                        }
+                        previous_distance = project_distance;
+                        source_wall = w;
                     }
+                }
 
-                    double width = 10;
-                    LocationCurve select_source_lc = source_wall.Location as LocationCurve;
-                    XYZ select_source_start = select_source_lc.Curve.GetEndPoint(0);
-                    XYZ select_source_end = select_source_lc.Curve.GetEndPoint(1);
-                    XYZ select_source_mid = (select_source_start + select_source_end) / 2;
+                double width = 10;
+                LocationCurve select_source_lc = source_wall.Location as LocationCurve;
+                XYZ select_source_start = select_source_lc.Curve.GetEndPoint(0);
+                XYZ select_source_end = select_source_lc.Curve.GetEndPoint(1);
+                XYZ select_source_mid = (select_source_start + select_source_end) / 2;
 
-                    ViewFamilyType viewFamilyType = (from v in new FilteredElementCollector(doc).OfClass(typeof(ViewFamilyType)).Cast<ViewFamilyType>()
-                                                     where v.ViewFamily == ViewFamily.ThreeDimensional
-                                                     select v).First();
+                // get monitor family symbol
+                FamilySymbol familySymbol = new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>().Where(x => x.Name == detectObject).First();
 
-                    FamilySymbol familySymbol = new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>().Where(x => x.Name == detectObject).First();
+                List<string> visual_id = new List<string>();
+                List<double> visual_settlement = new List<double>();
+                List<XYZ> visual_coord = new List<XYZ>();
+                i = 0;
 
+                // find monitor id in excel
+                List<string> temp = filtered_equipment_id.GetRange(equipment_id_index[unit_index], equipment_id_index[unit_index + 1]);
+                for (i = 0; i != coordinate_n.Count(); i++)
+                {
+                    string monitor_id = equipment_id[i];
 
-                    List<string> visual_id = new List<string>();
-                    List<double> visual_settlement = new List<double>();
-                    List<XYZ> visual_coord = new List<XYZ>();
-                    i = 0;
-
-                    int j = 0;
-                    List<string> temp = filtered_equipment_id.GetRange(equipment_id_index[unit_index], equipment_id_index[unit_index + 1]);
-                    for (i = 0; i != coordinate_n.Count(); i++)
+                    if (temp.Contains(monitor_id))
                     {
-                        string monitor_id = equipment_id[i];
+                        FamilyInstance monitor3 = doc.Create.NewFamilyInstance(monitor_point_list[i], familySymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
+                        monitor3.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).Set(equipment_id[i] + "/" + settlement[i]);
 
-                        if (temp.Contains(monitor_id))
-                        {
-                            FamilyInstance monitor3 = doc.Create.NewFamilyInstance(monitor_point_list[i], familySymbol, Autodesk.Revit.DB.Structure.StructuralType.NonStructural);
-                            monitor3.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).Set(equipment_id[i] + "/" + settlement[i]);
-
-                            visual_id.Add(equipment_id[i]);
-                            visual_settlement.Add(settlement[i]);
-                            visual_coord.Add(monitor_point_list[i]);
-
-                        }
+                        visual_id.Add(equipment_id[i]);
+                        visual_settlement.Add(settlement[i]);
+                        visual_coord.Add(monitor_point_list[i]);
                     }
+                }
 
-                    XYZ sum_coord = visual_coord.Aggregate(func: (a, b) => { return a + b; });
-                    XYZ center = sum_coord / visual_coord.Count();
-                    List<int> index = FindNearest(target_mid, visual_coord);
-                    XYZ nearest_visual_coord = visual_coord[index[0]];
-                    XYZ farest_visual_coord = visual_coord[index[1]];
+                XYZ sum_coord = visual_coord.Aggregate(func: (a, b) => { return a + b; });
+                XYZ center = sum_coord / visual_coord.Count();
+                List<int> index = FindNearest(target_mid, visual_coord);
+                XYZ nearest_visual_coord = visual_coord[index[0]];
+                XYZ farest_visual_coord = visual_coord[index[1]];
 
-                    XYZ axis = new XYZ(center.X, center.Y, 0);
-                    Line axis_z = Line.CreateBound(axis, axis + new XYZ(0, 0, 10));
+                XYZ axis = new XYZ(center.X, center.Y, 0);
+                Line axis_z = Line.CreateBound(axis, axis + new XYZ(0, 0, 10));
 
-                    Transform rotate = Transform.CreateRotationAtPoint(new XYZ(0, 0, 10), Math.Atan(target_normal), new XYZ(axis.X, axis.Y, 0));
-                    Transform reverse_rotate = Transform.CreateRotationAtPoint(new XYZ(0, 0, 10), -Math.Atan(target_normal), new XYZ(axis.X, axis.Y, 0));
+                Transform rotate = Transform.CreateRotationAtPoint(new XYZ(0, 0, 10), Math.Atan(target_normal), new XYZ(axis.X, axis.Y, 0));
+                Transform reverse_rotate = Transform.CreateRotationAtPoint(new XYZ(0, 0, 10), -Math.Atan(target_normal), new XYZ(axis.X, axis.Y, 0));
 
-                    Plane plane = Plane.CreateByNormalAndOrigin(XYZ.BasisZ, new XYZ(0, 0, 0));
-                    SketchPlane sp = SketchPlane.Create(doc, plane);
-                    Arc arc3 = Arc.Create(new XYZ(axis.X, axis.Y, 0), 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
-                    ModelCurve mc3 = doc.Create.NewModelCurve(arc3, sp);
+                Plane plane = Plane.CreateByNormalAndOrigin(XYZ.BasisZ, new XYZ(0, 0, 0));
+                SketchPlane sp = SketchPlane.Create(doc, plane);
+                Arc arc3 = Arc.Create(new XYZ(axis.X, axis.Y, 0), 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
+                ModelCurve mc3 = doc.Create.NewModelCurve(arc3, sp);
 
-                    XYZ x1 = new XYZ(2 * nearest_visual_coord.X - center.X, center.Y + 1 * width, 0);
-                    XYZ x2 = new XYZ(2 * nearest_visual_coord.X - center.X, center.Y - 1 * width, 0);
-                    XYZ x3 = new XYZ(2 * farest_visual_coord.X - center.X, center.Y - 1 * width, 0);
-                    XYZ x4 = new XYZ(2 * farest_visual_coord.X - center.X, center.Y + 1 * width, 0);
+                XYZ x1 = new XYZ(2 * nearest_visual_coord.X - center.X, center.Y + 1 * width, 0);
+                XYZ x2 = new XYZ(2 * nearest_visual_coord.X - center.X, center.Y - 1 * width, 0);
+                XYZ x3 = new XYZ(2 * farest_visual_coord.X - center.X, center.Y - 1 * width, 0);
+                XYZ x4 = new XYZ(2 * farest_visual_coord.X - center.X, center.Y + 1 * width, 0);
 
-                    CurveArray profile = new CurveArray();
-                    profile.Append(Line.CreateBound(x1, x2));
-                    profile.Append(Line.CreateBound(x2, x3));
-                    profile.Append(Line.CreateBound(x3, x4));
-                    profile.Append(Line.CreateBound(x4, x1));
+                CurveArray profile = new CurveArray();
+                profile.Append(Line.CreateBound(x1, x2));
+                profile.Append(Line.CreateBound(x2, x3));
+                profile.Append(Line.CreateBound(x3, x4));
+                profile.Append(Line.CreateBound(x4, x1));
 
-                    FloorType floorType = new FilteredElementCollector(doc).OfClass(typeof(FloorType)).Cast<FloorType>().Where(x => x.Name == "通用 150mm").First();
-                    Element floor = doc.Create.NewFloor(profile, floorType, Level.Create(doc, 0), false, XYZ.BasisZ);
-                    ElementTransformUtils.RotateElement(doc, floor.Id, axis_z, Math.Atan(target_normal));
+                FloorType floorType = new FilteredElementCollector(doc).OfClass(typeof(FloorType)).Cast<FloorType>().Where(x => x.Name == "通用 150mm").First();
+                Element floor = doc.Create.NewFloor(profile, floorType, Level.Create(doc, 0), false, XYZ.BasisZ);
+                ElementTransformUtils.RotateElement(doc, floor.Id, axis_z, Math.Atan(target_normal));
 
-                    tran.Commit();
-                    tran.Start("visualize");
+                tran.Commit();
+                tran.Start("visualize");
 
-                    // find target face
-                    double previous_z = -100;
-                    PlanarFace target_face = null;
-                    GeometryElement geometryElement = floor.get_Geometry(new Options());
+                // find target face of floor
+                previous_distance = 10000;
+                PlanarFace target_face = null;
+                GeometryElement geometryElement = floor.get_Geometry(new Options());
+                foreach (GeometryObject geometryObject in geometryElement)
+                {
+                    Solid solid = geometryObject as Solid;
 
-                    foreach (GeometryObject geometryObject in geometryElement)
+                    if (solid != null)
                     {
-                        Solid solid = geometryObject as Solid;
-
-                        if (solid != null)
+                        FaceArray faceArray = solid.Faces;
+                        foreach (PlanarFace planarFace in faceArray)
                         {
-                            FaceArray faceArray = solid.Faces;
-                            foreach (PlanarFace planarFace in faceArray)
+                            double distance = center.DistanceTo(planarFace.Origin);
+                            if (distance <= previous_distance)
                             {
-                                if (previous_z <= planarFace.Origin.Z)
-                                {
-                                    previous_z = planarFace.Origin.Z;
-                                    target_face = planarFace;
-                                }
+                                previous_distance = distance;
+                                target_face = planarFace;
                             }
                         }
                     }
+                }
 
-                    BoundingBoxUV bb = target_face.GetBoundingBox();
-                    UV min = bb.Min;
-                    UV max = bb.Max;
+                BoundingBoxUV bb = target_face.GetBoundingBox();
+                UV min = bb.Min;
+                UV max = bb.Max;
 
-                    UV faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
-                    Transform computeDerivatives = target_face.ComputeDerivatives(faceCenter);
-                    XYZ faceCenterNormal = computeDerivatives.BasisZ;
-                    XYZ faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(1);
-                    Transform transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
+                UV faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
+                Transform computeDerivatives = target_face.ComputeDerivatives(faceCenter);
+                XYZ faceCenterNormal = computeDerivatives.BasisZ;
+                XYZ faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(1);
+                Transform transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
 
+                // uv points
+                IList<UV> uvPts = new List<UV>();
+                for (i = 0; i != visual_id.Count(); i++)
+                {
+                    visual_coord[i] = reverse_rotate.OfPoint(visual_coord[i]);
+                    uvPts.Add(new UV(visual_coord[i].X, visual_coord[i].Y) - new UV(x2.X, x2.Y));
+                }
 
+                // val points
+                IList<ValueAtPoint> valList = new List<ValueAtPoint>();
+                for (i = 0; i != visual_id.Count(); i++)
+                {
+                    valList.Add(new ValueAtPoint(new List<double> { visual_settlement[i] }));
+                }
 
-                    // uv points
-                    IList<UV> uvPts = new List<UV>();
-                    for (i = 0; i != visual_id.Count(); i++)
+                int idx = sfm.AddSpatialFieldPrimitive(target_face, transform);
+                sfm.UpdateSpatialFieldPrimitive(idx, new FieldDomainPointsByUV(uvPts), new FieldValues(valList), schemaIndex_settlement);
+
+                // find target face of unit
+                previous_distance = 10000;
+                target_face = null;
+                geometryElement = target_wall.get_Geometry(new Options());
+
+                XYZ visual_vector = nearest_visual_coord - farest_visual_coord;
+                foreach (GeometryObject geometryObject in geometryElement)
+                {
+                    Solid solid = geometryObject as Solid;
+
+                    if (solid != null)
                     {
-                        visual_coord[i] = reverse_rotate.OfPoint(visual_coord[i]);
-                        uvPts.Add(new UV(visual_coord[i].X, visual_coord[i].Y) - new UV(x2.X, x2.Y));
-                    }
-
-                    // val points
-                    IList<ValueAtPoint> valList = new List<ValueAtPoint>();
-                    for (i = 0; i != visual_id.Count(); i++)
-                    {
-                        valList.Add(new ValueAtPoint(new List<double> { visual_settlement[i] }));
-                    }
-
-                    sfm.SetMeasurementNames(new List<string> { "資料 1" });
-                    int idx = sfm.AddSpatialFieldPrimitive(target_face, transform);
-                    sfm.UpdateSpatialFieldPrimitive(idx, new FieldDomainPointsByUV(uvPts), new FieldValues(valList), schemaIndex);
-
-
-                    // find target face
-                    previous_distance = 10000;
-                    target_face = null;
-                    geometryElement = target_wall.get_Geometry(new Options());
-
-                    foreach (GeometryObject geometryObject in geometryElement)
-                    {
-                        Solid solid = geometryObject as Solid;
-
-                        if (solid != null)
+                        FaceArray faceArray = solid.Faces;
+                        foreach (PlanarFace planarFace in faceArray)
                         {
-                            FaceArray faceArray = solid.Faces;
-                            foreach (PlanarFace planarFace in faceArray)
+                            double dot = visual_vector.DotProduct(planarFace.FaceNormal);
+                            double mul = visual_vector.GetLength() * planarFace.FaceNormal.GetLength();
+                            double distance = nearest_visual_coord.DistanceTo(planarFace.Origin);
+                            if (Math.Abs(dot + mul) < 0.01 && distance <= previous_distance)
                             {
-                                double distance = nearest_visual_coord.DistanceTo(new XYZ(planarFace.Origin.X, planarFace.Origin.Y, 0));
-                                if (distance <= previous_distance)
-                                {
-                                    previous_distance = distance;
-                                    target_face = planarFace;
-                                }
+                                previous_distance = distance;
+                                target_face = planarFace;
                             }
                         }
                     }
-                    TaskDialog.Show("1", target_wall.Id.ToString());
-                    TaskDialog.Show("1", target_face.Area.ToString());
+                }
 
-                    bb = target_face.GetBoundingBox();
-                    min = bb.Min;
-                    max = bb.Max;
+                bb = target_face.GetBoundingBox();
+                min = bb.Min;
+                max = bb.Max;
 
-                    faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
-                    computeDerivatives = target_face.ComputeDerivatives(faceCenter);
-                    faceCenterNormal = computeDerivatives.BasisZ;
-                    faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(1);
-                    transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
+                faceCenter = new UV((max.U + min.U) / 2, (max.V + min.V) / 2);
+                computeDerivatives = target_face.ComputeDerivatives(faceCenter);
+                faceCenterNormal = computeDerivatives.BasisZ;
+                faceCenterNormalMultiplied = faceCenterNormal.Normalize().Multiply(1);
+                transform = Transform.CreateTranslation(faceCenterNormalMultiplied);
 
-                    int n = sid_index[unit_index + 1];
-                    double delta = (max.V - min.V) / n;
+                int n = sid_index[unit_index + 1];
+                double delta = (max.V - min.V) / n;
 
-                    // uv points
-                    uvPts = new List<UV>();
-                    for (i = 0; i < n; i++)
+                // uv points
+                uvPts = new List<UV>();
+                List<double> temp_depth = depth.GetRange(sid_index[unit_index], sid_index[unit_index + 1]);
+                for (i = 0; i < n; i++)
+                {
+                    TaskDialog.Show("1", (max.V - temp_depth[i] * 3.281).ToString());
+                    uvPts.Add(new UV(max.U / 2, max.V - temp_depth[i] * 3.281));
+                    if (max.V - temp_depth[i] * 3.281 < 0)
                     {
-                        uvPts.Add(new UV(max.U, max.V - delta * i));
+                        break;
                     }
+                }
+                TaskDialog.Show("1", uvPts.Count().ToString());
 
-                    // val points
-                    valList = new List<ValueAtPoint>();
-                    List<double> temp_double = sid_displacement.GetRange(sid_index[unit_index], sid_index[unit_index + 1]);
-                    for (i = 0; i < n; i++)
+                // val points
+                valList = new List<ValueAtPoint>();
+                List<double> temp_sid = sid_displacement.GetRange(sid_index[unit_index], sid_index[unit_index + 1]);
+                for (i = 0; i < uvPts.Count(); i++)
+                {
+                    valList.Add(new ValueAtPoint(new List<double> { temp_sid[i] }));
+                }
+
+                idx = sfm.AddSpatialFieldPrimitive(target_face, transform);
+                sfm.UpdateSpatialFieldPrimitive(idx, new FieldDomainPointsByUV(uvPts), new FieldValues(valList), schemaIndex_displacement);
+
+                sfm.LegendPosition = new XYZ(target_mid.X, target_mid.Y, 0);
+
+                // find nearest frame
+                previous_distance = 10000;
+                FamilyInstance t = familyInstance[0];
+                foreach (FamilyInstance f in familyInstance)
+                {
+                    LocationCurve locationCurve = f.Location as LocationCurve;
+                    XYZ start = locationCurve.Curve.GetEndPoint(0);
+                    XYZ end = locationCurve.Curve.GetEndPoint(1);
+
+                    double start_distance = target_mid.DistanceTo(start);
+                    double end_distance = target_mid.DistanceTo(end);
+                    if (start_distance < previous_distance || end_distance < previous_distance)
                     {
-                        valList.Add(new ValueAtPoint(new List<double> { temp_double[i] }));
-                    }
-                    TaskDialog.Show("1", uvPts.Count().ToString());
-                    TaskDialog.Show("1", valList.Count().ToString());
+                        if (start_distance < end_distance) { previous_distance = start_distance; }
+                        else { previous_distance = end_distance; }
 
-                    sfm.SetMeasurementNames(new List<string> { "資料 1" });
-                    idx = sfm.AddSpatialFieldPrimitive(target_face, transform);
-                    //sfm.UpdateSpatialFieldPrimitive(idx, new FieldDomainPointsByUV(uvPts), new FieldValues(valList), schemaIndex);
+                        t = f;
+                    }
+                }
+                target_frame_list.Add(t);
+
+                LocationCurve t_lc = t.Location as LocationCurve;
+
+                // put text note
+                List<Level> level = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().Where(x => x.Name.Contains("斷面typeS1-開挖階數")).ToList();
+                for (i = 0; i != vg_id.Count(); i += 2)
+                {
+                    XYZ t_mid = (t_lc.Curve.GetEndPoint(0) + t_lc.Curve.GetEndPoint(1)) / 2;
+                    double z = Math.Round(level[i / 2].Elevation);
+                    XYZ point = new XYZ(t_mid.X, t_mid.Y, z);
+                    string text = vg_id[i] + ": " + axial_force[i] + "\n" + vg_id[i + 1] + ": " + axial_force[i + 1];
+                    TextNote note = TextNote.Create(doc, view.Id, point, text, textNoteOptions);
+                }
+
+            }
+            //}
+            //catch (Exception e) { TaskDialog.Show("Error", e.ToString()); }
+
+            ICollection<ElementId> not_hide_id = new List<ElementId>();
+            foreach (FamilyInstance t in target_frame_list)
+            {
+                LocationCurve t_lc = t.Location as LocationCurve;
+                double t_length = t_lc.Curve.Length;
+                XYZ t_start = t_lc.Curve.GetEndPoint(0);
+
+                foreach (FamilyInstance f in familyInstance)
+                {
+                    LocationCurve lc = f.Location as LocationCurve;
+                    double length = lc.Curve.Length;
+                    XYZ start = lc.Curve.GetEndPoint(0);
+
+                    t_start = new XYZ(t_start.X, t_start.Y, 0);
+                    start = new XYZ(start.X, start.Y, 0);
+
+                    if (t_start.DistanceTo(start) < 10)// && Math.Abs(length - t_length) < 10)
+                    {
+                        not_hide_id.Add(f.Id);
+                    }
                 }
             }
-            catch (Exception e) { TaskDialog.Show("Error", e.ToString()); }
+
+            List<FamilyInstance> middle_column = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>().Where(x => x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString().Contains("中間樁")).ToList();
+            List<FamilyInstance> slope_column = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Cast<FamilyInstance>().Where(x => x.get_Parameter(BuiltInParameter.ALL_MODEL_INSTANCE_COMMENTS).AsString().Contains("斜撐")).ToList();
+            ICollection<ElementId> hide_id = new List<ElementId>();
+            foreach (FamilyInstance f in familyInstance)
+            {
+                if (!not_hide_id.Contains(f.Id))
+                {
+                    hide_id.Add(f.Id);
+                }
+            }
+            foreach (FamilyInstance f in middle_column)
+            {
+                if (!not_hide_id.Contains(f.Id))
+                {
+                    hide_id.Add(f.Id);
+                }
+            }
+            foreach (FamilyInstance f in slope_column)
+            {
+                if (!not_hide_id.Contains(f.Id))
+                {
+                    hide_id.Add(f.Id);
+                }
+            }
+            view.HideElementsTemporary(hide_id);
+
             TaskDialog.Show("1", "done");
             tran.Commit();
-            
-
         }
 
         public string GetName()
@@ -466,7 +567,8 @@ namespace excavation
                 {
                     distance = element_point.DistanceTo(point);
                     index[0] = i;
-                }else if (element_point.DistanceTo(point) > distance)
+                }
+                else if (element_point.DistanceTo(point) > distance)
                 {
                     distance = element_point.DistanceTo(point);
                     index[1] = i;

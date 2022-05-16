@@ -663,3 +663,4 @@ C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.cspr
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.dll
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.pdb
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.Form4.resources
+C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.Form4.resources

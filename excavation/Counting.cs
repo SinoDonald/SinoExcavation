@@ -893,7 +893,7 @@ namespace excavation
                         Eapp.Quit();
                         Eapp = null;
                     }
-                    catch (Exception e) { reader.CloseEx(); TaskDialog.Show("error", Environment.NewLine + e.Message); }
+                    catch (Exception e) { TaskDialog.Show("error", e.ToString()); }
                 }
                 //最後寫入土方量
                 try

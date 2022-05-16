@@ -80,7 +80,7 @@ namespace excavation
                 {
                     sheet.SetData(file_path, 1);
                     sheet.PassWallData();
-                    sheet.PassColumnData();
+                    //sheet.PassColumnData();
                     sheet.CloseEx();
 
                     if (type == "型鋼樁")
@@ -124,7 +124,7 @@ namespace excavation
                     }
 
                 }
-                catch { }
+                catch (Exception e) { TaskDialog.Show("Error", e.ToString()); }
                 Level wall_level = Level.Create(doc, sheet.wall_high * 1000 * -1 / 304.8);
                 try 
                 { 
@@ -264,7 +264,7 @@ namespace excavation
                     fs.LookupParameter("t").SetValueString(t1.ToString());
                     fs.LookupParameter("D").SetValueString(D.ToString());
                     fs.LookupParameter("E").SetValueString(E.ToString());
-                    // fs.LookupParameter("F").SetValueString(t2.ToString());
+                    fs.LookupParameter("F").SetValueString(t2.ToString());
                 }
 
                 // get timber lagging element
@@ -303,6 +303,11 @@ namespace excavation
                     // doc.Create.NewDetailCurve(doc.ActiveView, edge_line);
 
                     double slope = edge_line.Direction.Y / edge_line.Direction.X;
+                    double slope_correction = 0;
+                    if (edge_line.GetEndPoint(0).X - edge_line.GetEndPoint(1).X < 0)
+                    {
+                        slope_correction = Math.PI;
+                    }
                     int pile_num = (int)(edge_line.Length / distance) + 1;
 
                     List<ElementId> pre_nor_rotate_list = new List<ElementId>();
@@ -315,7 +320,7 @@ namespace excavation
                     // create corner h beam in each edge_line
                     XYZ corner_point = edge_line.GetEndPoint(1) + B / 2 / 304.8 * edge_line.Direction - (h / 2 / 304.8) * nomal_vector;
                     FamilyInstance instance3 = doc.Create.NewFamilyInstance(corner_point, fs, level, StructuralType.NonStructural);
-                    ElementTransformUtils.RotateElement(doc, instance3.Id, Line.CreateBound(corner_point, (corner_point + XYZ.BasisZ)), Math.Atan(slope));
+                    ElementTransformUtils.RotateElement(doc, instance3.Id, Line.CreateBound(corner_point, (corner_point + XYZ.BasisZ)), Math.Atan(slope) + slope_correction);
 
                     Line wood_line;
                     Curve c;
@@ -332,11 +337,11 @@ namespace excavation
                         {
                             // create h beam
                             instance2 = doc.Create.NewFamilyInstance(point, fs, level, StructuralType.NonStructural);
-                            ElementTransformUtils.RotateElement(doc, instance2.Id, Line.CreateBound(point, (point + XYZ.BasisZ)), Math.Atan(slope));
+                            ElementTransformUtils.RotateElement(doc, instance2.Id, Line.CreateBound(point, (point + XYZ.BasisZ)), Math.Atan(slope) + slope_correction);
 
                             // create timber lagging in all level
                             wood_line = Line.CreateBound(wall_point, corner_point - (t1 / 2 / 304.8) * edge_line.Direction);
-                            c = wood_line.CreateOffset(((h - wall_W) / 2 - t2) / 304.8, new XYZ(0, 0, -1));
+                            c = wood_line.CreateOffset((t2 - (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
                             for (int k = 0; k < levlist.Length - 1; k++)
                             {
                                 Wall wall = Wall.Create(doc, c, wallType.Id, level.Id, sheet.wall_high * 1000 / 304.8, 0, false, false);
@@ -348,7 +353,7 @@ namespace excavation
 
                         // create h beam
                         instance2 = doc.Create.NewFamilyInstance(point, fs, level, StructuralType.NonStructural);
-                        ElementTransformUtils.RotateElement(doc, instance2.Id, Line.CreateBound(point, (point + XYZ.BasisZ)), Math.Atan(slope));
+                        ElementTransformUtils.RotateElement(doc, instance2.Id, Line.CreateBound(point, (point + XYZ.BasisZ)), Math.Atan(slope) + slope_correction);
                         
                         // if the end point of the wall exceed the corner h beam, change end point to the last h beam
                         if (corner_point.DotProduct(edge_line.Direction) - wall_next_point.DotProduct(edge_line.Direction) < B / 2 / 304.8)
@@ -358,7 +363,7 @@ namespace excavation
 
                         // create timber lagging in all level
                         wood_line = Line.CreateBound(wall_point, wall_next_point);
-                        c = wood_line.CreateOffset(((h - wall_W) / 2 - t2) / 304.8, new XYZ(0, 0, -1));
+                        c = wood_line.CreateOffset((t2 - (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
                         for (int k = 0; k < levlist.Length - 1; k++)
                         {
                             Wall wall = Wall.Create(doc, c, wallType.Id, level.Id, sheet.wall_high * 1000 / 304.8, 0, false, false);
