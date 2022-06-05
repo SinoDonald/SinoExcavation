@@ -64,6 +64,9 @@ namespace excavation
         ExternalEvent externalEvent_CreateUnit;
         CreateUnit handler_CreateUnit = new CreateUnit();
 
+        ExternalEvent externalEvent_Rotate;
+        Rotate handler_Rotate = new Rotate();
+
         ExternalEvent externalEvent_CreateColumn;
         CreateColumn handler_createColumn = new CreateColumn();
 
@@ -139,6 +142,7 @@ namespace excavation
             externalEvent_CreateRebar = ExternalEvent.Create(handler_CreateRebar);
             externalEvent_CreateMonitor = ExternalEvent.Create(handler_CreateMonitor);
             externalEvent_CreateUnit = ExternalEvent.Create(handler_CreateUnit);
+            externalEvent_Rotate = ExternalEvent.Create(handler_Rotate);
             externalEvent_CreateColumn = ExternalEvent.Create(handler_createColumn);
             externalEvent_MoveColumn = ExternalEvent.Create(handler_moveColumn);
             externalEvent_CreateFrame = ExternalEvent.Create(handler_createFrame);
@@ -894,6 +898,7 @@ namespace excavation
             handler_CreateMonitor.files_path = new List<string>();
             handler_CreateMonitor.files_path = file_names;
             handler_CreateMonitor.type = comboBox12.Text;
+            handler_CreateMonitor.excel_path = textBox8.Text;
 
             externalEvent_CreateMonitor.Raise();
         }
@@ -905,9 +910,7 @@ namespace excavation
 
         private void button15_Click(object sender, EventArgs e)
         {
-            handler_CreateRebar.files_path = new List<string>();
-            handler_CreateRebar.files_path = file_names;
-            externalEvent_CreateRebar.Raise();
+            externalEvent_Rotate.Raise();
         }
 
         private void button16_Click(object sender, EventArgs e)

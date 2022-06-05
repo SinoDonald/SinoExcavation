@@ -29,6 +29,16 @@ namespace excavation
             get;
             set;
         }
+        public string unit_dwg_file_name
+        {
+            get;
+            set;
+        }
+        public string unit_id_position_excel_path
+        {
+            get;
+            set;
+        }
         public IList<double> xy_shift
         {
             get;
@@ -50,7 +60,8 @@ namespace excavation
                 try
                 {
                     dex.PassWallData();
-                    dex.SetData(@"\\Mac\Home\Desktop\excavation\test.xlsx", 1);
+                    //dex.SetData(@"\\Mac\Home\Desktop\excavation\test.xlsx", 1);
+                    dex.SetData(unit_id_position_excel_path, 1);
                     dex.PassUnitText();
                     dex.CloseEx();
                 }
@@ -58,8 +69,8 @@ namespace excavation
                                 
                 //插入CAD
                 trans.Start("CAD");
-                string unit_dwg_file_name = @"\\Mac\Home\Desktop\excavation\LG05連續壁單元分割圖.dwg";
-                string diaphragm_dwg_file_name = @"\\Mac\Home\Desktop\excavation\LG05測試\LG05-20181129.dwg";
+                //string unit_dwg_file_name = @"\\Mac\Home\Desktop\excavation\LG05連續壁單元分割圖.dwg";
+                //string diaphragm_dwg_file_name = @"\\Mac\Home\Desktop\excavation\LG05測試\LG05-20181129.dwg";
 
                 Autodesk.Revit.DB.View view = doc.ActiveView;
                 DWGImportOptions dWGImportOptions = new DWGImportOptions();
@@ -69,13 +80,13 @@ namespace excavation
 
                 LinkLoadResult linkLoadResult = new LinkLoadResult();
                 ImportInstance unit_dwg = ImportInstance.Create(doc, view, unit_dwg_file_name, dWGImportOptions, out linkLoadResult);
-                ImportInstance diaphragm_dwg = ImportInstance.Create(doc, view, diaphragm_dwg_file_name, dWGImportOptions, out linkLoadResult);
+                //ImportInstance diaphragm_dwg = ImportInstance.Create(doc, view, diaphragm_dwg_file_name, dWGImportOptions, out linkLoadResult);
 
                 unit_dwg.Pinned = false;
-                diaphragm_dwg.Pinned = false;
+                //diaphragm_dwg.Pinned = false;
 
                 ElementTransformUtils.MoveElement(doc, unit_dwg.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
-                ElementTransformUtils.MoveElement(doc, diaphragm_dwg.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
+                //ElementTransformUtils.MoveElement(doc, diaphragm_dwg.Id, new XYZ(xy_shift[0], xy_shift[1], 0));
 
                 TextNoteOptions textNoteOptions = new TextNoteOptions();
                 TextNoteType tType = new FilteredElementCollector(doc).OfClass(typeof(TextNoteType)).Cast<TextNoteType>().FirstOrDefault();
@@ -203,13 +214,15 @@ namespace excavation
                     k++; 
                     // check sorting result
                     //int k = 0;
+
+                    /*
                     foreach (XYZ point in wall_point_list)
                     {
-                        Arc arc3 = Arc.Create(project_transform.OfPoint(point), 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
-                        ModelCurve mc3 = doc.Create.NewModelCurve(arc3, sp);
+                        //Arc arc3 = Arc.Create(project_transform.OfPoint(point), 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
+                        //ModelCurve mc3 = doc.Create.NewModelCurve(arc3, sp);
                         //TextNote note = TextNote.Create(doc, view.Id, point, k.ToString(), textNoteOptions);
                         //k++;
-                    }
+                    }*/
 
                     // create unit wall
                     doc.Delete(wall.Id);

@@ -174,9 +174,10 @@
             this.CountBtm = new System.Windows.Forms.Button();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.gradientPanel1 = new auto_line.GradientPanel();
+            this.button27 = new System.Windows.Forms.Button();
+            this.textBox14 = new System.Windows.Forms.TextBox();
             this.button16 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
@@ -844,7 +845,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(377, 285);
+            this.tabPage1.Size = new System.Drawing.Size(377, 283);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -1267,7 +1268,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(377, 285);
+            this.tabPage5.Size = new System.Drawing.Size(377, 283);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1539,6 +1540,7 @@
             this.button25.Size = new System.Drawing.Size(50, 30);
             this.button25.TabIndex = 42;
             this.button25.UseVisualStyleBackColor = false;
+            this.button25.Click += new System.EventHandler(this.button25_Click);
             // 
             // button24
             // 
@@ -1555,6 +1557,7 @@
             this.button24.TabIndex = 41;
             this.button24.Text = "建置擋土壁單元";
             this.button24.UseVisualStyleBackColor = false;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
             // 
             // label32
             // 
@@ -1632,6 +1635,7 @@
             this.button15.Size = new System.Drawing.Size(50, 30);
             this.button15.TabIndex = 35;
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
             // textBox12
             // 
@@ -2133,9 +2137,10 @@
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.Khaki;
             this.gradientPanel1.ColorTop = System.Drawing.Color.Wheat;
+            this.gradientPanel1.Controls.Add(this.button27);
+            this.gradientPanel1.Controls.Add(this.textBox14);
             this.gradientPanel1.Controls.Add(this.button16);
             this.gradientPanel1.Controls.Add(this.textBox8);
-            this.gradientPanel1.Controls.Add(this.comboBox12);
             this.gradientPanel1.Controls.Add(this.label25);
             this.gradientPanel1.Controls.Add(this.button9);
             this.gradientPanel1.Controls.Add(this.label24);
@@ -2148,6 +2153,23 @@
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(371, 274);
             this.gradientPanel1.TabIndex = 30;
+            // 
+            // button27
+            // 
+            this.button27.Location = new System.Drawing.Point(291, 125);
+            this.button27.Name = "button27";
+            this.button27.Size = new System.Drawing.Size(57, 23);
+            this.button27.TabIndex = 26;
+            this.button27.Text = "瀏覽";
+            this.button27.UseVisualStyleBackColor = true;
+            this.button27.Click += new System.EventHandler(this.button27_Click);
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(114, 126);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(168, 22);
+            this.textBox14.TabIndex = 25;
             // 
             // button16
             // 
@@ -2168,42 +2190,18 @@
             this.textBox8.Size = new System.Drawing.Size(169, 22);
             this.textBox8.TabIndex = 23;
             // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "土中傾度管",
-            "支撐應變計",
-            "水壓計",
-            "永久水準點",
-            "地面沉陷點",
-            "沉陷計",
-            "建物沉陷點",
-            "建物傾斜計",
-            "淺層沉陷點",
-            "壁中傾度管",
-            "鋼筋計",
-            "隧道收斂點",
-            "觀測井",
-            "沉陷"});
-            this.comboBox12.Location = new System.Drawing.Point(113, 128);
-            this.comboBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(169, 20);
-            this.comboBox12.TabIndex = 22;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label25.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label25.Location = new System.Drawing.Point(6, 164);
+            this.label25.Location = new System.Drawing.Point(29, 165);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(104, 16);
+            this.label25.Size = new System.Drawing.Size(80, 16);
             this.label25.TabIndex = 21;
-            this.label25.Text = "選取監測儀器參考";
+            this.label25.Text = "監測儀器數值";
             // 
             // button9
             // 
@@ -2233,7 +2231,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(80, 16);
             this.label24.TabIndex = 18;
-            this.label24.Text = "監測儀器種類";
+            this.label24.Text = "監測儀器總表";
             // 
             // select_floor_comboBox
             // 
@@ -2618,7 +2616,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label24;
@@ -2651,5 +2648,7 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button button27;
+        private System.Windows.Forms.TextBox textBox14;
     }
 }

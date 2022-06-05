@@ -52,7 +52,7 @@ namespace excavation
                     ExReader reader = new ExReader();
                     reader.SetData(file_path, 1);
                     reader.PassWallData();
-                    reader.PassColumnData();
+                    //reader.PassColumnData();
                     reader.PassSideData();
                     reader.CloseEx();
                     string check_str = reader.section;
@@ -597,18 +597,27 @@ namespace excavation
                     {
                         Excel.Application Eapp = new Excel.Application();
 
+                        /*
                         if (files_path[0] == file_path)
                         {
                             string example = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase).ToString().Substring(6);
+
+                            TaskDialog.Show("1", example);
                             example += @"\數量表_test.xls";
                             Excel.Workbook EWB2 = Eapp.Workbooks.Open(example);
                             EWB2.SaveAs(path, Type.Missing, "", "", Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange, 1, false, Type.Missing, Type.Missing, Type.Missing);
-                        }
+                        }*/
+
+                        TaskDialog.Show("1", path);
+
                         Excel.Workbook EWb = Eapp.Workbooks.Open(path);
+                        TaskDialog.Show("1", "2");
                         Excel.Worksheet EWs = EWb.Worksheets[1];
                         Excel.Worksheet DataSheet = EWb.Worksheets[5]; //型鋼資料庫
+                        TaskDialog.Show("1", "3");
                         Excel.Range ERa_whole = EWs.UsedRange;
                         Excel.Range Data = DataSheet.UsedRange;
+                        TaskDialog.Show("1", "4");
 
                         Excel.Range StrRow = EWs.Rows["8:15"];
                         StrRow.EntireRow.Insert(Excel.XlInsertShiftDirection.xlShiftDown, Excel.XlInsertFormatOrigin.xlFormatFromRightOrBelow);
@@ -623,6 +632,7 @@ namespace excavation
                         EWs.Cells[10, 3] = "=" + total_l.ToString() + "*" + depth.ToString() + "*" + reader.wall_width.ToString();
                         EWs.Cells[10, 4] = total_l.ToString() + "*" + depth.ToString() + "*" + reader.wall_width.ToString();
                         EWs.Cells[10, 5] = "長x深x厚度";
+                        TaskDialog.Show("1", "5");
 
                         //中間樁部分
 
@@ -660,6 +670,7 @@ namespace excavation
                         int count = 0;
                         int big_count = 0;
                         int count1 = 0;
+                        TaskDialog.Show("1", "6");
 
                         for (int e = 0; e != mid_t_list.Count(); e++)//不同階數
                         {

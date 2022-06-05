@@ -55,12 +55,14 @@
   <ItemGroup>
     <Compile Include="Circle_excavation.cs" />
     <Compile Include="CreateBentPile.cs" />
+    <Compile Include="CreateMonitor.cs" />
     <Compile Include="CreateRebar.cs" />
     <Compile Include="CreateTriSupportofBeam.cs" />
     <Compile Include="CreateTriSupportOfFrame.cs" />
     <Compile Include="CreateU.cs" />
     <Compile Include="CreateUnit.cs" />
-    <Compile Include="CreateMonitor.cs" />
+    <Compile Include="Rotate.cs" />
+    <Compile Include="VisualizeMonitor.cs" />
     <Compile Include="DisplayColor.cs" />
     <Compile Include="CreateSoldierPile.cs" />
     <Compile Include="Counting.cs" />

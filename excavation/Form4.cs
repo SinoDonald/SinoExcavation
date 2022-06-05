@@ -61,6 +61,9 @@ namespace excavation
         ExternalEvent externalEvent_CreateMonitor;
         CreateMonitor handler_CreateMonitor = new CreateMonitor();
 
+        ExternalEvent externalEvent_VisualizeMonitor;
+        VisualizeMonitor handler_VisualizeMonitor = new VisualizeMonitor();
+
         ExternalEvent externalEvent_CreateUnit;
         CreateUnit handler_CreateUnit = new CreateUnit();
 
@@ -142,6 +145,7 @@ namespace excavation
             externalEvent_CreateSoldierPile = ExternalEvent.Create(handler_CreateSoldierPile);
             externalEvent_CreateRebar = ExternalEvent.Create(handler_CreateRebar);
             externalEvent_CreateMonitor = ExternalEvent.Create(handler_CreateMonitor);
+            externalEvent_VisualizeMonitor = ExternalEvent.Create(handler_VisualizeMonitor);
             externalEvent_CreateUnit = ExternalEvent.Create(handler_CreateUnit);
             externalEvent_CreateColumn = ExternalEvent.Create(handler_createColumn);
             externalEvent_MoveColumn = ExternalEvent.Create(handler_moveColumn);
@@ -908,11 +912,12 @@ namespace excavation
 
         private void button9_Click_1(object sender, EventArgs e)
         {
-            handler_CreateMonitor.files_path = new List<string>();
-            handler_CreateMonitor.files_path = file_names;
-            handler_CreateMonitor.type = comboBox12.Text;
+            handler_VisualizeMonitor.files_path = new List<string>();
+            handler_VisualizeMonitor.files_path = file_names;
+            handler_VisualizeMonitor.monitor_path = textBox14.Text;
+            handler_VisualizeMonitor.excel_path = textBox8.Text;
 
-            externalEvent_CreateMonitor.Raise();
+            externalEvent_VisualizeMonitor.Raise();
         }
 
         private void label20_Click(object sender, EventArgs e)
@@ -938,6 +943,7 @@ namespace excavation
             textBox8.Text = file_names[0];
             
         }
+
 
         private void button17_Click(object sender, EventArgs e)
         {
@@ -1143,6 +1149,44 @@ namespace excavation
             handler_create_U.files_path = new List<string>();
             handler_create_U.files_path = file_names;
             ExternalEvent_CreateU.Raise();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            textBox14.Text = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.ShowDialog();
+            file_names = openFileDialog.FileNames;
+            textBox14.Text = file_names[0];
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            textBox12.Text = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.ShowDialog();
+            file_names = openFileDialog.FileNames;
+            textBox12.Text = file_names[0];
+        }
+
+        private void button25_Click(object sender, EventArgs e)
+        {
+            textBox13.Text = "";
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.ShowDialog();
+            file_names = openFileDialog.FileNames;
+            textBox13.Text = file_names[0];
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            handler_CreateUnit.unit_dwg_file_name = textBox12.Text;
+            handler_CreateUnit.unit_id_position_excel_path = textBox13.Text;
+
+            externalEvent_CreateUnit.Raise();
         }
     }
 }
