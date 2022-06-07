@@ -627,8 +627,6 @@ C:\excavation\excavation\bin\Debug\excavation.dll
 C:\excavation\excavation\bin\Debug\excavation.pdb
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.csprojAssemblyReference.cache
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.csproj.ResolveComReference.cache
-C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.Form1.resources
-C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.form2.resources
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.Properties.Resources.resources
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.csproj.GenerateResource.cache
 C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.csproj.CoreCompileInputs.cache
@@ -663,4 +661,4 @@ C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.cspr
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.dll
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.pdb
 C:\Users\gill4\Desktop\excavation_最新版\excavation\obj\Debug\excavation.Form4.resources
-C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.Form4.resources
+C:\Users\weiluntsai\Documents\excavation\excavation\obj\Debug\excavation.g.resources
