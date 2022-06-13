@@ -153,16 +153,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Form4.resx">
+    <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
-    </Resource>
-    <Resource Include="Form1.resx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Resource>
-    <Resource Include="Form2.resx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </Resource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>

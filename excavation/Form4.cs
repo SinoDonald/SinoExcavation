@@ -1167,8 +1167,8 @@ namespace excavation
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
             openFileDialog.ShowDialog();
-            file_names = openFileDialog.FileNames;
-            textBox12.Text = file_names[0];
+            IList<string> unit_dwg_file_name = openFileDialog.FileNames;
+            textBox12.Text = unit_dwg_file_name[0];
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -1177,12 +1177,18 @@ namespace excavation
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
             openFileDialog.ShowDialog();
-            file_names = openFileDialog.FileNames;
-            textBox13.Text = file_names[0];
+            IList<string> unit_id_position_excel_path = openFileDialog.FileNames;
+            textBox13.Text = unit_id_position_excel_path[0];
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
+            handler_CreateUnit.files_path = new List<string>();
+            handler_CreateUnit.files_path = file_names;
+            handler_CreateUnit.xy_shift = new List<double>();
+            handler_CreateUnit.xy_shift.Add(double.Parse(shift_x.Text));
+            handler_CreateUnit.xy_shift.Add(double.Parse(shift_y.Text));
+
             handler_CreateUnit.unit_dwg_file_name = textBox12.Text;
             handler_CreateUnit.unit_id_position_excel_path = textBox13.Text;
 

@@ -164,7 +164,7 @@ namespace excavation
             if (displayStyle.Count() == 0)
             {
                 AnalysisDisplayColoredSurfaceSettings coloredSurfaceSettings = new AnalysisDisplayColoredSurfaceSettings();
-                coloredSurfaceSettings.ShowGridLines = true;
+                coloredSurfaceSettings.ShowGridLines = false;
 
                 AnalysisDisplayColorSettings colorSettings = new AnalysisDisplayColorSettings();
                 colorSettings.ColorSettingsType = AnalysisDisplayStyleColorSettingsType.GradientColor;
@@ -233,12 +233,12 @@ namespace excavation
             ICollection<ElementId> textnote_ids = new FilteredElementCollector(doc).OfClass(typeof(TextNote)).ToElementIds();
             Line origin_axis = Line.CreateBound(new XYZ(0, 0, 0), new XYZ(0, 0, 10));
             //double angle = -48.6 / 180 * Math.PI;
-            ElementTransformUtils.RotateElements(doc, element_ids, origin_axis, angle);
-            ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
+            //ElementTransformUtils.RotateElements(doc, element_ids, origin_axis, angle);
+            //ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
 
             // rotate base point
-            BasePoint basePoint = new FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_ProjectBasePoint).FirstOrDefault() as BasePoint;
-            basePoint.get_Parameter(BuiltInParameter.BASEPOINT_ANGLETON_PARAM).Set(0);
+            //BasePoint basePoint = new FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_ProjectBasePoint).FirstOrDefault() as BasePoint;
+            //basePoint.get_Parameter(BuiltInParameter.BASEPOINT_ANGLETON_PARAM).Set(0);
 
 
             double previous_distance = 100000;

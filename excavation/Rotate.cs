@@ -18,11 +18,12 @@ namespace excavation
             Document doc = app.ActiveUIDocument.Document;
             Transaction tran = new Transaction(doc);
 
-            tran.Start("start");
+            tran.Start("rotate");
             string temp_path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
             temp_path = Path.Combine(temp_path, @"temp\angle.txt");
 
             ICollection<ElementId> element_ids = new FilteredElementCollector(doc).WhereElementIsNotElementType().WhereElementIsViewIndependent().ToElementIds();
+            ICollection<ElementId> textnote_ids = new FilteredElementCollector(doc).OfClass(typeof(TextNote)).ToElementIds();
             Line origin_axis = Line.CreateBound(new XYZ(0, 0, 0), new XYZ(0, 0, 10));
 
             double angle = 0;
@@ -63,6 +64,7 @@ namespace excavation
 
             // rotate element
             ElementTransformUtils.RotateElements(doc, element_ids, origin_axis, angle);
+            ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
 
             if (Math.Abs(angle) > 0.001)
             {

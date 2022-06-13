@@ -2075,7 +2075,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(72, 26);
             this.label20.TabIndex = 6;
-            this.label20.Text = "v1.1.0";
+            this.label20.Text = "v2.0.0";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // topic

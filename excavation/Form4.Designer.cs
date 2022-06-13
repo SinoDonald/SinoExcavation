@@ -2216,7 +2216,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(150, 40);
             this.button9.TabIndex = 20;
-            this.button9.Text = "建置監測儀器";
+            this.button9.Text = "監測儀器視覺化";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click_1);
             // 
@@ -2325,7 +2325,7 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(72, 26);
             this.label20.TabIndex = 6;
-            this.label20.Text = "v1.1.0";
+            this.label20.Text = "v2.0.0";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // topic
