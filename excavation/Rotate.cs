@@ -64,7 +64,11 @@ namespace excavation
 
             // rotate element
             ElementTransformUtils.RotateElements(doc, element_ids, origin_axis, angle);
-            ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
+            try
+            {
+                ElementTransformUtils.RotateElements(doc, textnote_ids, origin_axis, angle);
+            }
+            catch {  }
 
             if (Math.Abs(angle) > 0.001)
             {
