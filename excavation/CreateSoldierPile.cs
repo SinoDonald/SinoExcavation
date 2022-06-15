@@ -80,7 +80,7 @@ namespace excavation
                 {
                     sheet.SetData(file_path, 1);
                     sheet.PassWallData();
-                    //sheet.PassColumnData();
+                    sheet.PassColumnData();
                     sheet.CloseEx();
 
                     if (type == "型鋼樁")
@@ -101,6 +101,7 @@ namespace excavation
                 }
                 catch (Exception e) { sheet.CloseEx(); TaskDialog.Show("Error", e.Message + e.StackTrace); }
 
+                TaskDialog.Show("1", "1");
                 SubTransaction subtran = new SubTransaction(doc);
                 tran.Start("create soldier pile");
 
