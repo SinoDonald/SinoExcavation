@@ -1194,5 +1194,16 @@ namespace excavation
 
             externalEvent_CreateUnit.Raise();
         }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            //指定數量計算之儲存路徑
+            Save_loc_textbox.Text = "";
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.FileName = "";
+            dialog.ShowDialog();
+            handler_counting.path = dialog.FileName;
+            Save_loc_textbox.Text = dialog.FileName;
+        }
     }
 }

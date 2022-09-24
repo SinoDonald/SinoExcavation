@@ -161,8 +161,6 @@ namespace excavation
 
                             middle_point = middle_point / count;
                             unit_point.Add(middle_point);
-                            //Arc arc = Arc.Create(middle_point, 1.05, 0.0, 2.0 * Math.PI, XYZ.BasisX, XYZ.BasisY);
-                            //ModelCurve mc = doc.Create.NewModelCurve(arc, sp);
                         }
                     }
                     catch { }

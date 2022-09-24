@@ -171,7 +171,7 @@ namespace excavation
                                 }
                             }
                         }
-                        catch (Exception e) { }
+                        catch (Exception e) { TaskDialog.Show("error", e.ToString()); }
                     }
                 }
                 else

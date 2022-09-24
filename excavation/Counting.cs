@@ -52,31 +52,37 @@ namespace excavation
                     ExReader reader = new ExReader();
                     reader.SetData(file_path, 1);
                     reader.PassWallData();
-                    //reader.PassColumnData();
+                    reader.PassColumnData();
                     reader.PassSideData();
                     reader.CloseEx();
                     string check_str = reader.section;
 
                     //連續壁部分
 
+                    
                     Level S1 = new FilteredElementCollector(doc).OfClass(typeof(Level)).Cast<Level>().Where(x => x.Name == "斷面" + check_str + "-擋土壁深度").ToList().First();
-                    List<Wall> wall_list = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().Where(x => x.LevelId == S1.Id).ToList();
-
-                    //找到長度
+                    double depth = 0;
                     double total_l = 0;
-                    foreach (Wall a in wall_list)
+                    List<Wall> wall_list = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().Where(x => x.LevelId == S1.Id).ToList();
+                    
+                    try
                     {
-                        // * 304.8 / 1000
-                        LocationCurve locationCurve = a.Location as LocationCurve;
-                        double length = locationCurve.Curve.Length * 304.8 / 1000;
-                        total_l += length;
+
+                        //找到長度
+                        foreach (Wall a in wall_list)
+                        {
+                            // * 304.8 / 1000
+                            LocationCurve locationCurve = a.Location as LocationCurve;
+                            double length = locationCurve.Curve.Length * 304.8 / 1000;
+                            total_l += length;
+                        }
+                        total_l = Math.Round(total_l, 3);
+
+                        //找到深度
+                        //WALL_USER_HEIGHT_PARAM => 不連續高度
+                        depth = double.Parse(wall_list[0].get_Parameter(BuiltInParameter.WALL_USER_HEIGHT_PARAM).AsValueString()) / 1000;
                     }
-                    total_l = Math.Round(total_l, 3);
-
-                    //找到深度
-                    //WALL_USER_HEIGHT_PARAM => 不連續高度
-                    double depth = double.Parse(wall_list[0].get_Parameter(BuiltInParameter.WALL_USER_HEIGHT_PARAM).AsValueString()) / 1000;
-
+                    catch { }
 
                     //中間樁部分
 
@@ -608,21 +614,16 @@ namespace excavation
                             EWB2.SaveAs(path, Type.Missing, "", "", Type.Missing, Type.Missing, Excel.XlSaveAsAccessMode.xlNoChange, 1, false, Type.Missing, Type.Missing, Type.Missing);
                         }*/
 
-                        TaskDialog.Show("1", path);
-
                         Excel.Workbook EWb = Eapp.Workbooks.Open(path);
-                        TaskDialog.Show("1", "2");
                         Excel.Worksheet EWs = EWb.Worksheets[1];
                         Excel.Worksheet DataSheet = EWb.Worksheets[5]; //型鋼資料庫
-                        TaskDialog.Show("1", "3");
                         Excel.Range ERa_whole = EWs.UsedRange;
                         Excel.Range Data = DataSheet.UsedRange;
-                        TaskDialog.Show("1", "4");
 
                         Excel.Range StrRow = EWs.Rows["8:15"];
                         StrRow.EntireRow.Insert(Excel.XlInsertShiftDirection.xlShiftDown, Excel.XlInsertFormatOrigin.xlFormatFromRightOrBelow);
                         EWs.Cells[8, 1] = "斷面" + check_str;
-                        EWs.Cells[9, 1] = wall_list[0].Name;
+                        EWs.Cells[9, 1] = wall_list.First().Name;
                         EWs.Cells[9, 2] = "m2";
                         EWs.Cells[9, 3] = "=" + total_l.ToString() + "*" + depth.ToString();
                         EWs.Cells[9, 4] = total_l.ToString() + "*" + depth.ToString();
@@ -632,7 +633,6 @@ namespace excavation
                         EWs.Cells[10, 3] = "=" + total_l.ToString() + "*" + depth.ToString() + "*" + reader.wall_width.ToString();
                         EWs.Cells[10, 4] = total_l.ToString() + "*" + depth.ToString() + "*" + reader.wall_width.ToString();
                         EWs.Cells[10, 5] = "長x深x厚度";
-                        TaskDialog.Show("1", "5");
 
                         //中間樁部分
 
@@ -640,6 +640,7 @@ namespace excavation
                         EWs.Cells[11, 2] = "支";
                         EWs.Cells[11, 4] = count_mid[0].ToString();
                         Excel.Range col_unit = Data.Find(reader.column[0].Item5, MatchCase: true);
+
 
                         int col_unit_row = col_unit.Row;
                         string col_unit_str = DataSheet.Cells[col_unit_row, 14].Value2.ToString();
@@ -670,7 +671,6 @@ namespace excavation
                         int count = 0;
                         int big_count = 0;
                         int count1 = 0;
-                        TaskDialog.Show("1", "6");
 
                         for (int e = 0; e != mid_t_list.Count(); e++)//不同階數
                         {
@@ -779,6 +779,8 @@ namespace excavation
                                 count1++;
                             }
 
+                            
+
                             big_count++;
                         }
 
@@ -867,6 +869,184 @@ namespace excavation
 
                             big_count++;
                         }
+
+                        Excel.Range ERa2 = EWs.Rows["15:27"];
+                        ERa2.EntireRow.Insert(Excel.XlInsertShiftDirection.xlShiftDown, Excel.XlInsertFormatOrigin.xlFormatFromRightOrBelow);
+
+                        // 型鋼樁 and 鋼軌樁
+                        IList<FamilyInstance> h_beam = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("型鋼樁")).Cast<FamilyInstance>().ToList();
+                        IList<FamilyInstance> rail_beam = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("鋼軌樁")).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[15, 1] = "型鋼樁";
+                        EWs.Cells[15, 2] = "支";
+
+                        EWs.Cells[16, 1] = "型鋼樁(" + reader.column[0].Item5 + ")";
+                        EWs.Cells[16, 2] = "t";
+                        EWs.Cells[16, 5] = "長 x 支數 x 單位重";
+
+                        try
+                        {
+                            EWs.Cells[15, 4] = h_beam.Count().ToString();
+
+                            string height = h_beam.First().Symbol.LookupParameter("高度").AsValueString();
+                            EWs.Cells[16, 3] = "=" + height + "*" + h_beam.Count().ToString() + "*" + col_unit_str;
+                            EWs.Cells[16, 4] = height + "*" + h_beam.Count().ToString() + "*" + col_unit_str;
+                        }
+                        catch { }
+
+                        EWs.Cells[17, 1] = "鋼軌樁";
+                        EWs.Cells[17, 2] = "支";
+
+                        EWs.Cells[18, 1] = "鋼軌樁(JRS˙JIS37Kg A)";
+                        EWs.Cells[18, 2] = "t";
+                        EWs.Cells[18, 5] = "長 x 支數 x 單位重";
+                        
+                        try
+                        {
+                            EWs.Cells[17, 4] = rail_beam.Count().ToString();
+
+                            col_unit_str = (37.2 / 1000).ToString();
+                            string height = rail_beam.First().Symbol.LookupParameter("高度").AsValueString();
+                            EWs.Cells[18, 3] = "=" + height + "*" + rail_beam.Count().ToString() + "*" + col_unit_str;
+                            EWs.Cells[18, 4] = height + "*" + rail_beam.Count().ToString() + "*" + col_unit_str;
+                        }
+                        catch { }
+
+                        // 橫板條
+                        Material material = new FilteredElementCollector(doc).OfClass(typeof(Material)).Cast<Material>().Where(x => x.Name == "timber lagging").First();
+                        FillPatternElement fillPatternElement = new FilteredElementCollector(doc).OfClass(typeof(FillPatternElement)).Cast<FillPatternElement>().Where(x => x.GetFillPattern().Name == "timber").First();
+                        List<Wall> timber_lagging = new FilteredElementCollector(doc).OfClass(typeof(Wall)).Cast<Wall>().Where(x => x.WallType.GetCompoundStructure().GetLayers().First().MaterialId == material.Id).ToList();
+
+                        EWs.Cells[19, 1] = "橫板條";
+                        EWs.Cells[19, 2] = "數量";
+
+                        EWs.Cells[20, 1] = "橫板條";
+                        EWs.Cells[20, 2] = "m";
+                        try
+                        {
+                            EWs.Cells[19, 4] = timber_lagging.Count().ToString();
+
+                            double spacing = fillPatternElement.GetFillPattern().GetFillGrids().First().Offset * 304.8 * 10;
+                            LocationCurve lc2 = timber_lagging.First().Location as LocationCurve;
+                            double length2 = lc2.Curve.Length * 304.8 / 1000;
+                            EWs.Cells[20, 3] = "=" + length2 + "*" + timber_lagging.Count().ToString();
+                            EWs.Cells[20, 4] = length2 + "*" + timber_lagging.Count().ToString();
+                            EWs.Cells[20, 5] = "長 x 數量, 寬(cm) = " + spacing.ToString();
+                        }
+                        catch { }
+
+                        // 排樁
+                        IList<FamilyInstance> bent_pile = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("排樁")).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[21, 1] = "排樁";
+                        EWs.Cells[21, 2] = "支";
+
+                        EWs.Cells[22, 1] = "排樁";
+                        EWs.Cells[22, 2] = "m3";
+                        EWs.Cells[22, 5] = "( 0.25 * pi * 直徑^2 * 深度 ) x 支數";
+                        try
+                        {
+                            EWs.Cells[21, 4] = bent_pile.Count().ToString();
+
+                            string pileBent_diameter = (float.Parse(bent_pile.First().LookupParameter("直徑").AsValueString()) / 1000).ToString();
+                            string pileBent_depth = (float.Parse(bent_pile.First().LookupParameter("深度").AsValueString()) / 1000).ToString();
+                            EWs.Cells[22, 3] = "=0.25*" + Math.PI + "*" + pileBent_diameter + "^2*" + pileBent_depth + "*" + bent_pile.Count().ToString();
+                            EWs.Cells[22, 4] = "0.25*" + Math.PI + "*" + pileBent_diameter + "^2*" + pileBent_depth + "*" + bent_pile.Count().ToString();
+                        }
+                        catch { }
+
+                        // 千斤頂
+                        IList<FamilyInstance> jack = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("千斤頂")).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[23, 1] = "千斤頂";
+                        EWs.Cells[23, 2] = "支";
+                        try
+                        {
+                            EWs.Cells[23, 4] = jack.Count().ToString();
+                        }
+                        catch { }
+
+                        // 三角架
+                        IList<FamilyInstance> tri_support = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("三角架")).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[24, 1] = "三角架";
+                        EWs.Cells[24, 2] = "支";
+                        try
+                        {
+                            EWs.Cells[24, 4] = tri_support.Count().ToString();
+                        }
+                        catch { }
+
+                        // 槽鋼
+                        IList<FamilySymbol> familySymbols = new FilteredElementCollector(doc).OfClass(typeof(FamilySymbol)).Cast<FamilySymbol>().Where(x => x.FamilyName == "槽鋼").ToList();
+                        List<string> channel_steel_name = new List<string>();
+                        foreach (FamilySymbol familySymbol in familySymbols)
+                        {
+                            channel_steel_name.Add(familySymbol.Name);
+                        }
+                        IList<FamilyInstance> channel_steel = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => channel_steel_name.Contains(x.Name)).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[25, 1] = "槽鋼";
+                        EWs.Cells[25, 2] = "支";
+                        try
+                        {
+                            EWs.Cells[25, 4] = channel_steel.Count().ToString();
+                        }
+                        catch { }
+
+                        LocationCurve lc = channel_steel.First().Location as LocationCurve;
+                        double length = lc.Curve.Length * 304.8 / 1000;
+                        string channel_steel_unit_str = (37.2 / 1000).ToString();
+
+                        try
+                        {
+                            EWs.Cells[26, 1] = "槽鋼(" + channel_steel.First().Name + ")";
+                            EWs.Cells[26, 2] = "t";
+                            EWs.Cells[26, 3] = "=" + length + "*" + channel_steel.Count().ToString() + "*" + channel_steel_unit_str;
+                            EWs.Cells[26, 4] = length + "*" + channel_steel.Count().ToString() + "*" + channel_steel_unit_str;
+                            EWs.Cells[26, 5] = "長 x 數量 x 單位重";
+                        }
+                        catch { }
+
+                        // U 型螺栓
+                        IList<FamilyInstance> u_bolt = new FilteredElementCollector(doc).OfClass(typeof(FamilyInstance)).Where(x => x.Name.Contains("48LUB")).Cast<FamilyInstance>().ToList();
+
+                        EWs.Cells[27, 1] = "U 型螺栓";
+                        EWs.Cells[27, 2] = "個";
+                        try
+                        {
+                            EWs.Cells[27, 4] = u_bolt.Count().ToString();
+                        }
+                        catch { }
+
+
+                        // 鋼筋
+                        IList<Rebar> rebar = new FilteredElementCollector(doc).OfClass(typeof(Rebar)).Cast<Rebar>().ToList();
+                        double volume = 0;
+                        IDictionary<string, Rebar> rebar_dict = new Dictionary<string, Rebar>();
+                        foreach (Rebar r in rebar)
+                        {
+                            if (!rebar_dict.ContainsKey(r.Name.Split(':')[0]))
+                            {
+                                rebar_dict.Add(r.Name.Split(':')[0], r);
+                            }
+                        }
+                        Excel.Range ERa3 = EWs.Rows["28:" + (28 + rebar_dict.Count() - 1).ToString()];
+                        ERa3.EntireRow.Insert(Excel.XlInsertShiftDirection.xlShiftDown, Excel.XlInsertFormatOrigin.xlFormatFromRightOrBelow);
+
+                        int i = 0;
+                        foreach(var item in rebar_dict)
+                        {
+                            EWs.Cells[28 + i, 1] = "鋼筋(" + item.Key + ")";
+                            EWs.Cells[28 + i, 2] = "m3";
+                            try
+                            {
+                                EWs.Cells[28 + i, 4] = item.Value.Volume.ToString();
+                            }
+                            catch { }
+                            i++;
+                        }
+
 
                         StrRow = null;
 

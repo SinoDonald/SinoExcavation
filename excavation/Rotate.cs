@@ -24,8 +24,8 @@ namespace excavation
 
             ICollection<ElementId> element_ids = new FilteredElementCollector(doc).WhereElementIsNotElementType().WhereElementIsViewIndependent().ToElementIds();
             ICollection<ElementId> textnote_ids = new FilteredElementCollector(doc).OfClass(typeof(TextNote)).ToElementIds();
+            
             Line origin_axis = Line.CreateBound(new XYZ(0, 0, 0), new XYZ(0, 0, 10));
-
             double angle = 0;
             if (File.Exists(temp_path))
             {
@@ -35,7 +35,6 @@ namespace excavation
             }
             else
             {
-
                 List<double> slope_list = new List<double>();
                 IList<Element> walls = new FilteredElementCollector(doc).WhereElementIsNotElementType().OfCategory(BuiltInCategory.OST_Walls).ToElements();
                 foreach (Element e in walls)

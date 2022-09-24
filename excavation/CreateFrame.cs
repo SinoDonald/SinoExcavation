@@ -365,7 +365,7 @@ namespace excavation
                 }
 
 
-                catch (Exception e) { TaskDialog.Show("error", new StackTrace(e, true).GetFrame(0).GetFileLineNumber() + Environment.NewLine + e.Message); break; }
+                catch (Exception e) { TaskDialog.Show("error", e.ToString()); break; }
             }
             TaskDialog.Show("done", "支撐建置完畢");
         }

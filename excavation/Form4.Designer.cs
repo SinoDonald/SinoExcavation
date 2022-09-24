@@ -195,6 +195,7 @@
             this.title = new System.Windows.Forms.Label();
             this.mini = new System.Windows.Forms.Button();
             this.dragControl1 = new excavation.DragControl();
+            this.button28 = new System.Windows.Forms.Button();
             this.homeleftpanel.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.settingpanel1.SuspendLayout();
@@ -2054,6 +2055,7 @@
             // 
             this.tabPage10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage10.BackgroundImage")));
             this.tabPage10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage10.Controls.Add(this.button28);
             this.tabPage10.Controls.Add(this.Save_loc_btn);
             this.tabPage10.Controls.Add(this.label19);
             this.tabPage10.Controls.Add(this.Save_loc_textbox);
@@ -2086,7 +2088,7 @@
             this.label19.BackColor = System.Drawing.Color.LemonChiffon;
             this.label19.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.label19.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label19.Location = new System.Drawing.Point(27, 77);
+            this.label19.Location = new System.Drawing.Point(10, 77);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(141, 20);
@@ -2098,7 +2100,7 @@
             this.Save_loc_textbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Save_loc_textbox.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Save_loc_textbox.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.Save_loc_textbox.Location = new System.Drawing.Point(182, 72);
+            this.Save_loc_textbox.Location = new System.Drawing.Point(153, 72);
             this.Save_loc_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.Save_loc_textbox.Multiline = true;
             this.Save_loc_textbox.Name = "Save_loc_textbox";
@@ -2408,6 +2410,20 @@
             // 
             this.dragControl1.SelectControl = this.header;
             // 
+            // button28
+            // 
+            this.button28.BackColor = System.Drawing.Color.Goldenrod;
+            this.button28.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button28.BackgroundImage")));
+            this.button28.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button28.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button28.Location = new System.Drawing.Point(305, 72);
+            this.button28.Margin = new System.Windows.Forms.Padding(2);
+            this.button28.Name = "button28";
+            this.button28.Size = new System.Drawing.Size(50, 30);
+            this.button28.TabIndex = 38;
+            this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2650,5 +2666,6 @@
         private System.Windows.Forms.Button button26;
         private System.Windows.Forms.Button button27;
         private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Button button28;
     }
 }

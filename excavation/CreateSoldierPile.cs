@@ -101,7 +101,6 @@ namespace excavation
                 }
                 catch (Exception e) { sheet.CloseEx(); TaskDialog.Show("Error", e.Message + e.StackTrace); }
 
-                TaskDialog.Show("1", "1");
                 SubTransaction subtran = new SubTransaction(doc);
                 tran.Start("create soldier pile");
 
@@ -311,11 +310,6 @@ namespace excavation
                     }
                     int pile_num = (int)(edge_line.Length / distance) + 1;
 
-                    List<ElementId> pre_nor_rotate_list = new List<ElementId>();
-                    List<XYZ> pre_nor_rotate_point_list = new List<XYZ>();
-                    List<ElementId> pre_rotate_list = new List<ElementId>();
-                    List<XYZ> pre_rotate_point_list = new List<XYZ>();
-
                     XYZ nomal_vector = XYZ.BasisZ.CrossProduct(edge_line.Direction);
                     
                     // create corner h beam in each edge_line
@@ -342,7 +336,7 @@ namespace excavation
 
                             // create timber lagging in all level
                             wood_line = Line.CreateBound(wall_point, corner_point - (t1 / 2 / 304.8) * edge_line.Direction);
-                            c = wood_line.CreateOffset((t2 - (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
+                            c = wood_line.CreateOffset((-t2 + (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
                             for (int k = 0; k < levlist.Length - 1; k++)
                             {
                                 Wall wall = Wall.Create(doc, c, wallType.Id, level.Id, sheet.wall_high * 1000 / 304.8, 0, false, false);
@@ -364,7 +358,7 @@ namespace excavation
 
                         // create timber lagging in all level
                         wood_line = Line.CreateBound(wall_point, wall_next_point);
-                        c = wood_line.CreateOffset((t2 - (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
+                        c = wood_line.CreateOffset((-t2 + (h - wall_W) / 2) / 304.8, new XYZ(0, 0, -1));
                         for (int k = 0; k < levlist.Length - 1; k++)
                         {
                             Wall wall = Wall.Create(doc, c, wallType.Id, level.Id, sheet.wall_high * 1000 / 304.8, 0, false, false);

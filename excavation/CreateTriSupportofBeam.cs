@@ -245,7 +245,7 @@ namespace excavation
                                             for (int j = 0; j <= Math.Floor((triSupport_distance - min_dis) / triSupport_spacing); j++)
                                             {
 
-                                                //trisupport.Activate();
+                                                trisupport.Activate();
                                                 XYZ pos = new XYZ(innerwall_points[i].X, innerwall_points[i].Y, triSupport_depth) + new_beam_slope * (min_dis + triSupport_spacing * j);
 
                                                 FamilyInstance instance = doc.Create.NewFamilyInstance(pos, trisupport, StructuralType.NonStructural);
