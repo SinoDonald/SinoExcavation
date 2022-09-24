@@ -485,82 +485,86 @@ namespace ExReaderConsole
         // 鋼筋配筋
         public void PassRebarData()
         {
-            var pos = this.FindAddress("擋土壁厚度");
-            wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            pos = this.FindAddress("分析斷面");
-            section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
-            pos = this.FindAddress("擋土壁長度");
-            wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            pos = this.FindAddress("保護層厚度");
-            protection_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            pos = this.FindAddress("M"); //公單元參數
-            m_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
-            m_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
-            m_connector2 = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2;
-            pos = this.FindAddress("接頭主筋");
-            m_main = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
-            m_space = xlRange.Cells[pos.Item1, pos.Item2 + 3].Value2;
-            pos = this.FindAddress("F"); //母單元參數
-            f_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
-            f_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
-            f_plate = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2.ToString();
-            f_style = xlRange.Cells[pos.Item1 + 4, pos.Item2].Value2.ToString();
-
-            // 垂直筋擋土側
-            int i = 1;
-
-            pos = this.FindAddress("擋土側");
-            i = 2;
-            do
+            try
             {
-                var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2);
-                vertical_r_rebar.Add(data);
-                i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                var pos = this.FindAddress("擋土壁厚度");
+                wall_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+                pos = this.FindAddress("分析斷面");
+                section = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2.ToString();
+                pos = this.FindAddress("擋土壁長度");
+                wall_high = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+                pos = this.FindAddress("保護層厚度");
+                protection_width = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+                pos = this.FindAddress("M"); //公單元參數
+                m_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
+                m_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
+                m_connector2 = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2;
+                pos = this.FindAddress("接頭主筋");
+                m_main = xlRange.Cells[pos.Item1, pos.Item2 + 1].Value2;
+                m_space = xlRange.Cells[pos.Item1, pos.Item2 + 3].Value2;
+                pos = this.FindAddress("F"); //母單元參數
+                f_length = xlRange.Cells[pos.Item1 + 1, pos.Item2].Value2;
+                f_connector = xlRange.Cells[pos.Item1 + 2, pos.Item2].Value2;
+                f_plate = xlRange.Cells[pos.Item1 + 3, pos.Item2].Value2.ToString();
+                f_style = xlRange.Cells[pos.Item1 + 4, pos.Item2].Value2.ToString();
 
-            // 垂直筋開挖側
-            pos = this.FindAddress("開挖側");
-            i = 2;
-            do
-            {
-                var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2);
-                vertical_e_rebar.Add(data);
-                i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                // 垂直筋擋土側
+                int i = 1;
 
-            //水平筋
-            pos = this.FindAddress("擋土牆水平筋設計");
-            i = 2;
-            do
-            {
-                var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2);
-                horizontal_rebar.Add(data);
-                i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                pos = this.FindAddress("擋土側");
+                i = 2;
+                do
+                {
+                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2);
+                    vertical_r_rebar.Add(data);
+                    i++;
+                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+
+                // 垂直筋開挖側
+                pos = this.FindAddress("開挖側");
+                i = 2;
+                do
+                {
+                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2);
+                    vertical_e_rebar.Add(data);
+                    i++;
+                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+
+                //水平筋
+                pos = this.FindAddress("擋土牆水平筋設計");
+                i = 2;
+                do
+                {
+                    var data = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2);
+                    horizontal_rebar.Add(data);
+                    i++;
+                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
 
 
-            //剪力筋
-            pos = this.FindAddress("擋土牆剪力筋設計");
-            i = 2;
-            do
-            {
-                var data1 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
-                shear_rebar_depth.Add(data1);
+                //剪力筋
+                pos = this.FindAddress("擋土牆剪力筋設計");
+                i = 2;
+                do
+                {
+                    var data1 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 2].Value2);
+                    shear_rebar_depth.Add(data1);
 
-                var data2 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2,
-                    xlRange.Cells[pos.Item1 + i, pos.Item2 + 7].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 8].Value2);
-                shear_rebar.Add(data2);
+                    var data2 = Tuple.Create(xlRange.Cells[pos.Item1 + i, pos.Item2 + 3].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 4].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 5].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 6].Value2,
+                        xlRange.Cells[pos.Item1 + i, pos.Item2 + 7].Value2, xlRange.Cells[pos.Item1 + i, pos.Item2 + 8].Value2);
+                    shear_rebar.Add(data2);
 
-                i++;
-            } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
+                    i++;
+                } while (xlRange.Cells[pos.Item1 + i, pos.Item2 + 1].Value2 != null);
 
-            SetPage(1);
+                SetPage(1);
+            }
+            catch (Exception e) { TaskDialog.Show("1", e.ToString()); }
         }
 
         public List<double> PassColumnDouble(string column_name, int start_row = 3, int start_column = 0)

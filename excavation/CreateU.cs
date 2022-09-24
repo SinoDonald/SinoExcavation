@@ -166,7 +166,7 @@ namespace excavation
                     }
                     trans1.Commit();
                 }
-                catch (Exception e) { TaskDialog.Show("error", new StackTrace(e, true).GetFrame(0).GetFileLineNumber() + Environment.NewLine + e.Message); break; }
+                catch (Exception e) { TaskDialog.Show("error", new StackTrace(e, true).GetFrame(0).GetFileLineNumber() + Environment.NewLine + e.ToString()); break; }
             }
             TaskDialog.Show("done", "U型螺栓建置完畢");
         }

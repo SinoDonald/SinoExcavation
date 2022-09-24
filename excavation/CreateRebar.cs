@@ -47,7 +47,7 @@ namespace excavation
                         dex.PassRebarData();
                         dex.CloseEx();
                     }
-                    catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.Message); }
+                    catch (Exception e) { dex.CloseEx(); TaskDialog.Show("Error", e.ToString()); }
 
                     // 要不要合體!!!!!!
                     bool combine_or_not = true;
