@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinoExcavation_2025", "Sino
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SinoExcavation_Setup", "SinoExcavation_Setup\SinoExcavation_Setup.vdproj", "{7885FE96-BD69-B0F4-A586-78BD6AA21BCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinoExcavation_2020", "SinoExcavation_2020\SinoExcavation_2020.csproj", "{21011AB5-6294-4CD7-A3A5-FE426DB56343}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{A847EF43-F989-4795-939B-33ED1427B4FF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7885FE96-BD69-B0F4-A586-78BD6AA21BCC}.Debug|Any CPU.ActiveCfg = Debug
 		{7885FE96-BD69-B0F4-A586-78BD6AA21BCC}.Release|Any CPU.ActiveCfg = Release
+		{21011AB5-6294-4CD7-A3A5-FE426DB56343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21011AB5-6294-4CD7-A3A5-FE426DB56343}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21011AB5-6294-4CD7-A3A5-FE426DB56343}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21011AB5-6294-4CD7-A3A5-FE426DB56343}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
